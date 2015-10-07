@@ -1,0 +1,15 @@
+﻿<Setting
+	ID="_settings"
+	>
+	<GlobalCSS
+		ID="themeSignal"
+		Theme="Signal"
+	/>
+	<Application/>
+	<Path/>
+	<General
+		RepoFriendly="True"
+	/>
+	<Connections/>
+	<TeamDevelopment/>
+</Setting>
