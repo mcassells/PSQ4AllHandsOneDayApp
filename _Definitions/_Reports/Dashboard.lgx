@@ -1,0 +1,867 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	ID="Dashboard"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Dashboard"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Dashboard2
+			AllowFreeformLayout="False"
+			DashboardColumns="2"
+			DashboardTabs="True"
+			ID="VisualizationsDashboard"
+			SaveFile="@Function.AppPhysicalPath~\SavedDashboards\Visualizations_User_@Function.UserName~.xml"
+			>
+			<Panel
+				Caption="KPI Table"
+				ID="KPI-Table"
+				>
+				<DefaultRequestParams
+					YearFilter="2007"
+				/>
+				<PanelParameters>
+					<Division
+						HtmlDiv="True"
+						ID="divParam"
+						>
+						<InputCheckboxList
+							Caption="Year Filter"
+							CheckboxListDropdown="True"
+							DefaultValue="@Request.YearFilter~"
+							ID="YearFilter"
+							OptionCaptionColumn="Year"
+							OptionValueColumn="Year"
+							>
+							<DataLayer
+								ID="dlYearSelection"
+								Type="Static"
+								>
+								<StaticDataRow
+									Year="2006"
+								/>
+								<StaticDataRow
+									Year="2007"
+								/>
+								<StaticDataRow
+									Year="2008"
+								/>
+							</DataLayer>
+						</InputCheckboxList>
+					</Division>
+				</PanelParameters>
+				<PanelContent>
+					<DataTable
+						AjaxPaging="True"
+						ID="KPI-table"
+						SortArrows="True"
+						>
+						<DataLayer
+							ConnectionID="Northwind"
+							ID="dlKPI"
+							Source="Select Employees.EmployeeID As &apos;Id&apos;,
+  Employees.LastName + &apos;, &apos; + Employees.FirstName As &apos;Name&apos;,
+  Employees.Quota As &apos;Threshold&apos;,
+  Sum([Order Subtotals].Subtotal) As &apos;Total&apos;
+From [Orders Qry]
+  Inner Join [Order Subtotals] On [Orders Qry].OrderID =
+    [Order Subtotals].OrderID
+  Inner Join Employees On [Orders Qry].EmployeeID = Employees.EmployeeID
+Where Year([Orders Qry].OrderDate) In (@SingleQuote.Request.YearFilter~)
+Group By Employees.EmployeeID,
+  Employees.Quota,
+  Employees.LastName,
+  Employees.FirstName"
+							Type="SQL"
+							>
+							<CalculatedColumn
+								Formula="@Data.Total~/@Data.Threshold~"
+								ID="ThresholdPercentage"
+							/>
+						</DataLayer>
+						<DataTableColumn
+							Header="Name"
+							ID="colName"
+							>
+							<Label
+								Caption="@Data.Name~"
+								ID="lblName"
+							/>
+							<DataColumnSort
+								DataColumn="Name"
+							/>
+						</DataTableColumn>
+						<DataTableColumn
+							Header="Total"
+							ID="colTotal"
+							>
+							<Label
+								Caption="@Data.Total~"
+								Format="Currency"
+								ID="lblTotal"
+							/>
+							<DataColumnSort
+								DataColumn="TotalSales"
+								DataType="Number"
+							/>
+						</DataTableColumn>
+						<DataTableColumn
+							Header="Threshold"
+							ID="colThreshold"
+							>
+							<Label
+								Caption="@Data.Threshold~"
+								Format="Currency"
+								ID="lblThreshold"
+							/>
+							<DataColumnSort
+								DataColumn="Threshold"
+								DataType="Number"
+							/>
+						</DataTableColumn>
+						<DataTableColumn
+							Header="Threshold Status"
+							ID="colStatus"
+							>
+							<Label
+								Caption="@Data.ThresholdPercentage~"
+								Format="Percent"
+								ID="lblStatus"
+							/>
+							<DataColumnSort
+								DataColumn="ThresholdPercentage"
+								DataType="Number"
+							/>
+						</DataTableColumn>
+						<DataTableColumn
+							ID="colKPI"
+							>
+							<Label
+								Caption=" "
+								ID="KPI"
+								>
+								<ConditionalClass
+									Class="fa fa-thumbs-up fa-2x text-success"
+									Condition="@Data.Total~&gt;=@Data.Threshold~"
+								/>
+								<ConditionalClass
+									Class="fa fa-thumbs-down fa-2x text-danger"
+									Condition="@Data.Total~&lt;@Data.Threshold~"
+								/>
+							</Label>
+						</DataTableColumn>
+						<InteractivePaging
+							CaptionType="Image"
+							HideWhenOnePage="True"
+							Location="Top"
+							PageRowCount="20"
+							ShowPageNumber="True"
+						/>
+					</DataTable>
+				</PanelContent>
+			</Panel>
+			<Panel
+				Caption="Time Period Comparison"
+				ID="TimePeriodComparison"
+				>
+				<DefaultRequestParams
+					Stacking="Stacked"
+					TimePeriod="Month"
+					TimePeriodGrouping="Year"
+				/>
+				<PanelParameters>
+					<Division
+						HtmlDiv="True"
+						ID="divParam"
+						>
+						<InputSelectList
+							Caption="Stacking Display"
+							DefaultValue="@Request.Stacking~"
+							ID="Stacking"
+							OptionCaptionColumn="Label"
+							OptionValueColumn="Value"
+							>
+							<DataLayer
+								ID="dlStacking"
+								Type="Static"
+								>
+								<StaticDataRow
+									Label="Side By Side"
+									Value="SideBySide"
+								/>
+								<StaticDataRow
+									Label="Stacked"
+									Value="Stacked"
+								/>
+								<StaticDataRow
+									Label="Stacked Percentage"
+									Value="StackedPercentage"
+								/>
+								<StaticDataRow
+									Label="Overlay"
+									Value="Overlay"
+								/>
+							</DataLayer>
+						</InputSelectList>
+					</Division>
+					<LineBreak/>
+					<Division
+						HtmlDiv="True"
+						ID="divParam"
+						>
+						<InputSelectList
+							Caption="Time Period"
+							DefaultValue="@Request.TimePeriod~"
+							ID="TimePeriod"
+							OptionCaptionColumn="Label"
+							OptionValueColumn="Value"
+							>
+							<DataLayer
+								ID="dlXMetric"
+								Type="Static"
+								>
+								<StaticDataRow
+									Label="Year"
+									Value="Year"
+								/>
+								<StaticDataRow
+									Label="Quarter"
+									Value="Quarter"
+								/>
+								<StaticDataRow
+									Label="Month"
+									Value="Month"
+								/>
+							</DataLayer>
+						</InputSelectList>
+					</Division>
+					<LineBreak/>
+					<Division
+						HtmlDiv="True"
+						ID="divParam"
+						>
+						<InputSelectList
+							Caption="Time Period Grouping"
+							DefaultValue="@Request.TimePeriodGrouping~"
+							ID="TimePeriodGrouping"
+							OptionCaptionColumn="Label"
+							OptionValueColumn="Value"
+							>
+							<DataLayer
+								ID="dlXGrouping"
+								Type="Static"
+								>
+								<StaticDataRow
+									Label="Year"
+									Value="Year"
+								/>
+								<StaticDataRow
+									Label="Quarter"
+									Value="Quarter"
+								/>
+								<StaticDataRow
+									Label="Month"
+									Value="Month"
+								/>
+							</DataLayer>
+						</InputSelectList>
+					</Division>
+				</PanelParameters>
+				<PanelContent>
+					<ChartCanvas
+						ChartCaption="Sum of @Request.TimePeriod~ by @Request.TimePeriodGrouping~"
+						ID="TimePeriodComparison"
+						>
+						<DataLayer
+							ConnectionID="Northwind"
+							ID="dlTimePeriodComparison"
+							Source="Select
+  [Summary of Sales by Year].ShippedDate as &apos;Date&apos;,
+  SUM([Summary of Sales by Year].Subtotal) as &apos;Total&apos;,
+  Year([Summary of Sales by Year].ShippedDate) as &apos;Year&apos;
+From [Summary of Sales by Year]
+Where Year([Summary of Sales by Year].ShippedDate) Between &apos;2006&apos; And &apos;2008&apos;
+group by [Summary of Sales by Year].ShippedDate"
+							Type="SQL"
+							>
+							<TimePeriodColumn
+								DataColumn="Date"
+								ID="Quarter"
+								TimePeriod="Quarter"
+							/>
+							<TimePeriodColumn
+								DataColumn="Date"
+								ID="Month"
+								TimePeriod="MonthName"
+							/>
+							<TimePeriodColumn
+								DataColumn="Date"
+								ID="MonthInt"
+								TimePeriod="Month"
+							/>
+							<SortFilter
+								DataType="Number"
+								SortColumn="MonthInt"
+							/>
+							<CrosstabFilter
+								CrosstabColumn="@Request.TimePeriodGrouping~"
+								CrosstabLabelColumn="@Request.TimePeriod~"
+								CrosstabValueColumn="Total"
+								CrosstabValueFunction="Sum"
+							/>
+						</DataLayer>
+						<Series
+							BarStacking="@Request.Stacking~"
+							ChartYDataColumn="rdCrosstabValue"
+							Type="Bar"
+						/>
+						<ChartYAxis>
+							<AxisLabelStyle
+								Format="Currency"
+							/>
+						</ChartYAxis>
+						<ChartCanvasLegend/>
+					</ChartCanvas>
+				</PanelContent>
+			</Panel>
+			<Panel
+				Caption="Geographic Heat Map"
+				ID="GeoHeatMap"
+				>
+				<DefaultRequestParams
+					YearFilter="2007"
+				/>
+				<PanelParameters>
+					<Division
+						HtmlDiv="True"
+						ID="divParam"
+						>
+						<InputCheckboxList
+							Caption="Year Filter"
+							CheckboxListDropdown="True"
+							DefaultValue="@Request.YearFilter~"
+							ID="YearFilter"
+							OptionCaptionColumn="Year"
+							OptionValueColumn="Year"
+							>
+							<DataLayer
+								ID="dlYearSelection"
+								Type="Static"
+								>
+								<StaticDataRow
+									Year="2006"
+								/>
+								<StaticDataRow
+									Year="2007"
+								/>
+								<StaticDataRow
+									Year="2008"
+								/>
+							</DataLayer>
+						</InputCheckboxList>
+					</Division>
+				</PanelParameters>
+				<PanelContent>
+					<LineBreak/>
+					<Division
+						HtmlDiv="True"
+						ID="gMap"
+						>
+						<IncludeHtml
+							Html="&lt;style type=&quot;text/css&quot;&gt;
+	#pcslColorLegend,
+	#pcslColorLegend table,
+	#pcslColorLegend td{
+		width: 100%;
+	}
+&lt;/style&gt;"
+							ID="FullWidthMap"
+						/>
+						<GoogleMap
+							GoogleMapControl="None"
+							GoogleMapTypeControl="False"
+							GoogleMapTypes="Map"
+							GoogleMapZoomControl="Small"
+							Height="380"
+							ID="gmapUSA"
+							MapScale="False"
+							Width="100%"
+							>
+							<GoogleMapPolygons
+								BorderColor="#17179F"
+								BorderThickness="0"
+								BorderTransparency="15"
+								FillColor="@Data.cscCountryTotals~"
+								FillTransparency="5"
+								ID="gmpUSA"
+								PointReduction="1.5"
+								>
+								<DataLayer
+									Filename="@Function.AppPhysicalPath~\_SupportFiles\world-countries.kml"
+									ID="dlCountriesKML"
+									Type="KmlFile"
+									>
+									<Join
+										ID="jnKMLtoData"
+										JoinType="InnerJoin"
+										SortLeftSide="True"
+										SortRightSide="True"
+										>
+										<DataLayer
+											ConnectionID="Northwind"
+											ID="dlCountryTotals"
+											Source="SELECT
+	SUM(Freight) as &apos;Total&apos;,
+	ShipCountry as &apos;Country&apos;
+FROM dbo.[Orders Qry]
+Where (Year(ShippedDate) = @SingleQuote.Request.YearFilter~ OR @SingleQuote.Request.YearFilter~=&apos;&apos;)
+Group By ShipCountry"
+											Type="SQL"
+											>
+											<ColorSpectrumColumn
+												DataColumn="Total"
+												ID="cscCountryTotals"
+											/>
+										</DataLayer>
+										<MatchCondition
+											DataType="Text"
+											LeftDataColumn="name"
+											RightDataColumn="Country"
+										/>
+									</Join>
+								</DataLayer>
+								<PolygonColorSpectrumLegend
+									Format="Currency"
+									ID="pcslColorLegend"
+									Location="Right"
+								/>
+								<Action
+									ID="actMarkerInfo"
+									Type="MapMarkerInfo"
+									>
+									<MapMarkerInfo
+										ID="OverlayPopup"
+										>
+										<Label
+											Caption="@Data.Country~"
+											Class="bold"
+											HtmlTag="P"
+										/>
+										<Label
+											Caption="@Data.Total~"
+											Format="Currency"
+											HtmlTag="P"
+										/>
+									</MapMarkerInfo>
+								</Action>
+							</GoogleMapPolygons>
+							<GoogleMapInitialView
+								GoogleMapZoomLevel="1"
+							/>
+						</GoogleMap>
+					</Division>
+				</PanelContent>
+			</Panel>
+			<Panel
+				Caption="Gauge Display"
+				ID="GaugeDisplay"
+				MultipleInstances="True"
+				>
+				<LocalData>
+					<DataLayer
+						ConnectionID="Northwind"
+						Source="Select SUM([Summary of Sales by Year].Subtotal) as &apos;Total&apos;
+From [Summary of Sales by Year]"
+						Type="SQL"
+						>
+						<DataLayerLink
+							ID="linkKPI-Guage-Data"
+						/>
+					</DataLayer>
+				</LocalData>
+				<DefaultRequestParams
+					DisplayAs="Arc"
+					Range1="1000000"
+					Range1Color="Red"
+					Range2="2000000"
+					Range2Color="#ECD869"
+					Range3="3000000"
+					Range3Color="#85E77C"
+				/>
+				<PanelParameters>
+					<Division
+						HtmlDiv="True"
+						ID="divParam"
+						>
+						<InputSelectList
+							Caption="Display As"
+							DefaultValue="@Request.DisplayAs~"
+							ID="DisplayAs"
+							OptionCaptionColumn="Label"
+							OptionValueColumn="Value"
+							>
+							<DataLayer
+								ID="dlDisplayType"
+								Type="Static"
+								>
+								<StaticDataRow
+									Label="Arc Gauge"
+									Value="Arc"
+								/>
+								<StaticDataRow
+									Label="Balloon Bar"
+									Value="BalloonBar"
+								/>
+								<StaticDataRow
+									Label="Bullet Bar"
+									Value="BulletBar"
+								/>
+								<StaticDataRow
+									Label="KPI"
+									Value="KPI"
+								/>
+							</DataLayer>
+						</InputSelectList>
+					</Division>
+				</PanelParameters>
+				<PanelContent>
+					<Division
+						Condition="&quot;@Request.DisplayAs~&quot;==&quot;Arc&quot;"
+						ID="divArc"
+						>
+						<Gauge
+							ChartWidth="100%"
+							StartValue="0"
+							Type="Arc"
+							Value="@Data.Total~"
+							>
+							<DataLayer
+								LinkedDataLayerID="linkKPI-Guage-Data"
+								Type="Linked"
+							/>
+							<GaugeRange
+								Color="@Request.Range1Color~"
+								RangeEndValue="@Request.Range1~"
+							/>
+							<GaugeRange
+								Color="@Request.Range2Color~"
+								RangeEndValue="@Request.Range2~"
+							/>
+							<GaugeRange
+								Color="@Request.Range3Color~"
+								RangeEndValue="@Request.Range3~"
+							/>
+						</Gauge>
+					</Division>
+					<Division
+						Condition="&quot;@Request.DisplayAs~&quot;==&quot;BulletBar&quot;"
+						ID="divBulletBar"
+						>
+						<Gauge
+							BulletColor="#F7F7F7"
+							StartValue="0"
+							TickLabelFormat="mp"
+							Type="BulletBar"
+							Value="@Data.Total~"
+							>
+							<DataLayer
+								LinkedDataLayerID="linkKPI-Guage-Data"
+								Type="Linked"
+							/>
+							<GaugeRange
+								Color="@Request.Range1Color~"
+								RangeEndValue="@Request.Range1~"
+							/>
+							<GaugeRange
+								Color="@Request.Range2Color~"
+								RangeEndValue="@Request.Range2~"
+							/>
+							<GaugeRange
+								Color="@Request.Range3Color~"
+								RangeEndValue="@Request.Range3~"
+							/>
+						</Gauge>
+					</Division>
+					<Division
+						Condition="&quot;@Request.DisplayAs~&quot;==&quot;BalloonBar&quot;"
+						ID="divBalloonBar"
+						>
+						<Gauge
+							TickLabelFormat="mp"
+							Type="BalloonBar"
+							Value="@Data.Total~"
+							>
+							<DataLayer
+								LinkedDataLayerID="linkKPI-Guage-Data"
+								Type="Linked"
+							/>
+							<GaugeRange
+								Color="@Request.Range1Color~"
+								RangeEndValue="@Request.Range1~"
+							/>
+							<GaugeRange
+								Color="@Request.Range2Color~"
+								RangeEndValue="@Request.Range2~"
+							/>
+							<GaugeRange
+								Color="@Request.Range3Color~"
+								RangeEndValue="@Request.Range3~"
+							/>
+						</Gauge>
+					</Division>
+					<Division
+						Condition="&quot;@Request.DisplayAs~&quot;==&quot;KPI&quot;"
+						HtmlDiv="True"
+						ID="divKPI"
+						>
+						<Division
+							HtmlDiv="True"
+							ID="KPI"
+							>
+							<ConditionalClass
+								Class="kpi kpi-red"
+								Condition="&quot;@Local.Total~&quot;&lt;=&quot;@Request.Range1~&quot;"
+								ID="kpi-red"
+							/>
+							<ConditionalClass
+								Class="kpi kpi-yellow"
+								Condition="&quot;@Local.Total~&quot;&gt;&quot;@Request.Range1~&quot; &amp;&amp; &quot;@Local.Total~&quot;&lt;&quot;@Request.Range3~&quot;"
+								ID="kpi-yellow"
+							/>
+							<ConditionalClass
+								Class="kpi kpi-green"
+								Condition="&quot;@Local.Total~&quot;&gt;=&quot;@Request.Range3~&quot;"
+								ID="kpi-green"
+							/>
+							<Note
+								Note="Set the class of the div-KPI element to kpi-green, kpi-red, kpi-blue, kpi-yellow, or kpi-grey. "
+							/>
+							<ResponsiveRow
+								CollisionBehavior="Overlap"
+								>
+								<ResponsiveColumn
+									ColspanExtraSmallScreen="12"
+									ColspanLargeScreen="9"
+									ColspanMediumScreen="9"
+									ColspanSmallScreen="12"
+									>
+									<Label
+										Caption="@Local.Total~"
+										Class="kpi-value"
+										Format="Currency"
+									/>
+									<Label
+										Caption="Total"
+										Class="kpi-label"
+									/>
+								</ResponsiveColumn>
+								<ResponsiveColumn>
+									<Label
+										ID="kpi-icon"
+										>
+										<ConditionalClass
+											Class="down-arrow"
+											Condition="&quot;@Local.Total~&quot;&lt;=&quot;@Request.Range1~&quot;"
+											ID="down-arrow"
+										/>
+										<ConditionalClass
+											Class="warning"
+											Condition="&quot;@Local.Total~&quot;&gt;&quot;@Request.Range1~&quot; &amp;&amp; &quot;@Local.Total~&quot;&lt;&quot;@Request.Range3~&quot;"
+											ID="warning"
+										/>
+										<ConditionalClass
+											Class="up-arrow"
+											Condition="&quot;@Local.Total~&quot;&gt;=&quot;@Request.Range3~&quot;"
+											ID="up-arrow"
+										/>
+									</Label>
+									<Note
+										Note="Set the class of kpi-icon to up-arrow, down-arrow, cross, check, or warning."
+									/>
+								</ResponsiveColumn>
+							</ResponsiveRow>
+						</Division>
+						<IncludeHtml
+							Html="&lt;style type=&quot;text/css&quot;&gt;
+	#divKPI .kpi{
+		margin: -5px -.5em;
+	}
+&lt;/style&gt;"
+						/>
+					</Division>
+				</PanelContent>
+			</Panel>
+			<Panel
+				Caption="Pie Chart Visualization"
+				ID="PieChartVisualization"
+				>
+				<PanelContent>
+					<ChartCanvas>
+						<DataLayer
+							ConnectionID="Northwind"
+							Source="Select
+  YEAR([Summary of Sales by Year].ShippedDate) as &apos;Year&apos;,
+  SUM([Summary of Sales by Year].Subtotal) as &apos;Total&apos;
+From [Summary of Sales by Year]
+Group By YEAR([Summary of Sales by Year].ShippedDate)
+Order By YEAR([Summary of Sales by Year].ShippedDate);"
+							Type="SQL"
+						/>
+						<Series
+							ChartLabelColumn="Year"
+							ChartYDataColumn="Total"
+							LabelLocation="Legend"
+							Type="Pie"
+						/>
+						<ChartCanvasLegend/>
+					</ChartCanvas>
+				</PanelContent>
+			</Panel>
+			<Panel
+				Caption="Bar Chart Visualization"
+				ID="BarChartVisualization"
+				>
+				<PanelContent>
+					<ChartCanvas>
+						<DataLayer
+							ConnectionID="Northwind"
+							Source="Select
+  YEAR([Summary of Sales by Year].ShippedDate) as &apos;Year&apos;,
+  SUM([Summary of Sales by Year].Subtotal) as &apos;Total&apos;
+From [Summary of Sales by Year]
+Group By YEAR([Summary of Sales by Year].ShippedDate)
+Order By YEAR([Summary of Sales by Year].ShippedDate);"
+							Type="SQL"
+						/>
+						<Series
+							ChartXDataColumn="Year"
+							ChartYDataColumn="Total"
+							Type="Bar"
+						/>
+						<ZoomControl/>
+					</ChartCanvas>
+				</PanelContent>
+			</Panel>
+			<Panel
+				Caption="Line Chart Visualization"
+				ID="LineChartVisualization"
+				>
+				<PanelContent>
+					<ChartCanvas>
+						<DataLayer
+							ConnectionID="Northwind"
+							Source="Select
+  YEAR([Summary of Sales by Year].ShippedDate) as &apos;Year&apos;,
+  SUM([Summary of Sales by Year].Subtotal) as &apos;Total&apos;
+From [Summary of Sales by Year]
+Group By YEAR([Summary of Sales by Year].ShippedDate)
+Order By YEAR([Summary of Sales by Year].ShippedDate);"
+							Type="SQL"
+						/>
+						<Series
+							ChartXDataColumn="Year"
+							ChartYDataColumn="Total"
+							Type="Line"
+						/>
+						<ZoomControl/>
+					</ChartCanvas>
+				</PanelContent>
+			</Panel>
+			<Panel
+				Caption="Area Spline Chart Visualization"
+				ID="AreaSplineChartVisualization"
+				>
+				<PanelContent>
+					<ChartCanvas>
+						<DataLayer
+							ConnectionID="Northwind"
+							Source="Select
+  YEAR([Summary of Sales by Year].ShippedDate) as &apos;Year&apos;,
+  SUM([Summary of Sales by Year].Subtotal) as &apos;Total&apos;
+From [Summary of Sales by Year]
+Group By YEAR([Summary of Sales by Year].ShippedDate)
+Order By YEAR([Summary of Sales by Year].ShippedDate);"
+							Type="SQL"
+						/>
+						<Series
+							ChartXDataColumn="Year"
+							ChartYDataColumn="Total"
+							Type="AreaSpline"
+						/>
+						<ZoomControl/>
+					</ChartCanvas>
+				</PanelContent>
+			</Panel>
+			<Panel
+				Caption="Area Chart Visualization"
+				ID="AreaChartVisualization"
+				>
+				<PanelContent>
+					<ChartCanvas>
+						<DataLayer
+							ConnectionID="Northwind"
+							Source="Select
+  YEAR([Summary of Sales by Year].ShippedDate) as &apos;Year&apos;,
+  SUM([Summary of Sales by Year].Subtotal) as &apos;Total&apos;
+From [Summary of Sales by Year]
+Group By YEAR([Summary of Sales by Year].ShippedDate)
+Order By YEAR([Summary of Sales by Year].ShippedDate);"
+							Type="SQL"
+						/>
+						<Series
+							ChartXDataColumn="Year"
+							ChartYDataColumn="Total"
+							Type="Area"
+						/>
+						<ZoomControl/>
+					</ChartCanvas>
+				</PanelContent>
+			</Panel>
+			<Panel
+				Caption="Heat Map Visualization"
+				ID="HeatMapVisualization"
+				>
+				<PanelContent>
+					<ChartCanvas>
+						<DataLayer
+							ConnectionID="Northwind"
+							Source="Select Count([Orders Qry].OrderDate) as &apos;UniqueCount&apos;,
+  Year([Orders Qry].OrderDate) As &apos;Year&apos;,
+  Sum([Orders Qry].Freight) As &apos;Total&apos;
+From [Orders Qry]
+Group By Year([Orders Qry].OrderDate)
+Order By &apos;Year&apos;"
+							Type="SQL"
+						/>
+						<Series
+							HeatmapColorDataColumn="UniqueCount"
+							HeatmapLabelDataColumn="Year"
+							HeatmapSizeDataColumn="Total"
+							Type="Heatmap"
+						/>
+					</ChartCanvas>
+				</PanelContent>
+			</Panel>
+		</Dashboard2>
+	</Body>
+	<ideTestParams
+		DisplayAs=""
+		Range1=""
+		Range1Color=""
+		Range2=""
+		Range2Color=""
+		Range3=""
+		Range3Color=""
+		Stacking=""
+		TimePeriod=""
+		TimePeriodGrouping=""
+		YearFilter=""
+	/>
+</Report>

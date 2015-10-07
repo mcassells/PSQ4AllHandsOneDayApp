@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	ID="UI-Components.Form-Elements"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Form Elements"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<FieldsetBox
+			Caption="Daterange picker"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="Daterangepicker"
+				>
+				<Division
+					Class="daterange"
+					HtmlDiv="False"
+					ID="daterange"
+					>
+					<Label
+						Caption="Select a Range"
+						Class="range-label"
+						ID="range-label"
+					/>
+					<Label
+						Class="caret"
+						ID="caret"
+					/>
+				</Division>
+				<IncludeScript
+					ID="InitDaterangePicker"
+					IncludedScript="// Init the daterange picker tool
+$(&quot;span.daterange&quot;).daterangepicker({
+    format: &apos;MM/DD/YYYY&apos;,
+	startDate: moment().startOf(&apos;month&apos;),
+	endDate: moment().endOf(&apos;month&apos;),
+	showDropdowns: true,
+	timePicker: false,
+    ranges: {
+       &apos;Today&apos;: [moment(), moment()],
+       &apos;Yesterday&apos;: [moment().subtract(1, &apos;days&apos;), moment().subtract(1, &apos;days&apos;)],
+       &apos;This Week&apos;: [moment().startOf(&apos;week&apos;), moment().endOf(&apos;week&apos;)],
+       &apos;Last Week&apos;: [moment().subtract(1, &apos;week&apos;).startOf(&apos;week&apos;), moment().subtract(1, &apos;week&apos;).endOf(&apos;week&apos;)],
+       &apos;This Month&apos;: [moment().startOf(&apos;month&apos;), moment().endOf(&apos;month&apos;)],
+       &apos;Last Month&apos;: [moment().subtract(1, &apos;month&apos;).startOf(&apos;month&apos;), moment().subtract(1, &apos;month&apos;).endOf(&apos;month&apos;)],
+       &apos;This Quarter&apos;: [moment().startOf(&apos;quarter&apos;), moment().endOf(&apos;quarter&apos;)],
+       &apos;Last Quarter&apos;: [moment().subtract(1, &apos;quarter&apos;).startOf(&apos;quarter&apos;), moment().subtract(1, &apos;quarter&apos;).endOf(&apos;quarter&apos;)],
+       &apos;This Year&apos;: [moment().startOf(&apos;year&apos;), moment().endOf(&apos;year&apos;)],
+       &apos;Last Year&apos;: [moment().subtract(1, &apos;year&apos;).startOf(&apos;year&apos;), moment().subtract(1, &apos;year&apos;).endOf(&apos;year&apos;)]
+    }
+}, 
+function(start, end, label) {
+    $(&quot;span#daterange span.range-label&quot;).text(label);
+	$(&quot;input#startDateInput&quot;).val(start.format(&quot;MM/DD/YYYY&quot;));
+	$(&quot;input#endDateInput&quot;).val(end.format(&quot;MM/DD/YYYY&quot;));
+});"
+				/>
+			</Division>
+		</FieldsetBox>
+		<LineBreak/>
+		<FieldsetBox
+			Caption="Text Inputs"
+			>
+			<InputText
+				Caption="Text Field"
+				ID="inpText"
+				Placeholder="This is a placeholder!"
+			/>
+			<LineBreak/>
+			<InputEmail
+				Caption="Email"
+				ID="InputEmail"
+				Placeholder="email@email.com"
+			/>
+			<LineBreak/>
+			<InputText
+				Caption="Text field with Datepicker JS"
+				Class="datepicker"
+				ID="inpDatepicker"
+				Placeholder="MM/DD/YYYY"
+			/>
+			<LineBreak/>
+			<InputDate
+				Caption="Vanilla Date Field"
+				ID="InfoDatepicker"
+				Placeholder="MM/DD/YYYY"
+			/>
+		</FieldsetBox>
+		<LineBreak/>
+		<FieldsetBox
+			Caption="Option Selectors"
+			>
+			<InputSelectList
+				Caption="Select list"
+				ID="SelectList"
+				OptionCaptionColumn="Column1"
+				OptionValueColumn="Column1"
+				>
+				<DataLayer
+					ID="dlDropDownList"
+					Type="Static"
+					>
+					<StaticDataRow
+						Column1="Option 1"
+					/>
+					<StaticDataRow
+						Column1="Option 2"
+					/>
+				</DataLayer>
+			</InputSelectList>
+			<LineBreak/>
+			<Division
+				HtmlDiv="True"
+				ID="single-checkox"
+				>
+				<InputCheckbox
+					Caption="Single Checkbox"
+					CheckedValue="Value"
+					ID="SingleCheckbox"
+				/>
+			</Division>
+			<LineBreak/>
+			<Division
+				HtmlDiv="True"
+				ID="checkbox-list"
+				>
+				<InputCheckboxList
+					Caption="Checkbox List Group"
+					ID="CheckboxList"
+					OptionCaptionColumn="Column1"
+					OptionValueColumn="Column1"
+					>
+					<DataLayer
+						ID="dlCBList"
+						Type="Static"
+						>
+						<StaticDataRow
+							Column1="Option 1"
+						/>
+						<StaticDataRow
+							Column1="Option 2"
+						/>
+					</DataLayer>
+				</InputCheckboxList>
+			</Division>
+		</FieldsetBox>
+	</Body>
+	<ideTestParams/>
+</Report>

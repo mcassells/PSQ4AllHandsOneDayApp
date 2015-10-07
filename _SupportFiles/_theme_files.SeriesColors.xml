@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdData>
+  <SeriesColors ID="SeriesColors" value="#4DA8EF, #53C5B7, #EF9828, #E8CF44, #9A7AE8, #1F2B3A, #FF2C2D, #67E25C, #DADADC, #F26A66" />
+  <SeriesColors ID="SeriesColor1" value="#4DA8EF" />
+  <SeriesColors ID="SeriesColor2" value="#53C5B7" />
+  <SeriesColors ID="SeriesColor3" value="#EF9828" />
+  <SeriesColors ID="SeriesColor4" value="#E8CF44" />
+  <SeriesColors ID="SeriesColor5" value="#9A7AE8" />
+  <SeriesColors ID="SeriesColor6" value="#1F2B3A" />
+  <SeriesColors ID="SeriesColor7" value="#FF2C2D" />
+  <SeriesColors ID="SeriesColor8" value="#67E25C" />
+  <SeriesColors ID="SeriesColor9" value="#DADADC" />
+  <SeriesColors ID="SeriesColor10" value="#F26A66" />
+</rdData>

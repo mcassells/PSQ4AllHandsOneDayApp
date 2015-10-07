@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Responsive Embedded"
+	ID="UI-Components.ResponsiveEmbedded"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Responsive Embedded"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Division
+			HtmlDiv="True"
+			ID="doc-link"
+			>
+			<IncludeHtml
+				Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#responsive-embed&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap responsive embedded documentation&lt;/a&gt;"
+			/>
+			<Label
+				Caption="Used to embed responsive videos or slideshows.  Regulate dimensions based on the width of the viewport."
+				Class="lead text-info"
+				HtmlTag="P"
+			/>
+		</Division>
+		<FieldsetBox
+			Caption="Responsive Embedded"
+			ID="ResponsiveEmbedded"
+			>
+			<LineBreak/>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Division
+						Class="panel panel-default"
+						HtmlDiv="True"
+						ID="Panel-default"
+						>
+						<Division
+							Class="panel-heading"
+							HtmlDiv="True"
+							ID="panel-heading"
+							>
+							<Label
+								Caption="16:9 aspect ratio"
+								Class="h4"
+								HtmlTag="H2"
+							/>
+						</Division>
+						<Division
+							Class="panel-body"
+							HtmlDiv="True"
+							ID="panel-body"
+							>
+							<Division
+								Class="embed-responsive embed-responsive-16by9"
+								HtmlDiv="True"
+								ID="ResponsiveEmbedded"
+								>
+								<IncludeHtml
+									Html="&lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://www.youtube.com/embed/7U0Sfi3Ndpk&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;"
+								/>
+							</Division>
+						</Division>
+						<Label
+							Caption="&lt;Division HtmlDiv=&quot;True&quot; ID=&quot;ResponsiveEmbedded&quot; Class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;
+  &lt;IncludeHtml Html=&quot;&amp;lt;iframe class=&amp;quot;embed-responsive-item&amp;quot; src=&amp;quot;https://www.youtube.com/embed/7U0Sfi3Ndpk&amp;quot; frameborder=&amp;quot;0&amp;quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&quot; /&gt;
+&lt;/Division&gt;"
+							Class="panel-footer"
+							HtmlTag="Div"
+						/>
+					</Division>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="4:3 aspect ratio"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="embed-responsive embed-responsive-4by3"
+						HtmlDiv="True"
+						ID="ResponsiveEmbedded"
+						>
+						<IncludeHtml
+							Html="&lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://www.youtube.com/embed/7U0Sfi3Ndpk&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;"
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division HtmlDiv=&quot;True&quot; ID=&quot;ResponsiveEmbedded&quot; Class=&quot;embed-responsive embed-responsive-4by3&quot;&gt;
+  &lt;IncludeHtml Html=&quot;&amp;lt;iframe class=&amp;quot;embed-responsive-item&amp;quot; src=&amp;quot;https://www.youtube.com/embed/7U0Sfi3Ndpk&amp;quot; frameborder=&amp;quot;0&amp;quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+	</Body>
+</Report>

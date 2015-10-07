@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	ID="CoverFlow"
+	>
+	<DefaultRequestParams
+		EmployeeID="1"
+		Year="2007"
+	/>
+	<Body>
+		<IncludeHtml
+			Html="&lt;style type=&quot;text/css&quot;&gt;
+	div.cover{
+		background: #FFF;
+	}
+&lt;/style&gt;"
+			ID="coverflow-css"
+		/>
+		<IncludeScript
+			IncludedScript="$(function() {
+	$(&apos;#preview-coverflow&apos;).coverflow({
+		index:			1,
+		density:		2,
+		innerOffset:	50,
+		innerScale:		.7,
+		animateStep:	function(event, cover, offset, isVisible, isMiddle, sin, cos) {
+			if (isVisible) {
+				if (isMiddle) {
+					$(cover).css({
+						&apos;filter&apos;:			&apos;none&apos;,
+						&apos;-webkit-filter&apos;:	&apos;none&apos;
+					});
+				} else {
+					var brightness	= 1 + Math.abs(sin),
+						contrast	= 1 - Math.abs(sin),
+						filter		= &apos;contrast(&apos;+contrast+&apos;) brightness(&apos;+brightness+&apos;)&apos;;
+					$(cover).css({
+						&apos;filter&apos;:			filter,
+						&apos;-webkit-filter&apos;:	filter
+					});
+				}
+			}
+		}
+	});
+});"
+		/>
+		<Division
+			Class="text-center"
+			HtmlDiv="True"
+			ID="text-center"
+			>
+			<Label
+				Caption="Coverflow Magic"
+				Class="text-center"
+				HtmlTag="H1"
+			/>
+			<Label
+				Caption="Check out &lt;a href=&quot;http://vanderlee.github.io/coverflow/&quot; target=&quot;_blank&quot;&gt;jQuery Coverflow&lt;/a&gt; for more configuration options and examples."
+				Format="HTML"
+				HtmlTag="H4"
+			/>
+			<LineBreak/>
+			<Label
+				Caption="Swipe left/right or click on a cover to move to the next frame."
+				Format="HTML"
+				HtmlTag="I"
+			/>
+		</Division>
+		<LineBreak/>
+		<Division
+			HtmlDiv="True"
+			ID="preview"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="preview-coverflow"
+				>
+				<Division
+					Class="cover"
+					HtmlDiv="True"
+					ID="AnnualSalesGauge"
+					>
+					<Gauge
+						Caption="Annual Sales for 2007"
+						ChartHeight="340"
+						ChartWidth="420"
+						StartValue="0"
+						Type="Arc"
+						Value="@Data.SubTotal~"
+						>
+						<DataLayer
+							ConnectionID="Northwind"
+							ID="YearlyTotals"
+							Source="Select YEAR([Summary of Sales by Year].ShippedDate) as &apos;Year&apos;,
+  SUM([Summary of Sales by Year].Subtotal) as SubTotal
+From [Summary of Sales by Year]
+where YEAR([Summary of Sales by Year].ShippedDate) = &apos;2007&apos;
+group by YEAR([Summary of Sales by Year].ShippedDate)
+order by &apos;Year&apos; desc"
+							Type="SQL"
+						/>
+						<GaugeRange
+							Color="Red"
+							RangeEndValue="200000"
+						/>
+						<GaugeRange
+							Color="#ECD869"
+							RangeEndValue="400000"
+						/>
+						<GaugeRange
+							Color="#85E77C"
+							RangeEndValue="700000"
+						/>
+					</Gauge>
+				</Division>
+				<Division
+					Class="cover"
+					HtmlDiv="True"
+					ID="AnnualSalesbyEmployee"
+					>
+					<Division
+						Class="ThemePadding"
+						HtmlDiv="True"
+						ID="extra-padding"
+						>
+						<Gauge
+							Caption="Sales by Employee"
+							ChartHeight="340"
+							ChartWidth="420"
+							ID="gaugeTotalEmployeeSales"
+							StartValue="0"
+							Type="Arc"
+							Value="@Data.SubTotal~"
+							>
+							<DataLayer
+								ConnectionID="Northwind"
+								ID="EmployeeTotals"
+								Source="Select Sum([Summary of Sales by Year].Subtotal) As SubTotal,
+  Year(Orders.OrderDate) As &apos;Year&apos;,
+  Employees.EmployeeID,
+  Employees.LastName,
+  Employees.FirstName,
+  Employees.Quota
+From [Summary of Sales by Year]
+  Inner Join Orders On [Summary of Sales by Year].OrderID = Orders.OrderID
+  Inner Join Employees On Employees.EmployeeID = Orders.EmployeeID
+Where Year(Orders.OrderDate) = &apos;@Request.Year~&apos; And Employees.EmployeeID =
+  &apos;@Request.EmployeeID~&apos;
+Group By Year(Orders.OrderDate),
+  Employees.EmployeeID,
+  Employees.LastName,
+  Employees.FirstName,
+  Employees.Quota"
+								Type="SQL"
+								>
+								<CalculatedColumn
+									Formula="@Data.Quota~/3"
+									ID="LowThreshold"
+								/>
+								<CalculatedColumn
+									Formula="@Data.Quota~/1.5"
+									ID="MidThreshold"
+								/>
+							</DataLayer>
+							<GaugeRange
+								Color="Red"
+								RangeEndValue="@Data.LowThreshold~"
+							/>
+							<GaugeRange
+								Color="#ECD869"
+								RangeEndValue="@Data.MidThreshold~"
+							/>
+							<GaugeRange
+								Color="#85E77C"
+								RangeEndValue="@Data.Quota~"
+							/>
+						</Gauge>
+						<InputSelectList
+							Class="input-sm"
+							DefaultValue="@Request.EmployeeID~"
+							ID="EmployeeID"
+							OptionCaptionColumn="FullName"
+							OptionValueColumn="EmployeeID"
+							>
+							<DataLayer
+								ConnectionID="Northwind"
+								ID="SQLDataLayer3"
+								Source="Select Employees.EmployeeID,
+  Employees.LastName + &apos;, &apos; + Employees.FirstName as FullName
+From Employees
+Where Employees.Title = &apos;Sales Representative&apos;"
+								Type="SQL"
+							/>
+							<EventHandler
+								DhtmlEvent="onchange"
+								>
+								<Action
+									ElementID="gaugeTotalEmployeeSales"
+									ID="actRefresh"
+									Type="RefreshElement"
+								/>
+							</EventHandler>
+						</InputSelectList>
+					</Division>
+				</Division>
+				<Division
+					Class="cover"
+					HtmlDiv="True"
+					ID="InvoicesByRep"
+					>
+					<ChartCanvas
+						ChartCaption="Total Invoices by Employee"
+						ChartHeight="340"
+						ChartWidth="420"
+						ID="PieChartCanvas1"
+						>
+						<DataLayer
+							ConnectionID="Northwind"
+							ID="SQLDataLayer2"
+							Source="Select Invoices.Salesperson,
+  Count(Invoices.OrderID)
+From Invoices
+WHERE YEAR(Invoices.OrderDate) = &apos;@Request.Year~&apos;
+Group By Invoices.Salesperson"
+							Type="SQL"
+							>
+							<GroupFilter
+								DataType="Text"
+								GroupColumn="Salesperson"
+								KeepGroupedRows="False"
+								>
+								<GroupAggregateColumn
+									AggregateColumn="Column1"
+									AggregateFunction="SUM"
+									DataType="Number"
+									ID="rdGrAggr-Column1-sum"
+								/>
+							</GroupFilter>
+							<SortFilter
+								DataType="Number"
+								SortColumn="rdGrAggr-Column1-sum"
+								SortSequence="Descending"
+							/>
+							<RelevanceFilter
+								DataColumn="rdGrAggr-Column1-sum"
+								IrrelevanceLabel="Other"
+								LabelColumn="Salesperson"
+								RelevanceType="NumberOfRows"
+								RelevanceValue="0"
+							/>
+						</DataLayer>
+						<Series
+							ChartLabelColumn="Salesperson"
+							ChartYDataColumn="rdGrAggr-Column1-sum"
+							DonutHoleSize="40%"
+							LabelLocation="Legend"
+							ShowDataValues="True"
+							Type="Pie"
+							>
+							<Quicktip>
+								<QuicktipRow
+									Caption="Salesperson: "
+									Value="@Chart.Salesperson~"
+								/>
+								<QuicktipRow
+									Caption="Column1: "
+									Value="@Chart.rdGrAggr-Column1-sum~"
+								/>
+							</Quicktip>
+						</Series>
+						<ChartCanvasLegend/>
+					</ChartCanvas>
+				</Division>
+			</Division>
+		</Division>
+	</Body>
+	<ideTestParams
+		EmployeeID=""
+		Year=""
+	/>
+</Report>

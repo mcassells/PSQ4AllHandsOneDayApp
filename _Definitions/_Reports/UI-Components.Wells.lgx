@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Wells"
+	ID="UI-Components.Wells"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Panels"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<FieldsetBox
+			Caption="Wells"
+			ID="Wells"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="doc-link"
+				>
+				<IncludeHtml
+					Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#wells&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap well documentation&lt;/a&gt;"
+				/>
+				<Label
+					Caption="Inset a container for content.  The &lt;code&gt;.well&lt;/code&gt; class adds a rounded border around an element with a gray background color and some padding"
+					Class="lead text-info"
+					Format="HTML"
+					HtmlTag="P"
+				/>
+			</Division>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Division
+						Class="well well-lg"
+						HtmlDiv="True"
+						ID="Well-lg"
+						>
+						<Label
+							Caption="Large Well"
+							Class="text-center"
+							HtmlTag="h5"
+						/>
+						<Label
+							Caption="&lt;Division ID=&quot;Well-lg&quot; Class=&quot;well well-lg&quot;&gt;
+  &lt;Label Caption=&quot;Large Well&quot; Class=&quot;text-center&quot; HtmlTag=&quot;h5&quot; /&gt;
+&lt;/Division&gt;"
+							HtmlTag="pre"
+						/>
+					</Division>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Division
+						Class="well"
+						HtmlDiv="True"
+						ID="Well-md"
+						>
+						<Label
+							Caption="Medium Well"
+							Class="text-center"
+							HtmlTag="h5"
+						/>
+						<Label
+							Caption="&lt;Division ID=&quot;Well-md&quot; Class=&quot;well&quot;&gt;
+  &lt;Label Caption=&quot;Normal Well&quot; Class=&quot;text-center&quot; HtmlTag=&quot;h5&quot; /&gt;
+&lt;/Division&gt;"
+							HtmlTag="pre"
+						/>
+					</Division>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Division
+						Class="well well-sm"
+						HtmlDiv="True"
+						ID="Well-sm"
+						>
+						<Label
+							Caption="Small Well"
+							Class="text-center"
+							HtmlTag="h5"
+						/>
+						<Label
+							Caption="&lt;Division ID=&quot;Well-sm&quot; Class=&quot;well well-sm&quot;&gt;
+  &lt;Label Caption=&quot;Small Well&quot; Class=&quot;text-center&quot; HtmlTag=&quot;h5&quot; /&gt;
+&lt;/Division&gt;"
+							HtmlTag="pre"
+						/>
+					</Division>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+	</Body>
+</Report>

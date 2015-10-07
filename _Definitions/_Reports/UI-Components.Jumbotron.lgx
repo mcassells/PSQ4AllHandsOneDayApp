@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Jumbotron"
+	ID="UI-Components.Jumbotron"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Jumbotron"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<FieldsetBox
+			Caption="Jumbotron"
+			ID="fsbJumbotron"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="doc-link"
+				>
+				<IncludeHtml
+					Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#jumbotron&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap jumbotron documentation&lt;/a&gt;"
+				/>
+				<Label
+					Caption="Showcase key content by adding a jumbotron accross the entire viewport."
+					Class="lead text-info"
+					Format="HTML"
+					HtmlTag="P"
+				/>
+			</Division>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Division
+						Class="jumbotron"
+						HtmlDiv="True"
+						ID="divJumbotron"
+						>
+						<Label
+							Caption="Hello Logi!"
+							HtmlTag="H1"
+						/>
+						<Label
+							Caption="..."
+							HtmlTag="P"
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;jumbotron&quot; HtmlDiv=&quot;True&quot; ID=&quot;divJumbotron&quot;&gt;
+  &lt;Label Caption=&quot;Hello Logi!&quot; HtmlTag=&quot;H1&quot; /&gt;
+  &lt;Label Caption=&quot;...&quot; HtmlTag=&quot;P&quot; /&gt;
+&lt;/Division&gt;"
+						Class="pull-down"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+	</Body>
+</Report>

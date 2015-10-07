@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ID="goCustomizations.goWebFooter" SavedBy="FELIPE-SURFACE\fblanco" SavedAt="9/9/2014 10:39:28 AM" EngineVersion="8.2.26">
+  <SharedElement ID="sharedFooter">
+    <Remark>
+      <Division ID="divGoFooter" HtmlDiv="True" Class="go-footer" ShowModes="rdBrowser">
+        <Division ID="divGoFooterSpacer" Class="go-footer-spacer" HtmlDiv="True">
+          <Note Note="Remark this or use it for a thin bottom line" />
+        </Division>
+        <Division ID="divFooterContent" Class="ThemeContent" HtmlDiv="True">
+          <Note Note="Remark this or edit content in here" />
+          <Note Note="Add ThemeContent class to divFooterContent for margins" />
+          <Label Caption="© 2014 Logi Analytics" Format="HTML" />
+          <Remark>
+            <Label Caption=" | " Format="HTML" />
+          </Remark>
+          <Remark>
+            <Label Caption="Logout">
+              <Action Type="Exit" ID="actExit">
+                <Target Type="Link" ID="tgtSelf" Link="@Function.AppVirtualPath~" />
+              </Action>
+            </Label>
+          </Remark>
+        </Division>
+      </Division>
+    </Remark>
+  </SharedElement>
+  <ideTestParams />
+</Report>

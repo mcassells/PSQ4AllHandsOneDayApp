@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MobileReport
+	ID="Dashboard"
+	>
+	<Body>
+		<MobileDashboard
+			DashboardDefinitionFile="Dashboard"
+		/>
+	</Body>
+</MobileReport>

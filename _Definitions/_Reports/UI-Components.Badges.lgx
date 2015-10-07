@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Badges"
+	ID="UI-Components.Badges"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Badges"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<FieldsetBox
+			Caption="Label"
+			ID="fsbLabel"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="doc-link"
+				>
+				<IncludeHtml
+					Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#badges&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap badges documentation&lt;/a&gt;"
+				/>
+				<Label
+					Caption="Highlight text within controls, list items and more."
+					Class="lead text-info"
+					HtmlTag="P"
+				/>
+			</Division>
+			<LineBreak/>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Division
+						ID="btnLinkBadge"
+						>
+						<Label
+							Caption="Inbox"
+						/>
+						<Spaces/>
+						<Label
+							Caption="42"
+							Class="badge"
+						/>
+						<Action
+							ID="actJS"
+							Javascript="void(0)"
+							Type="Javascript"
+						/>
+					</Division>
+					<LineBreak
+						LineCount="2"
+					/>
+					<Label
+						Caption="&lt;Division ID=&quot;btnLinkBadge&quot;&gt;
+  &lt;Label Caption=&quot;Inbox&quot; /&gt;
+  &lt;Spaces /&gt;
+  &lt;Label Class=&quot;badge&quot; Caption=&quot;42&quot; /&gt;
+  &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;void(0)&quot; /&gt;
+&lt;/Division&gt;"
+						Class="pull-down"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Division
+						Class="btn btn-primary"
+						ID="btnLinkBadge"
+						>
+						<Label
+							Caption="Messages"
+						/>
+						<Spaces/>
+						<Label
+							Caption="4"
+							Class="badge"
+						/>
+						<Action
+							ID="actJS"
+							Javascript="void(0)"
+							Type="Javascript"
+						/>
+					</Division>
+					<LineBreak
+						LineCount="2"
+					/>
+					<Label
+						Caption="&lt;Division ID=&quot;btnLinkBadge&quot; Class=&quot;btn btn-primary&quot;&gt;
+  &lt;Label Caption=&quot;Messages&quot; /&gt;
+  &lt;Spaces /&gt;
+  &lt;Label Class=&quot;badge&quot; Caption=&quot;4&quot; /&gt;
+  &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;void(0)&quot; /&gt;
+&lt;/Division&gt;"
+						Class="pull-down"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+	</Body>
+</Report>

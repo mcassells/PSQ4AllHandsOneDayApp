@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Pagination"
+	ID="UI-Components.Pagination"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Pagination"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Division
+			Class="table-responsive"
+			>
+			<Label
+				Caption="The &lt;code&gt;.pagination&lt;/code&gt; class adds new style to the interactive paging element."
+				Class="lead text-info"
+				Format="HTML"
+				HtmlTag="P"
+			/>
+		</Division>
+		<Division
+			Class="table-responsive"
+			>
+			<DataTable
+				AjaxPaging="True"
+				AltRowClass="success"
+				Class="table"
+				ID="dtPagination"
+				SortArrows="True"
+				>
+				<DataLayer
+					ConnectionID="Northwind"
+					ID="SQLDataLayer1"
+					Source="Select Products.ProductID,
+  Products.ProductName,
+  Categories.CategoryName,
+  Categories.Description
+From Products
+  Inner Join Categories On Categories.CategoryID = Products.CategoryID"
+					Type="SQL"
+				/>
+				<DataTableColumn
+					Header="Product ID"
+					ID="colProductID"
+					>
+					<Label
+						Caption="@Data.ProductID~"
+						ID="lblProductID"
+					/>
+					<DataColumnSort
+						DataColumn="ProductID"
+					/>
+				</DataTableColumn>
+				<DataTableColumn
+					Header="Product Name"
+					ID="colProductName"
+					>
+					<Label
+						Caption="@Data.ProductName~"
+						ID="lblProductName"
+					/>
+					<DataColumnSort
+						DataColumn="ProductName"
+					/>
+				</DataTableColumn>
+				<DataTableColumn
+					Header="Category Name"
+					ID="colCategoryName"
+					>
+					<Label
+						Caption="@Data.CategoryName~"
+						ID="lblCategoryName"
+					/>
+					<DataColumnSort
+						DataColumn="CategoryName"
+					/>
+				</DataTableColumn>
+				<DataTableColumn
+					Header="Description"
+					ID="colDescription"
+					>
+					<Label
+						Caption="@Data.Description~"
+						ID="lblDescription"
+					/>
+					<DataColumnSort
+						DataColumn="Description"
+					/>
+				</DataTableColumn>
+				<InteractivePaging
+					CaptionType="Text"
+					Class="pagination"
+					HideShowPrevNextCaptions="True"
+					HideWhenOnePage="True"
+					Location="Both"
+					PageRowCount="10"
+					ShowPageNumber="Numbered"
+				/>
+			</DataTable>
+			<LineBreak/>
+			<Label
+				Caption="Add the &lt;code&gt;.pagination&lt;/code&gt; class to the interactive paging element."
+				Class="text-info"
+				Format="HTML"
+			/>
+			<Label
+				Caption="&lt;InteractivePaging PageRowCount=&quot;20&quot; ShowPageNumber=&quot;Numbered&quot; Location=&quot;Bottom&quot; HideShowPrevNextCaptions=&quot;True&quot; CaptionType=&quot;Text&quot; HideWhenOnePage=&quot;True&quot; Class=&quot;pagination&quot; /&gt;"
+				HtmlTag="pre"
+			/>
+		</Division>
+	</Body>
+	<ideTestParams/>
+</Report>

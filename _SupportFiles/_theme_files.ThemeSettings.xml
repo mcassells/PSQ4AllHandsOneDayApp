@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rdData>
+  <settings field="Body-bg" label="Body background color" type="textbox" value="" />
+  <settings field="Header-bg" label="Header background color" type="textbox" value="" />
+  <settings field="Sidebar-bg" label="Sidebar background color" type="textbox" value="" />
+  <settings field="Footer-bg" label="Footer background color" type="textbox" value="" />
+</rdData>

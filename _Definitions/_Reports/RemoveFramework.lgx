@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="No Framework"
+	Class="no-framework"
+	ID="RemoveFramework"
+	>
+	<Body>
+		<Label
+			Caption="Look! No framework."
+			Class="text-center"
+			HtmlTag="H1"
+		/>
+		<Label
+			Caption="Use the class &quot;no-framework&quot; on the report element to force the page to render without the framework elements. All scripts and styles included with the framework will still be available to this report."
+			Class="text-center"
+			HtmlTag="P"
+		/>
+	</Body>
+</Report>

@@ -1,0 +1,800 @@
+<TemplateModifier>
+	<!-- StyleSheets & CSS libs -->
+    <PrependChildElement XPath="/Report | /MobileReport">
+		<NewElement>
+			<StyleSheet StyleSheet="_SupportFiles/_theme_files.custom.css" />
+		</NewElement>
+    </PrependChildElement>
+
+    <PrependChildElement XPath="/Report | /MobileReport">
+		<NewElement>
+			<StyleSheet StyleSheet="_Themes/Accelerate/css/application.css" />
+		</NewElement>
+    </PrependChildElement>
+
+    <PrependChildElement XPath="/Report | /MobileReport">
+		<NewElement>
+			<StyleSheet StyleSheet="_Themes/Accelerate/css/iconpicker.min.css" />
+		</NewElement>
+    </PrependChildElement>
+	
+    <PrependChildElement XPath="/Report | /MobileReport">
+		<NewElement>
+			<StyleSheet StyleSheet="_Themes/Accelerate/css/colpick.css" />
+		</NewElement>
+    </PrependChildElement>
+	
+    <PrependChildElement XPath="/Report | /MobileReport">
+		<NewElement>
+			<StyleSheet StyleSheet="_Themes/Accelerate/css/bootstrap-datepicker.css" />
+		</NewElement>
+    </PrependChildElement>
+	
+    <PrependChildElement XPath="/Report | /MobileReport">
+		<NewElement>
+			<StyleSheet StyleSheet="_Themes/Accelerate/css/daterangepicker.css" />
+		</NewElement>
+    </PrependChildElement>
+	
+    <PrependChildElement XPath="/Report | /MobileReport">
+		<NewElement>
+			<StyleSheet StyleSheet="_Themes/Accelerate/css/smartmenus.css" />
+		</NewElement>
+    </PrependChildElement>		
+	
+    <PrependChildElement XPath="/Report | /MobileReport">
+		<NewElement>
+			<StyleSheet StyleSheet="_Themes/Accelerate/Theme.css" />
+		</NewElement>
+    </PrependChildElement>
+
+    <PrependChildElement XPath="/Report | /MobileReport">
+		<NewElement>
+			<StyleSheet StyleSheet="_Themes/Accelerate/font-awesome/css/font-awesome.min.css" />
+		</NewElement>
+    </PrependChildElement>	
+	
+    <PrependChildElement XPath="/Report | /MobileReport">
+		<NewElement>
+			<StyleSheet StyleSheet="_Themes/Accelerate/css/bootstrap.min.css" />
+		</NewElement>
+    </PrependChildElement>
+
+	<!--Framework Header-->
+	<PrependChildElement XPath="/Report[not(@Class='no-framework')] | /MobileReport[not(@Class='no-framework')]">
+		<NewElement>
+			<Division ID="Header" HtmlDiv="True" ShowModes="rdBrowser">
+			  <Division ID="Header-inner" HtmlDiv="True" Condition="&quot;@Request.rdForWizard~&quot;!=&quot;True&quot; &amp;&amp; &quot;@Session.Template_Header~&quot;==&quot;True&quot;">
+				<Division Class="navbar navbar-default navbar-fixed-top navbar-inverse" Condition="&quot;@Session.Template_Header~&quot;==&quot;True&quot;" HtmlDiv="True" ID="navigation" ShowModes="rdBrowser">
+				  <Division Class="container-fluid" HtmlDiv="True" ID="container">
+					<ConditionalClass Class="container-fluid" Condition="&quot;@Session.Template_LayoutStyle~&quot;==&quot;Fluid&quot;" ID="LayoutStyle-Fluid" />
+					<ConditionalClass Class="container" Condition="&quot;@Session.Template_LayoutStyle~&quot;==&quot;Boxed&quot;" ID="LayoutStyle-Boxed" />
+					<Division Class="navbar-header" HtmlDiv="True" ID="navbar-header">
+					  <Division ID="ShowSidebarToggle" Class="hidden-sm hidden-md hidden-lg">
+						<ConditionalClass Condition="&quot;@Session.Template_Sidebar~&quot;==&quot;True&quot; &amp;&amp; &quot;@Session.Template_SidebarCollapse~&quot;!=&quot;&quot; &amp;&amp; &quot;@Session.Template_SidebarCollapse~&quot;==&quot;True&quot;" ID="ShowToggleButton" Class="visible" />
+						<ConditionalClass Class="hidden-sm hidden-md hidden-lg" Condition="&quot;@Session.Template_Sidebar~&quot;==&quot;&quot; OR &quot;@Session.Template_SidebarCollapse~&quot;==&quot;&quot;" ID="HideToggleButton" />
+						<Division>
+						  <ConditionalClass Class="no-sidebar" Condition="&quot;@Session.Template_Sidebar~&quot;==&quot;&quot;" ID="HideToggleButton-NoSidebar" />
+						  <IncludeHtml Html="&lt;button type=&quot;button&quot; class=&quot;sidebar-toggle navbar-toggle&quot; onclick=&quot;ToggleMenu()&quot;&gt;&#xD;&#xA;	&lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;&#xD;&#xA;	&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;&#xD;&#xA;	&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;&#xD;&#xA;	&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;&#xD;&#xA;&lt;/button&gt;" ID="sidebar-toggle" NoWrap="True" />
+						</Division>
+					  </Division>
+					  <Division Class="navbar-brand" HtmlDiv="True" ID="navbar-brand">
+						<ConditionalClass Condition="&quot;@Session.Template_HeaderBranding~&quot;==&quot;&quot;" Class="navbar-brand hidden-lg hidden-md hidden-sm visible-xs" />
+						<Image Caption="_theme_files.logo.png?a=" Class="main-logo" ID="logo" />
+					  </Division>
+					  <Division Class="navbar-brand navbar-brand-txt" HtmlDiv="True" ID="navbar-brand">
+						<Division ID="title" Condition="&quot;@Session.Template_HeaderApplicationTitle~&quot;==&quot;True&quot;&amp;&amp;&quot;@Session.Template_ApplicationTitle~&quot;&lt;&gt;&quot;&quot;">
+						  <Label Caption="@Session.Template_ApplicationTitle~" />
+						</Division>
+						<Division ID="caption" Condition="&quot;@Session.Template_HeaderApplicationCaption~&quot;==&quot;True&quot;&amp;&amp;&quot;@Session.Template_ApplicationCaption~&quot;&lt;&gt;&quot;&quot;">
+						  <Label Caption="@Session.Template_ApplicationCaption~" />
+						</Division>
+					  </Division>
+					  <IncludeHtml Html="&lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar-collapse&quot;&gt;&lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/button&gt;" ID="show-top-menu" />
+					</Division>
+					<Division Class="navbar-collapse collapse" HtmlDiv="True" ID="navbar-collapse">
+					  <DataList ID="BuildActiveJMenuHeader" Class="nav navbar-nav navbar-right" IdeDisplayStatus="Collapsed">
+						<DataLayer ID="dlActiveMenuRetrievalHeader" RemoveNamespace="True" Type="XMLFile" XMLFile="@Function.AppPhysicalPath~/_SupportFiles/_theme_files.Menu.xml" XPath="rdData/Menu">
+						  <CalculatedColumn Formula="decodeURI(&quot;@Data.active~&quot;)" ID="MenuOutput" />
+						  <RemoveColumns ColumnNames="active,inactive" ID="RemoveEncoded" />
+						  <IfDataError ID="NoActiveMenu">
+							<DataLayer ID="dlEmptyActiveJMenuOutputHeader" Type="Static">
+							  <StaticDataRow MenuOutput="" />
+							</DataLayer>
+						  </IfDataError>
+						  <ConditionFilter Condition="&quot;@Session.Template_MenuLocation~&quot;==&quot;Header&quot; || &quot;@Session.Template_MenuLocation~&quot;==&quot;Both&quot;" />
+						</DataLayer>
+						<ListItem>
+						  <IncludeHtml Html="@Data.MenuOutput~" />
+						</ListItem>
+					  </DataList>
+					  <IncludeHtml Html="&lt;UL class=&quot;nav navbar-nav navbar-right&quot;&gt;&#xD;&#xA;	&lt;LI&gt;&lt;A href=&quot;rdPage.aspx?rdLogoffRedirect=rdPage.aspx&quot;&gt;Logout &lt;I class=&quot;fa fa-sign-out&quot;&gt;&lt;/I&gt;&lt;/A&gt;&lt;/LI&gt;&#xD;&#xA;&lt;/UL&gt;" ID="logout-menu" />
+					  <Division ID="HeaderAdminMenu" HtmlDiv="False" Condition="&quot;@Session.Template_AdminMenuLocation~&quot;==&quot;Header&quot; || &quot;@Session.Template_AdminMenuLocation~&quot;==&quot;Both&quot;"><IncludeHtml Html="&lt;UL class=&quot;nav navbar-nav navbar-right&quot;&gt;&#xD;&#xA;	&lt;LI class=&quot;dropdown srid-Admin&quot;&gt;&#xD;&#xA;		&lt;A href=&quot;javascript:void(0)&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Settings &lt;I class=&quot;fa fa-cogs&quot;&gt;&lt;/I&gt;&lt;/A&gt;&#xD;&#xA;		&lt;UL class=&quot;dropdown-menu&quot;&gt;&#xD;&#xA;			&lt;LI&gt;&lt;A href=&quot;rdPage.aspx?rdReport=_Layout._Config.Theme-Settings&quot;&gt;Theme Colors&lt;/A&gt;&lt;/LI&gt;&#xD;&#xA;			&lt;LI&gt;&lt;A href=&quot;rdPage.aspx?rdReport=_Layout._Config.Menu-Administration&quot;&gt;Menu Admin&lt;/A&gt;&lt;/LI&gt;&#xD;&#xA;			&lt;LI&gt;&lt;A href=&quot;rdPage.aspx?rdReport=_Layout._Config.Template-Config&quot;&gt;Template Config&lt;/A&gt;&lt;/LI&gt;&#xD;&#xA;		&lt;/UL&gt;&#xD;&#xA;	&lt;/LI&gt;&#xD;&#xA;&lt;/UL&gt;" ID="user-menu" /></Division>
+					</Division>
+				  </Division>
+				</Division>
+			  </Division>
+			</Division>
+		</NewElement>
+    </PrependChildElement>		
+	
+	<PrependChildElement XPath="/Report | /MobileReport">
+		<NewElement>
+			<Division ID="JS" ShowModes="rdBrowser">
+			</Division>
+		</NewElement>
+    </PrependChildElement>
+	
+	<!-- Javascript Includes -->
+    <AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/jquery.min.js" />
+		</NewElement>
+    </AppendChildElement>
+	
+    <AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/jquery-ui.min.js" />
+		</NewElement>
+    </AppendChildElement>
+
+    <AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/bootstrap.min.js" />
+		</NewElement>
+    </AppendChildElement>
+	
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/sortable.min.js" />
+		</NewElement>
+    </AppendChildElement>	
+
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/bootstrap-datepicker.js" />
+		</NewElement>
+    </AppendChildElement>
+	
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/moment.min.js" />
+		</NewElement>
+    </AppendChildElement>	
+	
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/daterangepicker.js" />
+		</NewElement>
+    </AppendChildElement>
+	
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/colpick.js" />
+		</NewElement>
+    </AppendChildElement>
+
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/iconpicker-fontawesome-4.2.0.min.js" />
+		</NewElement>
+    </AppendChildElement>
+
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/iconpicker.min.js" />
+		</NewElement>
+    </AppendChildElement>	
+	
+	<!--Start: Jquery Coverflow-->
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/jquery.coverflow.js" />
+		</NewElement>
+    </AppendChildElement>
+	
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/jquery.interpolate.js" />
+		</NewElement>
+    </AppendChildElement>
+
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/jquery.mousewheel.js" />
+		</NewElement>
+    </AppendChildElement>
+	
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/jquery.touchSwipe.min.js" />
+		</NewElement>
+    </AppendChildElement>
+	
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/reflection.js" />
+		</NewElement>
+    </AppendChildElement>
+	<!--End: Jquery Coverflow-->
+
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/application.js" />
+		</NewElement>
+    </AppendChildElement>	
+	
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/smartmenus.min.js" />
+		</NewElement>
+    </AppendChildElement>		
+	
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScriptFile IncludedScriptFile="../_Themes/Accelerate/js/smartmenus.bootstrap.min.js" />
+		</NewElement>
+    </AppendChildElement>
+
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>
+			<IncludeScript ID="No-Header" IncludedScript="(&quot;@Session.Template_Header~&quot;==&quot;&quot; || &quot;@Request.rdForWizard~&quot;==&quot;True&quot;)?$(&quot;body&quot;).addClass(&quot;no-Header&quot;):null;" />
+		</NewElement>
+    </AppendChildElement>		
+	
+	<AppendChildElement XPath="/Report/Division[@ID='JS'] | /MobileReport/Division[@ID='JS']">
+		<NewElement>	
+			<IncludeScript IncludedScript="$(function(){&#xD;&#xA;	var roles = &quot;@Function.UserRoles~&quot;.split(&quot;,&quot;);&#xD;&#xA;	if(roles.indexOf(&quot;Admin&quot;)==-1){&#xD;&#xA;		$(&quot;.srid-Admin&quot;).remove();&#xD;&#xA;	}&#xD;&#xA;});" ID="srid-Admin" />
+		</NewElement>
+    </AppendChildElement>
+	
+	<!-- Framework Build-out -->
+	<PrependChildElement XPath="/Report[not(@Class='no-framework')] | /MobileReport[not(@Class='no-framework')]">
+		<NewElement>
+			<Division ID="divScrollToTop" HtmlDiv="True">
+				<Label Caption=" " Class="fa fa-chevron-circle-up" ID="ScrollToTop" />
+			</Division>	
+		</NewElement>
+    </PrependChildElement>	
+	
+	<PrependChildElement XPath="/Report[not(@Class='no-framework')] | /MobileReport[not(@Class='no-framework')]">
+		<NewElement>
+			<Division ID="Content-Overlay" Class="Content-Overlay" HtmlDiv="True" Condition="&quot;@Constant.Layout_UseContentOverlay~&quot;==&quot;True&quot;" />	
+		</NewElement>
+    </PrependChildElement>
+
+	<PrependChildElement XPath="/Report[not(@Class='no-framework')] | /MobileReport[not(@Class='no-framework')]">
+		<NewElement>
+            <IncludeHtml Html="&lt;LINK rel=&quot;shortcut icon&quot; href=&quot;_SupportFiles/favicon.ico&quot; /&gt;&#xD;&#xA;&lt;META http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;&#xD;&#xA;&lt;META name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;&#xD;&#xA;&lt;style type=&quot;text/css&quot;&gt;&#xD;&#xA;	Body{&#xD;&#xA;		background: @Session.Body-bg~;&#xD;&#xA;	}&#xD;&#xA;	&#xD;&#xA;	#navigation{&#xD;&#xA;		background: @Session.Header-bg~;&#xD;&#xA;	}&#xD;&#xA;	&#xD;&#xA;	#Sidebar{&#xD;&#xA;		background: @Session.Sidebar-bg~;&#xD;&#xA;	}&#xD;&#xA;	&#xD;&#xA;	#FooterWrap #Footer{&#xD;&#xA;		background: @Session.Footer-bg~;&#xD;&#xA;	}&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&lt;!--[if lt IE 9]&gt;&#xD;&#xA;	&lt;SCRIPT src=&quot;_Themes/Accelerate/js/html5shiv.js&quot;&gt;&lt;/SCRIPT&gt;&#xD;&#xA;	&lt;SCRIPT src=&quot;_Themes/Accelerate/js/respond.min.js&quot;&gt;&lt;/SCRIPT&gt;&#xD;&#xA;&lt;![endif]--&gt;" />
+		</NewElement>
+    </PrependChildElement>	
+	
+	<PrependChildElement XPath="/Report[not(@Class='no-framework')] | /MobileReport[not(@Class='no-framework')]">
+		<NewElement>
+			<Division ID="Sidebar" HtmlDiv="True" Condition="&quot;@Request.rdForWizard~&quot;==&quot;&quot;" ShowModes="rdBrowser">
+			  <ConditionalClass Condition="&quot;@Session.Template_Sidebar~&quot;==&quot;True&quot; &amp;&amp; &quot;@Session.Template_SidebarCollapse~&quot;==&quot;True&quot; &amp;&amp; &quot;@Session.Template_SidebarStateAtStart~&quot;==&quot;Closed&quot;" Class="Closed" ID="Closed" />
+			  <ConditionalClass Condition="&quot;@Session.Template_Sidebar~&quot;==&quot;True&quot; &amp;&amp; &quot;@Session.Template_SidebarStateAtStart~&quot;==&quot;Open&quot; &amp;&amp; &quot;@Session.Template_SidebarCollapse~&quot;==&quot;True&quot;" Class="Open" ID="Open" />
+			  <ConditionalClass Condition="&quot;@Session.Template_Sidebar~&quot;==&quot;True&quot; &amp;&amp; &quot;@Session.Template_SidebarCollapse~&quot;&lt;&gt;&quot;True&quot;" Class="StaticOpen" ID="StaticOpen" />
+			  <Division Class="text-center" HtmlDiv="True" ID="logo-container">
+				<Division ID="branding" Condition="&quot;@Session.Template_SidebarBranding~&quot;==&quot;True&quot;">
+				  <Image Caption="_theme_files.logo.png?a=" Class="sidebar-logo" ID="logo" />
+				</Division>
+				<Division ID="title" Condition="&quot;@Session.Template_SidebarApplicationTitle~&quot;==&quot;True&quot;&amp;&amp;&quot;@Session.Template_ApplicationTitle~&quot;&lt;&gt;&quot;&quot;">
+				  <Label Caption="@Session.Template_ApplicationTitle~" />
+				</Division>
+				<Division ID="caption" Condition="&quot;@Session.Template_SidebarApplicationCaption~&quot;==&quot;True&quot;&amp;&amp;&quot;@Session.Template_ApplicationCaption~&quot;&lt;&gt;&quot;&quot;">
+				  <Label Caption="@Session.Template_ApplicationCaption~" />
+				</Division>
+			  </Division>
+			  <Division ID="JMenu2" ShowModes="None" HtmlDiv="True" Condition="&quot;@Request.Export~&quot;==&quot;&quot;">
+				<DataList ID="BuildActiveJMenu">
+				  <DataLayer Type="XMLFile" ID="dlActiveMenuRetrieval" XMLFile="@Function.AppPhysicalPath~/_SupportFiles/_theme_files.Menu.xml" XPath="rdData/Menu" RemoveNamespace="True">
+					<CalculatedColumn Formula="decodeURI(&quot;@Data.active~&quot;)" ID="MenuOutput" />
+					<RemoveColumns ColumnNames="active,inactive" ID="RemoveEncoded" />
+					<IfDataError ID="NoActiveMenu">
+					  <DataLayer Type="Static" ID="dlEmptyActiveJMenuOutput">
+						<StaticDataRow MenuOutput="" />
+					  </DataLayer>
+					</IfDataError>
+					<ConditionFilter Condition="&quot;@Session.Template_MenuLocation~&quot;==&quot;Sidebar&quot; || &quot;@Session.Template_MenuLocation~&quot;==&quot;Both&quot;" ID="SidebarMenuLocation" />
+				  </DataLayer>
+				  <ListItem>
+					<IncludeHtml Html="@Data.MenuOutput~" />
+				  </ListItem>
+				</DataList>
+				<Division HtmlDiv="True" ID="AdminMenu" Condition="&quot;@Session.Template_AdminMenuLocation~&quot;==&quot;Sidebar&quot; || &quot;@Session.Template_AdminMenuLocation~&quot;==&quot;Both&quot;" Class="srid-Admin"><IncludeHtml Html="&lt;ul id=&quot;ActiveMenuItems&quot; class=&quot;MenuBuilder&quot;&gt;&#xD;&#xA;    &lt;li class=&quot;AdminMenu&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot; class=&quot;report-caption&quot;&gt;&lt;i class=&quot;fa fa-cogs fa-fw&quot;&gt;&lt;/i&gt; Settings&lt;/a&gt;&#xD;&#xA;		&lt;ul&gt;&#xD;&#xA;			&lt;li class=&quot;LayoutConfigThemeSettings&quot;&gt;&lt;a href=&quot;rdPage.aspx?rdReport=_Layout._Config.Theme-Settings&quot; class=&quot;report-caption&quot;&gt;&lt;i class=&quot;fa empty fa-fw&quot;&gt;&lt;/i&gt;Theme Colors&lt;/a&gt; &lt;/li&gt;&#xD;&#xA;			&lt;li class=&quot;LayoutConfigMenuAdministration&quot;&gt;&lt;a href=&quot;rdPage.aspx?rdReport=_Layout._Config.Menu-Administration&quot; class=&quot;report-caption&quot;&gt;&lt;i class=&quot;fa empty fa-fw&quot;&gt;&lt;/i&gt;Menu Admin&lt;/a&gt; &lt;/li&gt;&#xD;&#xA;			&lt;li class=&quot;LayoutConfigTemplateConfig&quot;&gt;&lt;a href=&quot;rdPage.aspx?rdReport=_Layout._Config.Template-Config&quot; class=&quot;report-caption&quot;&gt;&lt;i class=&quot;fa empty fa-fw&quot;&gt;&lt;/i&gt;Template Config&lt;/a&gt; &lt;/li&gt;&#xD;&#xA;		&lt;/ul&gt;&#xD;&#xA;	&lt;/li&gt;&#xD;&#xA;&lt;/ul&gt;" /></Division>
+				</Division>
+			</Division>
+		</NewElement>
+    </PrependChildElement>
+	
+	<AppendChildElement XPath="/Report[not(@Class='no-framework')] | /MobileReport[not(@Class='no-framework')]">
+		<NewElement>	
+            <Division ID="FooterWrap" HtmlDiv="True" ShowModes="rdBrowser">
+				<Division ID="Footer" Condition="&quot;@Request.rdForWizard~&quot;==&quot;&quot;&amp;&amp;&quot;@Session.Template_Footer~&quot;==&quot;True&quot;" HtmlDiv="True" ShowModes="rdBrowser">
+					<Label Caption="@Session.Template_FooterContent~" Format="HTML" />
+				</Division>
+			</Division>
+		</NewElement>
+    </AppendChildElement>
+
+	<AppendChildElement XPath="/Report[not(@Class='no-framework')] | /MobileReport[not(@Class='no-framework')]">
+		<NewElement>	
+			<ConditionalClass Class="container LayoutStyleBoxed" Condition="&quot;@Session.Template_LayoutStyle~&quot;==&quot;Boxed&quot;" />
+		</NewElement>
+    </AppendChildElement>
+	
+	<!-- Start element customizations 
+	############################################# -->
+
+	<!-- This causes the dashboard to stop working... -->
+	<!--<SetAttributeWhenEmpty XPath=".//Division" HtmlDiv="True" />-->
+	
+	<SetAttribute XPath=".//IncludeHtml" NoWrap="True" />
+	<SetAttribute XPath=".//Label" NoWrap="True" />
+	
+	<PrependChildElement XPath=".//DataList[@ID='top-nav']">
+		<NewElement>
+            <DataLayer ID="emptyDL" Type="Static">
+				<StaticDataRow blank="" />
+			</DataLayer>
+		</NewElement>
+    </PrependChildElement>
+	
+	<!-- WaitPage -->
+	<SetAttributeWhenEmpty XPath=".//WaitPage" Class="rdThemeWaitPanel" CaptionClass="rdThemeWaitCaption" StyleSheet="_Themes/Accelerate/Theme.css" />
+
+	<!-- Tabs -->
+	<SetAttributeWhenEmpty XPath=".//Tabs" BorderColor="Transparent" ActiveTabBackgroundColor="Transparent" InactiveTabBackgroundColor="Transparent" />
+	<SetAttribute XPath="//Tabs[@ID='rdDashboardTabs']" ActiveTabBackgroundColor="Transparent" />
+
+	<!-- DataTable -->
+	<SetAttributeWhenEmpty XPath=".//DataTable" CellSpacing="0" Class="table table-hover"  />
+	<SetAttributeWhenEmpty XPath="/Report[@ID!='OlapGrid.rdOgTemplate' and @ID!='OlapGrid.rdDgTemplate' and @ID!='ChartGrid.rdCgTemplate' and @ID!='TrellisChart.rdTcTemplate']//DataTable" AltRowClass="ThemeAlternatingRow" />
+	<SetAttributeWithInsert XPath=".//DataTable[not(ancestor::Report[@ID='AnalysisGrid.rdAgTemplate']) and not(@rdAnalysisGrid='True')]" Class="rdThemeDataTable" ColumnHeaderClass="rdThemeDataTableHeader" CaptionClass="rdThemeDataTableMainHeader" />
+	<SetAttributeWithInsert XPath=".//DataTable/DataTableColumn | DataTableColumn" Class="rdThemeDataTableCell" />
+	<SetAttributeWithInsert XPath=".//DataTable/HeaderRow" Class="rdThemeDataTableHeaderRow" />
+	<SetAttributeWithInsert XPath=".//DataTable/SummaryRow" Class="rdThemeDataTableSummaryRow" />
+	<CycleAttributeValues XPath=".//DataTable" CycleOnChildElement="GroupHeaderRow">
+		<CycleValue Class="rdThemeDataTableGroupHeaderRow0" />
+		<CycleValue Class="rdThemeDataTableGroupHeaderRow1" />
+		<CycleValue Class="rdThemeDataTableGroupHeaderRow2" />
+		<CycleValue Class="rdThemeDataTableGroupHeaderRow3" />
+		<CycleValue Class="rdThemeDataTableGroupHeaderRow4" />
+	</CycleAttributeValues>
+	<SetAttributeWithInsert XPath=".//DataTable/GroupSummaryRow" Class="rdThemeDataTableGroupSummaryRow" />
+	<SetAttributeWithInsert XPath=".//DataTable/MoreInfoRow" Class="rdThemeDataTableMoreInfoRow" />
+
+	<!-- SubDataTable -->
+	<SetAttributeWhenEmpty XPath=".//SubDataTable" CellSpacing="0" />
+	<SetAttributeWithInsert XPath=".//SubDataTable" Class="rdThemeSubDataTable" />
+	<SetAttributeWithInsert XPath=".//SubDataTable/DataTableColumn" Class="rdThemeSubDataTableDataTableCell" />
+	<SetAttributeWithInsert XPath=".//SubDataTable/HeaderRow" Class="rdThemeSubDataTableHeaderRow" />
+	<SetAttributeWithInsert XPath=".//SubDataTable/SummaryRow" Class="rdThemeSubDataTableSummaryRow" />
+	<SetAttributeWithInsert XPath=".//SubDataTable/GroupHeaderRow" Class="rdThemeSubDataTableGroupHeaderRow" />
+	<SetAttributeWithInsert XPath=".//SubDataTable/GroupSummaryRow" Class="rdThemeSubDataTableGroupSummaryRow" />
+	<SetAttributeWithInsert XPath=".//SubDataTable/MoreInfoRow" Class="rdThemeSubDataTableMoreInfoRow" />
+
+	 <!-- Paging -->
+	<SetAttributeWithInsert XPath=".//InteractivePaging" Class="rdThemePaging" CurrentPageClass="rdThemePagingCurrent" />
+	<SetAttribute XPath=".//AnalysisGrid" CurrentPageClass="rdThemePagingCurrent" />
+
+	<SetAttribute XPath=".//InteractivePaging[@CaptionType='Image']" FirstPageCaption="_Themes/Accelerate/images/rdPageFirstDark.png" PreviousPageCaption="_Themes/Accelerate/images/rdPagePreviousDark.png" NextPageCaption="_Themes/Accelerate/images/rdPageNextDark.png" LastPageCaption="_Themes/Accelerate/images/rdPageLastDark.png" />
+	<SetAttribute XPath=".//InteractivePaging[@CaptionType='Image' and @FirstPageCaption='page_first_en.png' ]" FirstPageCaption="_Themes/Accelerate/images/rdPageFirstDark.png" />
+	<SetAttribute XPath=".//InteractivePaging[@CaptionType='Image' and @PreviousPageCaption='page_prev_en.png']" PreviousPageCaption="_Themes/Accelerate/images/rdPagePreviousDark.png" />
+	<SetAttribute XPath=".//InteractivePaging[@CaptionType='Image' and @NextPageCaption='page_next_en.png']" NextPageCaption="_Themes/Accelerate/images/rdPageNextDark.png" />
+	<SetAttribute XPath=".//InteractivePaging[@CaptionType='Image' and @LastPageCaption='page_last_en.png']" LastPageCaption="_Themes/Accelerate/images/rdPageLastDark.png" />
+	<!-- for AG Paging only -->
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//InteractivePaging[@CaptionType='Image']" FirstPageCaption="_Themes/Accelerate/images/rdPageFirst.png" PreviousPageCaption="_Themes/Accelerate/images/rdPagePrevious.png" NextPageCaption="_Themes/Accelerate/images/rdPageNext.png" LastPageCaption="_Themes/Accelerate/images/rdPageLast.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//InteractivePaging[@CaptionType='Image' and @FirstPageCaption='page_first_en.png' ]" FirstPageCaption="_Themes/Accelerate/images/rdPageFirst.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//InteractivePaging[@CaptionType='Image' and @PreviousPageCaption='page_prev_en.png']" PreviousPageCaption="_Themes/Accelerate/images/rdPagePrevious.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//InteractivePaging[@CaptionType='Image' and @NextPageCaption='page_next_en.png']" NextPageCaption="_Themes/Accelerate/images/rdPageNext.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//InteractivePaging[@CaptionType='Image' and @LastPageCaption='page_last_en.png']" LastPageCaption="_Themes/Accelerate/images/rdPageLast.png" />
+
+	<SetAttributeWithInsert XPath=".//AppendPaging" Class="ThemeLinkButton" />
+
+	<!-- CrossTabTable -->
+	<SetAttributeWhenEmpty XPath=".//CrosstabTable" CellSpacing="0" AltRowClass="ThemeAlternatingRow" />
+	<SetAttributeWithInsert XPath=".//CrosstabTable[not(ancestor::Report[@ID='AnalysisGrid.rdAgTemplate']) and not(@rdAnalysisGrid='True')]" Class="rdThemeDataTable" ColumnHeaderClass="rdThemeDataTableHeader" />
+	<SetAttributeWithInsert XPath=".//CrosstabTableLabelColumn" Class="rdThemeDataTableCell" />
+	<SetAttributeWithInsert XPath=".//CrosstabTableValueColumns" Class="rdThemeDataTableCell ThemeAlignRight" />
+	<SetAttributeWithInsert XPath=".//CrosstabTable/HeaderRow" Class="rdThemeDataTableHeaderRow" />
+	<SetAttributeWithInsert XPath=".//CrosstabTable/SummaryRow" Class="rdThemeDataTableSummaryRow" />
+
+	<!-- Analysis, OLAP Grid -->
+	<SetAttributeWithInsert XPath=".//AnalysisGrid/AnalysisGridColumn | AnalysisGridColumn" Class="rdThemeDataTableCell" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//DataTable" AltRowClass="" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//CrosstabTable | /Report[@ID='AnalysisGrid.rdAgTemplate']//Rows[@Class='rdAgPanel']" CellSpacing="0" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//DataTable[@ID='dtAnalysisGrid']" CellSpacing="0" AltRowClass="ThemeAlternatingRow" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//DataTable[@ID='dtLayout' or @ID='dtGroups' or @ID='dtOrders' or @ID='dtAggrs' or @ID='dtCharts' or @ID='dtCrosstabs' or @ID='dtCalcColumns' or @ID='dtFilters']" Class="rdRemoveTableStyle" />
+	<SetAttribute XPath="/Report[@ID='OlapGrid.rdOgTemplate']//DataTableColumn[@ID='colPickedFilters'] | /Report[@ID='OlapGrid.rdOgTemplate' or @ID='OlapGrid.rdDgTemplate' or @ID='ChartGrid.rdCgTemplate']//DataTable[@ID='dtPickedFilters' or @ID='dtCalcMeasures' or @ID='mclDimensions' or @ID='mclMeasures' or @ID='mclFilters'or @ID='dtGridYAxis' or @ID='dtGridXAxis' or @ID='dtGridColumns' or @ID='dtGridRows' or @ID='dtGridFilter'] | /Report[@ID='OlapGrid.rdOgTemplate']//OlapTable[@ID='otFilterTable']" Class="rdRemoveTableStyle" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Chart" BackgroundColor="#d2e9ff" OuterBorderColor="#90909c" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate' or @ID='OlapGrid.rdOgTemplate' or @ID='OlapGrid.rdDgTemplate' or @ID='TrellisChart.rdTcTemplate' or @ID='AnalysisChart.rdAcTemplate']//Chart" BackgroundColor="#ffffff" Transparency="" ChartTexture="" BarShading="" RoundedBorder="0" BorderColor="Transparent" OuterBorderColor="Transparent" GridHorizontalColor="#e6e6e6" ChartBackgroundColor="#ffffff" ChartBackgroundGradientColor="" AreaGradientColor="" LineWidth="3" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate' or @ID='OlapGrid.rdOgTemplate' or @ID='OlapGrid.rdDgTemplate' or @ID='TrellisChart.rdTcTemplate' or @ID='AnalysisChart.rdAcTemplate']//Chart/FontChartTitle" FontFilename="Lato" FontColor="#424242" FontSize="18" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate' or @ID='OlapGrid.rdOgTemplate' or @ID='OlapGrid.rdDgTemplate' or @ID='TrellisChart.rdTcTemplate' or @ID='AnalysisChart.rdAcTemplate']//Chart/FontLabel" FontFilename="Lato" FontColor="#424242" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate' or @ID='OlapGrid.rdOgTemplate' or @ID='OlapGrid.rdDgTemplate' or @ID='TrellisChart.rdTcTemplate' or @ID='AnalysisChart.rdAcTemplate']//Chart/HeatmapFontTitle" FontFilename="Lato" FontBold="False" FontColor="#464646" FontSize="18" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate' or @ID='OlapGrid.rdOgTemplate' or @ID='OlapGrid.rdDgTemplate' or @ID='AnalysisChart.rdAcTemplate']//Chart[@XYChartType='Area']" Transparency="7" ChartSymbolEdgeColor="Transparent" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate' or @ID='OlapGrid.rdOgTemplate' or @ID='OlapGrid.rdDgTemplate' or @ID='AnalysisChart.rdAcTemplate']//Chart[@XYChartType='Bar']" D3="" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate' or @ID='OlapGrid.rdOgTemplate' or @ID='OlapGrid.rdDgTemplate' or @ID='AnalysisChart.rdAcTemplate']//Chart[@Type='Pie']" D3Angle="" D3="" LabelShading="" WedgeBorderColor="#ffffff" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate' or @ID='OlapGrid.rdOgTemplate' or @ID='OlapGrid.rdDgTemplate' or @ID='TrellisChart.rdTcTemplate' or @ID='AnalysisChart.rdAcTemplate']//Chart[@Type='Scatter']" BorderColor="#cccccc" ChartBackgroundColor="#ffffff" ChartSymbol="SymbolCircle" ChartSymbolEdgeColor="#45d2f0" ChartSymbolFillColor="#72C8C1" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate' or @ID='OlapGrid.rdOgTemplate' or @ID='OlapGrid.rdDgTemplate' or @ID='TrellisChart.rdTcTemplate' or @ID='AnalysisChart.rdAcTemplate']//ChartTrendLine" LineWidth="3" Color="#01273C" />
+	<SetAttribute XPath="/Report[@ID='TrellisChart.rdTcTemplate']//Chart[@Type='Scatter']" ChartSymbolSize="5" />
+	<SetAttribute XPath="/Report[@ID='TrellisChart.rdTcTemplate']//Chart[@Type='XY']" LineWidth="2" D3="0" />
+	<UpdateOrAppendChildElement XPath="/Report[@ID='OlapGrid.rdDgTemplate' or @ID='TrellisChart.rdTcTemplate' or @ID='OlapGrid.rdOgTemplate']//Chart[@Type='XY']">
+		<NewElement>
+			<DimensionGridChartPanel Colors="#86CAC3, #DCD440, #01273C, #B84026, #85B74D, #363B42, #A5D9D4, #454D59, #DEDD79, #664581, #A23657, #AFCA85" />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<UpdateOrAppendChildElement XPath="/Report[@ID='TrellisChart.rdTcTemplate']//Chart[@Type='XY' or @Type='Scatter']">
+		<NewElement>
+			<FontLabel FontSize="8" />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<UpdateOrAppendChildElement XPath="/Report[@ID='TrellisChart.rdTcTemplate']//Chart[@Type='XY' or @Type='Scatter']">
+		<NewElement>
+			<FontData FontSize="8" />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+
+	<!-- OlapTable-->
+	<SetAttributeWhenEmpty XPath=".//OlapTable" CellSpacing="1" />
+	<SetAttributeWithInsert XPath=".//OlapTable" Class="rdThemeDataTable" ColumnHeaderClass="rdThemeDataTableHeader" CaptionClass="rdThemeDataTableMainHeader" />
+	<SetAttributeWithInsert XPath=".//OlapTable/DataTableColumn | DataTableColumn" Class="rdThemeDataTableCell" />
+
+	<!-- PopupMenu -->
+	<SetAttributeWithInsert XPath=".//Action[@Type='Popup']" Class="rdThemePopupMenu" />
+
+	<!-- Legend -->
+	<SetAttributeWhenEmpty XPath=".//Legend" BorderColor="Transparent" />
+	<UpdateOrAppendChildElement XPath=".//Legend">
+		<NewElement>
+			<FontLegend FontFilename="Lato" FontColor="#3B4247" FontSize="11" />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+
+	<!-- BallonBar -->
+	<SetAttributeWhenEmpty XPath=".//Gauge[@Type='BalloonBar']" FontName="Lato" BalloonLabelFontName="Lato" TickLabelFontName="Lato" FontSize="18" FontBold="True" BackgroundColor="#ffffff" CaptionColor="#3B4247" BalloonLabelColor="#3B4247" TickColor="#3B4247" BalloonColor="#ffffff" BarBorderColor="Transparent" TickLabelFontSize="11" BalloonBorderColor="#3B4247" />
+	<CycleAttributeValues XPath=".//Gauge[@Type='BalloonBar']" CycleOnChildElement="GaugeRange">
+		<CycleValue Color="#C64533" />
+		<CycleValue Color="#c0c0c0" />
+		<CycleValue Color="#7FB15E" />
+	</CycleAttributeValues>
+
+	<!-- BulletBar -->
+	<SetAttributeWhenEmpty XPath=".//Gauge[@Type='BulletBar']" BackgroundColor="Transparent" BulletColor="#5e5e5e" BarBorderColor="Transparent" CaptionColor="#333333" FontSize="18" FontBold="True" TickColor="#333333" MarkerBorderColor="#333333" MarkerColor="#ffffff" TickLabelFontSize="11" FontName="Lato" TickLabelFontName="Lato" />
+	<CycleAttributeValues XPath=".//Gauge[@Type='BulletBar']" CycleOnChildElement="GaugeRange">
+		<CycleValue Color="#7FB15E" />
+		<CycleValue Color="#dbeb92" />
+		<CycleValue Color="#edfdbc" />
+		<CycleValue Color="#f4fed3" />
+		<CycleValue Color="#f8ffe2" />
+	</CycleAttributeValues>
+
+	<!-- Sparkline -->
+	<SetAttributeWhenEmpty XPath=".//Sparkline[@Type='Line']" Color="#72C8C1" LineWidth="1" ChartBackgroundColor="Transparent" OuterBorderColor="Transparent" BackgroundColor="Transparent" />
+	<SetAttributeWhenEmpty XPath=".//Sparkline[@Type='Area']" Color="#72C8C1" AreaGradientColor="Transparent" ChartBackgroundColor="Transparent" OuterBorderColor="Transparent" BackgroundColor="Transparent" />
+	<SetAttributeWhenEmpty XPath=".//Sparkline[@Type='WinLoss']" Color="#7FB15E" NegativeColor="#C64533" ChartBackgroundColor="Transparent" OuterBorderColor="Transparent" BackgroundColor="Transparent" />
+	<SetAttributeWhenEmpty XPath=".//Sparkline[@Type='Bar']" Color="#72C8C1" NegativeColor="#C64533" ChartBackgroundColor="Transparent" OuterBorderColor="Transparent" BackgroundColor="Transparent" />
+
+	<!-- ChartCanvas -->
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas" PlotBackgroundColor="#ffffff" BackgroundColor="Transparent" BorderColor="Transparent" BorderRadius="0" />
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/ChartXAxis" AxisLineColor="#EFEFF1" />
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/ChartYAxis" AxisLineColor="#EFEFF1" />
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/ChartXAxis/ChartTicksAndGrid" GridLineColor="#F7F7F7" TickLineColor="#F7F7F7" />
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/ChartYAxis/ChartTicksAndGrid" GridLineColor="#F7F7F7" TickLineColor="#F7F7F7" />
+	<SetAttribute XPath=".//ChartCanvas" BackgroundColorTransparency="15" BorderColorTransparency="15" />
+
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas">
+		<NewElement>
+			<ChartXAxis AxisLineColor="#EFEFF1"/>
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas">
+		<NewElement>
+			<ChartYAxis AxisLineColor="#EFEFF1"/>
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas/ChartYAxis">
+		<NewElement>
+			<ChartTicksAndGrid GridLineColor="#F7F7F7" TickLineColor="#F7F7F7"/>
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas/ChartYAxis">
+		<NewElement>
+			<AxisLabelStyle FontColor="#717171" FontSize="12" />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas/ChartXAxis">
+		<NewElement>
+			<AxisLabelStyle FontColor="#717171" FontAngle="40" FontSize="12" />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	
+	<!-- ChartCanvas series -->
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas[DataLayer/CrosstabFilter]/Series | .//ChartCanvas/Series[DataLayer/CrosstabFilter] | .//ChartCanvas/Series[DataLayer/SqlCrosstab] | .//ChartCanvas[DataLayer/SqlCrosstab]/Series" Color="@Session.SeriesColors~" />
+	<!--<SetAttributeWhenEmpty XPath=".//ChartCanvas/Series" ChartSymbolEdgeColor="Transparent" Transparency="3" Color="@Session.Series~" />-->
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/Series[@BarStacking='Overlay']" Transparency="6" />
+
+	<CycleAttributeValues XPath=".//ChartCanvas" CycleOnChildElement="Series">
+		<CycleValue Color="@Session.SeriesColor1~" />
+		<CycleValue Color="@Session.SeriesColor2~" />
+		<CycleValue Color="@Session.SeriesColor3~" />
+		<CycleValue Color="@Session.SeriesColor4~" />
+		<CycleValue Color="@Session.SeriesColor5~" />
+		<CycleValue Color="@Session.SeriesColor6~" />
+		<CycleValue Color="@Session.SeriesColor7~" />
+		<CycleValue Color="@Session.SeriesColor8~" />
+		<CycleValue Color="@Session.SeriesColor9~" />
+		<CycleValue Color="@Session.SeriesColor10~" />
+	</CycleAttributeValues>
+
+	<!-- Legend -->
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas[DataLayer/CrosstabFilter] | .//ChartCanvas[Series/DataLayer/CrosstabFilter] | .//ChartCanvas[Series[@LegendLabel]]">
+		<NewElement>
+			<ChartCanvasLegend />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<SetAttributeWhenEmpty XPath=".//ChartCanvasLegend" BorderColor="Transparent" />
+	<UpdateOrAppendChildElement XPath=".//ChartCanvasLegend[@LegendCaption]">
+		<NewElement>
+			<LegendCaptionStyle />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<SetAttributeWhenEmpty XPath=".//ChartCanvasLegend[@LegendCaption]/LegendCaptionStyle" FontFamily=" 'Lato', Helvetica, Arial, sans-serif" FontWeight="Normal" FontColor="#3B4247" FontSize="18" />
+	<UpdateOrAppendChildElement XPath=".//ChartCanvasLegend">
+		<NewElement>
+			<LegendLabelStyle />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<SetAttributeWhenEmpty XPath=".//ChartCanvasLegend/LegendLabelStyle" FontFamily=" 'Lato', Helvetica, Arial, sans-serif" FontColor="#3B4247" FontSize="14" />
+	<UpdateOrAppendChildElement XPath=".//ChartCanvasLegend">
+		<NewElement>
+			<LegendNavigationStyle />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<SetAttributeWhenEmpty XPath=".//ChartCanvasLegend/LegendNavigationStyle" FontFamily=" 'Lato', Helvetica, Arial, sans-serif" FontColor="#3B4247" FontSize="14" />
+
+	<!-- ChartCanvas Fonts -->
+		<!-- chart title -->
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas[@ChartCaption]">
+		<NewElement>
+			<ChartCaptionStyle />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/ChartCaptionStyle" FontFamily=" 'Lato', Helvetica, Arial, sans-serif" FontWeight="Normal" FontColor="#3B4247" FontSize="24" AlignmentHorizontal="Center" />
+		<!-- chart subtitle -->
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas[@ChartSubCaption]">
+		<NewElement>
+			<ChartSubCaptionStyle />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/ChartSubCaptionStyle" FontFamily=" 'Lato', Helvetica, Arial, sans-serif" FontWeight="Normal" FontColor="#5b5b5b" FontSize="18" AlignmentHorizontal="Center" />
+		<!-- x- or y-axis title -->
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas/ChartXAxis[@AxisCaption]">
+		<NewElement>
+			<AxisCaptionStyle />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas/ChartYAxis[@AxisCaption]">
+		<NewElement>
+			<AxisCaptionStyle />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<SetAttributeWhenEmpty XPath=".//AxisCaptionStyle" FontFamily=" 'Lato', Helvetica, Arial, sans-serif" FontWeight="Normal" FontColor="#3B4247" FontSize="14" />
+		<!-- x- and y-axis must exist to theme -->
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas">
+		<NewElement>
+			<ChartXAxis />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas">
+		<NewElement>
+			<ChartYAxis />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+		<!-- x- or y-axis label -->
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas/ChartXAxis">
+		<NewElement>
+			<AxisLabelStyle />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas/ChartYAxis">
+		<NewElement>
+			<AxisLabelStyle />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<SetAttributeWhenEmpty XPath=".//AxisLabelStyle" FontFamily=" 'Lato', Helvetica, Arial, sans-serif" FontWeight="Normal" FontColor="#3B4247" FontSize="14" />
+		<!-- data labels -->
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/Series/DataLabels" FontFamily=" 'Lato', Helvetica, Arial, sans-serif" FontWeight="Normal" FontColor="#3B4247" FontSize="14" />
+
+		<!-- chart marks -->
+	<CycleAttributeValues XPath=".//ChartCanvas/ChartXAxis | .//ChartCanvas/ChartYAxis" CycleOnChildElement="MarkerBand">
+		<CycleValue Color="@Session.SeriesColor1~" />
+		<CycleValue Color="@Session.SeriesColor2~" />
+		<CycleValue Color="@Session.SeriesColor3~" />
+		<CycleValue Color="@Session.SeriesColor4~" />
+		<CycleValue Color="@Session.SeriesColor5~" />
+		<CycleValue Color="@Session.SeriesColor6~" />
+		<CycleValue Color="@Session.SeriesColor7~" />
+		<CycleValue Color="@Session.SeriesColor8~" />
+		<CycleValue Color="@Session.SeriesColor9~" />
+		<CycleValue Color="@Session.SeriesColor10~" />
+	</CycleAttributeValues>
+	<CycleAttributeValues XPath=".//ChartCanvas/ChartXAxis | .//ChartCanvas/ChartYAxis" CycleOnChildElement="MarkerLine">
+		<CycleValue Color="@Session.SeriesColor1~" />
+		<CycleValue Color="@Session.SeriesColor2~" />
+		<CycleValue Color="@Session.SeriesColor3~" />
+		<CycleValue Color="@Session.SeriesColor4~" />
+		<CycleValue Color="@Session.SeriesColor5~" />
+		<CycleValue Color="@Session.SeriesColor6~" />
+		<CycleValue Color="@Session.SeriesColor7~" />
+		<CycleValue Color="@Session.SeriesColor8~" />
+		<CycleValue Color="@Session.SeriesColor9~" />
+		<CycleValue Color="@Session.SeriesColor10~" />
+	</CycleAttributeValues>
+
+	<!-- ChartCanvas: XY (Area, Bar, Line, Spline, Whiskers) -->
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas[(Series[@Type='Area'][1]) and (Series[2] or DataLayer/CrosstabFilter)]" ChartSymbolEdgeColor="#ffffff" />
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas[(Series[@Type='Area']) and not(Series[2]) and not(DataLayer/CrosstabFilter)]" ChartSymbolEdgeColor="#ffffff" />
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/Series[@Type='Bar' and not(@BarBorderColor)]" BarBorderThickness="0" />
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/Series[@Type='Line']" LineWidth="3" />
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/Series[@Type='Whiskers']" Transparency="" StemColorTransparency="" WhiskerColorTransparency="" WhiskerLineThickness="2" WhiskerColor="#7FB15E" StemLineThickness="2" StemColor="#7FB15E" />
+
+	<!-- ChartCanvas: PieChart, PyramidChart, FunnelChart -->
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/Series[@Type='Pie' or @Type='Pyramid' or @Type='Funnel']" Colors="@Session.SeriesColors~" PieBorderColor="Transparent" PieBorderColorTransparency="0" PieBorderThickness="0" />
+	<UpdateOrAppendChildElement XPath=".//ChartCanvas/Series[@Type='Pie' or @Type='Pyramid' or @Type='Funnel']">
+		<NewElement>
+			<DataLabels />
+		</NewElement>
+	</UpdateOrAppendChildElement>
+	<SetAttribute XPath=".//ChartCanvas/Series[@Type='Pie' or @Type='Pyramid' or @Type='Funnel']/DataLabels" FontFamily=" 'Lato', Helvetica, Arial, sans-serif" FontWeight="Normal" FontColor="#424242" FontSize="14" />
+
+	<!-- ChartCanvas: Scatter/Bubble -->
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/Series[@Type='Scatter' or @Type='Bubble']" Transparency="3" />
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/Series[@Type='Scatter' or @Type='Bubble']/MarkerPoints"  MarkerPointFillColorTransparency="3" />
+	<CycleAttributeValues XPath=".//ChartCanvas" CycleOnChildElement="Series[@Type='Scatter' or @Type='Bubble']/MarkerPoints">
+		<CycleValue MarkerPointFillColor="@Session.SeriesColor1~" MarkerPointBorderColor="" />
+		<CycleValue MarkerPointFillColor="@Session.SeriesColor2~" MarkerPointBorderColor="" />
+		<CycleValue MarkerPointFillColor="@Session.SeriesColor3~" MarkerPointBorderColor="" />
+		<CycleValue MarkerPointFillColor="@Session.SeriesColor4~" MarkerPointBorderColor="" />
+		<CycleValue MarkerPointFillColor="@Session.SeriesColor5~" MarkerPointBorderColor="" />
+		<CycleValue MarkerPointFillColor="@Session.SeriesColor6~" MarkerPointBorderColor="" />
+		<CycleValue MarkerPointFillColor="@Session.SeriesColor7~" MarkerPointBorderColor="" />
+		<CycleValue MarkerPointFillColor="@Session.SeriesColor8~" MarkerPointBorderColor="" />
+		<CycleValue MarkerPointFillColor="@Session.SeriesColor9~" MarkerPointBorderColor="" />
+		<CycleValue MarkerPointFillColor="@Session.SeriesColor10~" MarkerPointBorderColor="" />
+	</CycleAttributeValues>
+
+
+	<!-- ChartCanvas: Heatmap -->
+
+	<SetAttributeWhenEmpty XPath=".//ChartCanvas/Series[@Type='Heatmap']" BackgroundColor="#ffffff" OuterBorderColor="Transparent" CellBorder="2" CellBorderColor="#ffffff" MediumValueColor="#DCD440" LowValueColor="#B84026" HighValueColor="#85B74D" />
+
+	<!-- Gauges -->
+	
+	<!-- NeedleGauge -->
+	<SetAttributeWhenEmpty XPath=".//Gauge[@Type='Needle']" TickLabelFontName="Lato" D3Effects="False" BorderColor="Transparent" BackgroundColor="#ffffff" NeedleColor="#1994b6" TickColor="#3B4247" TickThickness="3" NeedleThickness="4" />
+	<SetAttributeWhenEmpty XPath=".//GaugeRing" Color="#cccccc" RingThickness="3" />
+	<SetAttributeWhenEmpty XPath=".//GaugeLabel" FontName="Lato" FontColor="#3B4247" FontSize="11" />
+	<CycleAttributeValues XPath=".//Gauge[@Type='Needle']" CycleOnChildElement="ExtraNeedle">
+		<CycleValue NeedleThickness="4" NeedleColor="#7FB15E" />
+		<CycleValue NeedleThickness="4" NeedleColor="#E2CE5D" />
+		<CycleValue NeedleThickness="4" NeedleColor="#47515A" />
+		<CycleValue NeedleThickness="4" NeedleColor="#01273C" />
+		<CycleValue NeedleThickness="4" NeedleColor="#3B4247" />
+	</CycleAttributeValues>
+
+	<!-- BarGauge -->
+	<SetAttributeWhenEmpty XPath=".//Gauge[@Type='Bar']" FontName="Lato" LabelColor="#3B4247" D3Effects="False" BackgroundColor="#ffffff" BarBackgroundColor="#E2CE5D" BarColor="#1994b6" />
+
+	<!--Arc Gauge -->
+	<SetAttributeWhenEmpty XPath=".//Gauge[@Type='Arc']" ArcBorderColor="#DDDDDD" ArcInnerRadius="70%" ArcBorderThickness="1" LabelFontFamily="Lato" TickLabelFontName="Lato"/>
+	
+	<!-- IndicatorGauge -->
+	<SetAttributeWhenEmpty XPath=".//Gauge[@Type='Indicator']" BackgroundColor="#ffffff" />
+	<SetAttributeWhenEmpty XPath=".//IndicatorState" BorderColor="#3057A7" Color="#34bce7" />
+
+	<!-- AnimatedNeedle -->
+	<SetAttributeWhenEmpty XPath=".//AnimatedGauge[@Type='Needle']" TickLabelFontName="Lato" TickLabelColor="#3B4247" OuterRingStyle="Bevel" BackgroundColor="#ffffff" NeedleColor="#def5fe" />
+
+	<!-- AnimatedBar -->
+	<SetAttributeWhenEmpty XPath=".//AnimatedGauge[@Type='Bar']" TickLabelFontName="Lato" TickLabelColor="#3B4247" BackgroundColor="#ffffff" BarColor="#b2d640" />
+	<CycleAttributeValues XPath=".//AnimatedGauge[@Type='Bar']" CycleOnChildElement="AnimatedGaugeLine">
+		<CycleValue Color="#7FB15E" />
+		<CycleValue Color="#E2CE5D" />
+		<CycleValue Color="#01273C" />
+		<CycleValue Color="#47515A" />
+		<CycleValue Color="#3B4247" />
+	</CycleAttributeValues>
+
+	<!-- AnimatedPyramid -->
+	<SetAttributeWhenEmpty XPath=".//AnimatedGauge[@Type='Pyramid']" BackgroundColor="#ffffff" />
+
+	<!-- DataCalendar -->
+	<SetAttributeWithInsert XPath=".//DataCalendarRows//Label" Class="rdDataCalendarFont" />
+
+	<!-- UserInput -->
+
+	<!-- InputCheckBox -->
+	<SetAttributeWithInsert XPath=".//InputCheckbox" CaptionClass="rdThemeInputCaption" />
+	<!-- InputDate -->
+	<SetAttributeWithInsert XPath=".//InputDate" Class="rdThemeInput form-control" CaptionClass="rdThemeInputCaption" />
+	<SetAttribute XPath=".//InputDate[not(@CalendarLink) and not(@CalendarLinkType)]" CalendarLinkType="Image" CalendarLinkClass="rdDataCalendarImage" />
+	
+	
+	<!-- InputTime -->
+	<SetAttributeWithInsert XPath=".//InputTime" Class="rdThemeInput" CaptionClass="rdThemeInputCaption" />
+	<SetAttribute XPath=".//InputTime[not(@ClockLink) and not(@ClockLinkType)]" ClockLinkType="Image" ClockLinkClass="rdTimePickerImage" />
+	<!-- InputRadioButtons -->
+	<SetAttributeWithInsert XPath=".//InputRadioButtons" CaptionClass="rdThemeInputCaption" />
+	<!-- InputText, InputEmail, InputTelephone InputTextArea, InputFileUpload, InputPassword, InputSelectList, InputSlider -->
+	<SetAttributeWithInsert XPath=".//InputText | .//InputEmail | .//InputTelephone | .//InputTextArea | .//InputPassword | .//InputSelectList" Class="rdThemeInput form-control" CaptionClass="rdThemeInputCaption" />
+	<!-- InputCheckboxList -->
+	<SetAttributeWithInsert XPath=".//InputCheckboxList" CaptionClass="InputCheckboxList-Caption" />
+
+	<SetAttributeWhenEmpty XPath=".//Button" Class="btn btn-default" />
+
+	<!-- Logi icon overloads -->
+
+	<!-- Menu -->
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgQueryBuilder']" Caption="_Themes/Accelerate/images/imgQueryBuilder.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgCalc']" Caption="_Themes/Accelerate/images/imgCalc.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgLayout']" Caption="_Themes/Accelerate/images/imgLayout.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgSortOrder']" Caption="_Themes/Accelerate/images/imgSortOrder.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate' or @ID='ChartGrid.rdCgTemplate' or @ID='OlapGrid.rdOgTemplate' or @ID='OlapGrid.rdDgTemplate']//Image[@ID='imgFilter']" Caption="_Themes/Accelerate/images/imgFilter.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgGroup']" Caption="_Themes/Accelerate/images/imgGroup.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgAggr']" Caption="_Themes/Accelerate/images/imgAggr.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate'  or @ID='ChartGrid.rdCgTemplate' or @ID='OlapGrid.rdOgTemplate' or @ID='OlapGrid.rdDgTemplate']//Image[@ID='imgChart']" Caption="_Themes/Accelerate/images/imgChart.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgCrosstab']" Caption="_Themes/Accelerate/images/imgCrosstab.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgPaging']" Caption="_Themes/Accelerate/images/imgPaging.png" />
+
+	<SetAttribute XPath=".//Image[@ID='imgMeasures']" Caption="_Themes/Accelerate/images/imgCrosstab.png" />
+	<SetAttribute XPath=".//Image[@ID='imgRows']" Caption="_Themes/Accelerate/images/rows.png" />
+	<SetAttribute XPath=".//Image[@ID='imgCols']" Caption="_Themes/Accelerate/images/cols.png" />
+	<SetAttribute XPath=".//Image[@ID='imgMeasures']" Caption="_Themes/Accelerate/images/measures.png" />
+	<SetAttribute XPath=".//Image[@ID='imgExport']" Caption="_Themes/Accelerate/images/export.png" />
+	<SetAttribute XPath=".//Image[@ID='imgTable']" Caption="_Themes/Accelerate/images/table.png" />
+
+    <SetAttribute XPath=".//Image[@ID='imgDimension']" Caption="_Themes/Accelerate/images/rdOgDimensions.png" />
+    <SetAttribute XPath=".//Image[@ID='imgMeasure']" Caption="_Themes/Accelerate/images/rdOgMeasures.png" />
+    <SetAttribute XPath=".//Image[@ID='imgCalculatedMeasure']" Caption="_Themes/Accelerate/images/rdOgCalculatedMeasure.png" />
+	<SetAttribute XPath=".//Image[@ID='imgFilter']" Caption="_Themes/Accelerate/images/imgFilter.png" />
+	<SetAttribute XPath=".//Image[@ID='imgHeatmap']" Caption="_Themes/Accelerate/images/rdOgHeatmap.png" />
+
+
+	<!--Northwind sales -->
+	<SetAttribute XPath=".//Image[@ID='imgXAxis']" Caption="_Themes/Accelerate/images/xAxis.png" />
+	<SetAttribute XPath=".//Image[@ID='imgYAxis']" Caption="_Themes/Accelerate/images/yAxis.png" />
+   	<SetAttribute XPath=".//Image[@ID='imgColumns']" Caption="_Themes/Accelerate/images/cols.png" />
+
+    <!-- Minus and pluss button -->
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//ToggleImage[starts-with(@ID, 'toggleShow')]" FalseImage="_Themes/Accelerate/images/rdMinus.png" TrueImage="_Themes/Accelerate/images/rdPlus.png" />
+
+	<!-- Help icon -->
+    <SetAttribute XPath=".//Image[@ID='imgHelp']" Caption="_Themes/Accelerate/images/icoBtnHelp.png" />
+
+	<!-- SubMenu -->
+    <SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgQueryBuilderSub']" Caption="_Themes/Accelerate/images/imgQueryBuilderSub.png" />
+    <SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgCalcSub']" Caption="_Themes/Accelerate/images/imgCalcSub.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgLayoutSub']" Caption="_Themes/Accelerate/images/imgLayoutSub.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgSortOrderSub']" Caption="_Themes/Accelerate/images/imgSortOrderSub.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgFilterSub']" Caption="_Themes/Accelerate/images/imgFilterSub.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgGroupSub']" Caption="_Themes/Accelerate/images/imgGroupSub.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgAggrSub']" Caption="_Themes/Accelerate/images/imgAggrSub.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgChartSub']" Caption="_Themes/Accelerate/images/imgChartSub.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgCrosstabSub']" Caption="_Themes/Accelerate/images/imgCrosstabSub.png" />
+	<SetAttribute XPath="/Report[@ID='AnalysisGrid.rdAgTemplate']//Image[@ID='imgPagingSub']" Caption="_Themes/Accelerate/images/imgPagingSub.png" />
+
+	<!-- Date / Time Picker Images -->
+	<SetAttributeWithInsert XPath="//InputDate" CalendarLink=" " CalendarLinkClass="fa fa-calendar" CalendarLinkType="Text" CaptionClass="rdDatepickerCaption" />
+	<SetAttributeWhenEmpty XPath="//InputTime" ClockLink="_Themes/Accelerate/images/imgClock.png" />
+	<SetAttributeWithInsert XPath="//InputDate" Class="rdThemeDatepicker" />
+
+	<SetAttribute XPath="//*[@ID='rowsChartLists']" Class="form-inline" />
+	
+	
+</TemplateModifier>

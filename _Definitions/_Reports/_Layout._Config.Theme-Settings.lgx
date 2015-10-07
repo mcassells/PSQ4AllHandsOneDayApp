@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	ID="_Layout._Config.Theme-Settings"
+	SecurityReportRightID="Admin"
+	>
+	<DefaultRequestParams
+		SeriesColor1="#4DA8EF"
+		SeriesColor10="#F26A66"
+		SeriesColor2="#53C5B7"
+		SeriesColor3="#EF9828"
+		SeriesColor4="#E8CF44"
+		SeriesColor5="#9A7AE8"
+		SeriesColor6="#1F2B3A"
+		SeriesColor7="#FF2C2D"
+		SeriesColor8="#67E25C"
+		SeriesColor9="#DADADC"
+		SeriesColors="#4DA8EF, #53C5B7, #EF9828, #E8CF44, #9A7AE8, #1F2B3A, #FF2C2D, #67E25C, #DADADC, #F26A66"
+	/>
+	<Body>
+		<Division
+			Condition="&quot;@Request.runUpdateProc~&quot;==&quot;True&quot;"
+			ID="runUpdateProc"
+			>
+			<Image
+				Caption="_theme_files.1x1.gif"
+				Class="hidden"
+				ID="onLoad"
+				>
+				<EventHandler
+					DhtmlEvent="onload"
+					>
+					<Action
+						ID="actUpdateSettings"
+						Process="proc_Theme-Settings"
+						TaskID="startup-SetThemeSettings"
+						Type="Process"
+						>
+						<LinkParams
+							report="_Layout._Config.Theme-Settings"
+							useresponse="True"
+						/>
+						<WaitPage/>
+					</Action>
+				</EventHandler>
+			</Image>
+		</Division>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Theme Color Settings"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Division
+			HtmlDiv="True"
+			ID="ThemeSettings"
+			>
+			<Division
+				Class="alert alert-success"
+				Condition="&quot;@Request.response~&quot;&lt;&gt;&quot;&quot;&amp;&amp;&quot;@Request.response~&quot;==&quot;success&quot;"
+				HtmlDiv="True"
+				ID="alert-success"
+				>
+				<Label
+					Caption="Your settings have been saved successfully!"
+				/>
+			</Division>
+			<Division
+				Class="alert alert-danger"
+				Condition="&quot;@Request.response~&quot;&lt;&gt;&quot;&quot;&amp;&amp;&quot;@Request.response~&quot;==&quot;fail&quot;"
+				HtmlDiv="True"
+				ID="alert-fail"
+				>
+				<Label
+					Caption="Oops! Something went wrong..."
+				/>
+			</Division>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Division
+						Class="panel panel-default"
+						HtmlDiv="True"
+						ID="Panel-LayoutColors"
+						>
+						<Division
+							Class="panel-heading"
+							HtmlDiv="True"
+							ID="panel-heading"
+							>
+							<Label
+								Caption="Layout Colors"
+							/>
+						</Division>
+						<Division
+							Class="panel-body"
+							HtmlDiv="True"
+							ID="panel-body"
+							>
+							<Division
+								HtmlDiv="True"
+								ID="SettingsInputs"
+								ShowModes="rdBrowser"
+								>
+								<RepeatElements
+									ID="SettingsFields"
+									>
+									<DataLayer
+										ID="dlSaveSettings"
+										Type="Static"
+										>
+										<Note
+											Note="// Start static rows -------------------------"
+										/>
+										<StaticDataRow
+											field="Body-bg"
+											label="Body background color"
+											type="color"
+										/>
+										<StaticDataRow
+											field="Header-bg"
+											label="Header background color"
+											type="color"
+										/>
+										<StaticDataRow
+											field="Sidebar-bg"
+											label="Sidebar background color"
+											type="color"
+										/>
+										<StaticDataRow
+											field="Footer-bg"
+											label="Footer background color"
+											type="color"
+										/>
+										<Note
+											Note="// End static rows -------------------------"
+										/>
+										<SequenceColumn
+											ID="colSequence"
+										/>
+										<Join
+											ID="JoinFields"
+											JoinType="FullOuterJoin"
+											>
+											<DataLayer
+												ID="dlXML"
+												Type="XMLFile"
+												XMLFile="@Function.AppPhysicalPath~/_SupportFiles/_theme_files.ThemeSettings.xml"
+												>
+												<IfDataError>
+													<DataLayer
+														ID="dlBlank"
+														Type="Static"
+														>
+														<StaticDataRow
+															blank=""
+														/>
+													</DataLayer>
+												</IfDataError>
+											</DataLayer>
+											<MatchCondition
+												DataType="Text"
+												LeftDataColumn="field"
+												RightDataColumn="field"
+											/>
+										</Join>
+										<GroupFilter
+											DataType="Text"
+											GroupColumn="field"
+											KeepGroupedRows="False"
+											SortSequence="Descending"
+										/>
+										<SortFilter
+											DataType="Number"
+											SortColumn="colSequence"
+											SortSequence="Ascending"
+										/>
+									</DataLayer>
+									<Division
+										ID="@Repeat.field~"
+										>
+										<Label
+											Caption="@Repeat.label~"
+											For="@Repeat.field~"
+										/>
+										<InputText
+											DefaultValue="@Repeat.value~"
+											ID="@Repeat.field~"
+											>
+											<ConditionalClass
+												Class="colorpicker form-control"
+												Condition="&quot;@Repeat.type~&quot;==&quot;color&quot;"
+											/>
+										</InputText>
+									</Division>
+									<LineBreak/>
+								</RepeatElements>
+								<Division
+									Class="text-left"
+									HtmlDiv="True"
+									ID="FormControls"
+									>
+									<Label
+										Class="hidden"
+										ID="btnResetThemeColors"
+										>
+										<Action
+											ID="actResetSettings"
+											Process="proc_Theme-Settings"
+											TaskID="updateThemeColors"
+											Type="Process"
+											>
+											<Remark>
+												<LinkParams
+													Body-bg=""
+													Footer-bg=""
+													Header-bg=""
+													Sidebar-bg=""
+												/>
+											</Remark>
+										</Action>
+									</Label>
+									<Division
+										Class="btn btn-default pull-right"
+										HtmlDiv="False"
+										ID="btnReset"
+										>
+										<Label
+											Class="fa fa-times"
+											HtmlTag="I"
+											ID="icon-times"
+										/>
+										<Spaces/>
+										<Label
+											Caption="Reset all colors to default"
+										/>
+										<Action
+											ConfirmMessage="Are you sure you want to reset the layout colors to default?"
+											ID="actJS"
+											Javascript="$(&quot;#SettingsInputs input&quot;).each(function(){
+	$(this).val(&quot;&quot;);
+});
+
+$(&quot;#btnResetThemeColors&quot;).click();"
+											Type="Javascript"
+										/>
+									</Division>
+									<Division
+										Class="btn btn-primary"
+										HtmlDiv="False"
+										ID="btnSave"
+										>
+										<Label
+											Class="fa fa-save"
+											HtmlTag="I"
+											ID="icon-save"
+										/>
+										<Spaces/>
+										<Label
+											Caption="Save Settings"
+										/>
+										<Action
+											ID="actSaveSettings"
+											Process="proc_Theme-Settings"
+											TaskID="updateThemeColors"
+											Type="Process"
+										/>
+									</Division>
+								</Division>
+							</Division>
+						</Division>
+					</Division>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Division
+						Class="panel panel-default"
+						HtmlDiv="True"
+						ID="Panel-SeriesColors"
+						>
+						<Division
+							Class="panel-heading"
+							HtmlDiv="True"
+							ID="panel-heading"
+							>
+							<Label
+								Caption="Canvas Chart Series Colors"
+							/>
+						</Division>
+						<Division
+							Class="panel-body"
+							HtmlDiv="True"
+							ID="panel-body"
+							>
+							<Division
+								HtmlDiv="True"
+								ID="SeriesInputs"
+								ShowModes="rdBrowser"
+								>
+								<ResponsiveRow
+									CollisionBehavior="Overlap"
+									>
+									<ResponsiveColumn>
+										<RepeatElements
+											ID="RepeatSeriesColors"
+											>
+											<DataLayer
+												ID="dlSeriesColors"
+												Type="Static"
+												>
+												<StaticDataRow
+													Count="1"
+												/>
+												<StaticDataRow
+													Count="2"
+												/>
+												<StaticDataRow
+													Count="3"
+												/>
+												<StaticDataRow
+													Count="4"
+												/>
+												<StaticDataRow
+													Count="5"
+												/>
+											</DataLayer>
+											<Division
+												HtmlDiv="True"
+												ID="Series@Repeat.Count~"
+												>
+												<Division
+													Class="pull-right"
+													Condition="&quot;@Repeat.Count~&quot;==&quot;1&quot;"
+													HtmlDiv="True"
+													ID="InfoPopup"
+													>
+													<Label
+														Class="fa fa-info-circle"
+														HtmlTag="I"
+														ID="icon-info"
+														>
+														<TooltipPanel
+															ID="ttInfo"
+															>
+															<Label
+																Caption="This is the color that will be used when a visual only has 1 series to display."
+															/>
+														</TooltipPanel>
+													</Label>
+												</Division>
+												<Label
+													Caption="Series Color @Repeat.Count~"
+													For="SeriesColor@Repeat.Count~"
+												/>
+												<InputText
+													Class="colorpicker form-control"
+													DefaultValue="@Session.SeriesColor@Repeat.Count~~"
+													ID="SeriesColor@Repeat.Count~"
+												/>
+											</Division>
+											<LineBreak/>
+										</RepeatElements>
+									</ResponsiveColumn>
+									<ResponsiveColumn>
+										<RepeatElements
+											ID="RepeatSeriesColors2"
+											>
+											<DataLayer
+												ID="dlSeriesColors2"
+												Type="Static"
+												>
+												<StaticDataRow
+													Count="6"
+												/>
+												<StaticDataRow
+													Count="7"
+												/>
+												<StaticDataRow
+													Count="8"
+												/>
+												<StaticDataRow
+													Count="9"
+												/>
+												<StaticDataRow
+													Count="10"
+												/>
+											</DataLayer>
+											<Division
+												HtmlDiv="True"
+												ID="Series@Repeat.Count~"
+												>
+												<Label
+													Caption="Series Color @Repeat.Count~"
+													For="SeriesColor@Repeat.Count~"
+												/>
+												<InputText
+													Class="colorpicker form-control"
+													DefaultValue="@Session.SeriesColor@Repeat.Count~~"
+													ID="SeriesColor@Repeat.Count~"
+												/>
+											</Division>
+											<LineBreak/>
+										</RepeatElements>
+									</ResponsiveColumn>
+								</ResponsiveRow>
+							</Division>
+							<InputHidden
+								DefaultValue="@Session.SeriesColors~"
+								ID="SeriesColors"
+							/>
+							<Division
+								Class="text-left"
+								HtmlDiv="True"
+								ID="FormControls"
+								>
+								<Division
+									Class="btn btn-default pull-right"
+									HtmlDiv="False"
+									ID="btnReset"
+									>
+									<Label
+										Class="fa fa-times"
+										HtmlTag="I"
+										ID="icon-times"
+									/>
+									<Spaces/>
+									<Label
+										Caption="Reset all colors to default"
+									/>
+									<Action
+										ConfirmMessage="Are you sure you want to reset the canvas chart series colors to default?"
+										ID="actJS"
+										Javascript="$(&quot;input#SeriesColor1&quot;).val(&quot;@Request.SeriesColor1~&quot;);
+$(&quot;input#SeriesColor2&quot;).val(&quot;@Request.SeriesColor2~&quot;);
+$(&quot;input#SeriesColor3&quot;).val(&quot;@Request.SeriesColor3~&quot;);
+$(&quot;input#SeriesColor4&quot;).val(&quot;@Request.SeriesColor4~&quot;);
+$(&quot;input#SeriesColor5&quot;).val(&quot;@Request.SeriesColor5~&quot;);
+$(&quot;input#SeriesColor6&quot;).val(&quot;@Request.SeriesColor6~&quot;);
+$(&quot;input#SeriesColor7&quot;).val(&quot;@Request.SeriesColor7~&quot;);
+$(&quot;input#SeriesColor8&quot;).val(&quot;@Request.SeriesColor8~&quot;);
+$(&quot;input#SeriesColor9&quot;).val(&quot;@Request.SeriesColor9~&quot;);
+$(&quot;input#SeriesColor10&quot;).val(&quot;@Request.SeriesColor10~&quot;);
+$(&quot;input#SeriesColors&quot;).val(&quot;@Request.SeriesColors~&quot;);
+RunProcess(&quot;&lt;rdProcessAction&gt;&lt;Action ID=\&apos;actSaveSeriesColors\&apos; Process=\&apos;proc_Theme-Settings\&apos; TaskID=\&apos;updateSeriesColors\&apos; Type=\&apos;Process\&apos;&gt;&lt;WaitPage Class=\&apos;rdThemeWaitPanel\&apos; CaptionClass=\&apos;rdThemeWaitCaption\&apos; StyleSheet=\&apos;_Themes/Accelerate/Theme.css\&apos; /&gt;&lt;/Action&gt;&lt;/rdProcessAction&gt;&quot;,&quot;false&quot;,&quot;&quot;,&quot;&quot;,[&quot;&quot;,&quot;rdThemeWaitPanel&quot;,&quot;rdThemeWaitCaption&quot;]);"
+										Type="Javascript"
+									/>
+								</Division>
+								<Division
+									Class="btn btn-primary"
+									HtmlDiv="False"
+									ID="btnSave"
+									>
+									<Label
+										Class="fa fa-save"
+										HtmlTag="I"
+										ID="icon-save"
+									/>
+									<Spaces/>
+									<Label
+										Caption="Save Settings"
+									/>
+									<Action
+										ID="actJS"
+										Javascript="var series = &quot;&quot;;
+$(&quot;#SeriesInputs input&quot;).each(function(i){
+	var color = $(this).val();
+	if(color.length&gt;0){
+		series += (i!==0)?&quot;,&quot;:&quot;&quot;;
+		series += color
+	}
+});
+$(&quot;input#SeriesColors&quot;).val(series);
+RunProcess(&quot;&lt;rdProcessAction&gt;&lt;Action ID=\&apos;actSaveSeriesColors\&apos; Process=\&apos;proc_Theme-Settings\&apos; TaskID=\&apos;updateSeriesColors\&apos; Type=\&apos;Process\&apos;&gt;&lt;WaitPage Class=\&apos;rdThemeWaitPanel\&apos; CaptionClass=\&apos;rdThemeWaitCaption\&apos; StyleSheet=\&apos;_Themes/Accelerate/Theme.css\&apos; /&gt;&lt;/Action&gt;&lt;/rdProcessAction&gt;&quot;,&quot;false&quot;,&quot;&quot;,&quot;&quot;,[&quot;&quot;,&quot;rdThemeWaitPanel&quot;,&quot;rdThemeWaitCaption&quot;]);"
+										Type="Javascript"
+									/>
+								</Division>
+							</Division>
+						</Division>
+					</Division>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</Division>
+		<Division
+			Condition="&quot;@Request.Export~&quot;==&quot;Settings&quot;"
+			ID="ExportSettings"
+			ShowModes="rdExport"
+			>
+			<DataTable
+				ID="settings"
+				>
+				<DataLayer
+					ID="dlSaveSettings"
+					Type="Static"
+					>
+					<StaticDataRow
+						field="Body-bg"
+						label="Body background color"
+						type="textbox"
+						value="@Request.Body-bg~"
+					/>
+					<StaticDataRow
+						field="Header-bg"
+						label="Header background color"
+						type="textbox"
+						value="@Request.Header-bg~"
+					/>
+					<StaticDataRow
+						field="Sidebar-bg"
+						label="Sidebar background color"
+						type="textbox"
+						value="@Request.Sidebar-bg~"
+					/>
+					<StaticDataRow
+						field="Footer-bg"
+						label="Footer background color"
+						type="textbox"
+						value="@Request.Footer-bg~"
+					/>
+				</DataLayer>
+				<AutoColumns/>
+			</DataTable>
+		</Division>
+		<Division
+			Condition="&quot;@Request.Export~&quot;==&quot;SeriesColors&quot;"
+			ID="ExportSeriesColors"
+			ShowModes="rdExport"
+			>
+			<DataTable
+				ID="SeriesColors"
+				>
+				<DataLayer
+					ID="dlSaveSeriesColors"
+					Type="Static"
+					>
+					<StaticDataRow
+						ID="SeriesColors"
+						value="@Request.SeriesColors~"
+					/>
+					<StaticDataRow
+						ID="SeriesColor1"
+						value="@Request.SeriesColor1~"
+					/>
+					<StaticDataRow
+						ID="SeriesColor2"
+						value="@Request.SeriesColor2~"
+					/>
+					<StaticDataRow
+						ID="SeriesColor3"
+						value="@Request.SeriesColor3~"
+					/>
+					<StaticDataRow
+						ID="SeriesColor4"
+						value="@Request.SeriesColor4~"
+					/>
+					<StaticDataRow
+						ID="SeriesColor5"
+						value="@Request.SeriesColor5~"
+					/>
+					<StaticDataRow
+						ID="SeriesColor6"
+						value="@Request.SeriesColor6~"
+					/>
+					<StaticDataRow
+						ID="SeriesColor7"
+						value="@Request.SeriesColor7~"
+					/>
+					<StaticDataRow
+						ID="SeriesColor8"
+						value="@Request.SeriesColor8~"
+					/>
+					<StaticDataRow
+						ID="SeriesColor9"
+						value="@Request.SeriesColor9~"
+					/>
+					<StaticDataRow
+						ID="SeriesColor10"
+						value="@Request.SeriesColor10~"
+					/>
+				</DataLayer>
+				<AutoColumns/>
+			</DataTable>
+		</Division>
+	</Body>
+	<ideTestParams
+		Body-bg=""
+		Export=""
+		Footer-bg=""
+		Header-bg=""
+		response=""
+		runUpdateProc=""
+		SeriesColor1=""
+		SeriesColor10=""
+		SeriesColor2=""
+		SeriesColor3=""
+		SeriesColor4=""
+		SeriesColor5=""
+		SeriesColor6=""
+		SeriesColor7=""
+		SeriesColor8=""
+		SeriesColor9=""
+		SeriesColors=""
+		Sidebar-bg=""
+	/>
+</Report>

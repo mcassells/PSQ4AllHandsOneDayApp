@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Label"
+	ID="UI-Components.Labels"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Label"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Division
+			HtmlDiv="True"
+			ID="doc-link"
+			>
+			<IncludeHtml
+				Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#labels&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap labels documentation&lt;/a&gt;"
+			/>
+			<Label
+				Caption="Change the appearance of a &lt;span&gt; or &lt;label&gt;."
+				Class="lead text-info"
+				HtmlTag="P"
+			/>
+		</Division>
+		<FieldsetBox
+			Caption="Available Variations"
+			ID="fsbLabel"
+			>
+			<ResponsiveRow>
+				<ResponsiveColumn
+					Class="ThemePanel"
+					>
+					<Label
+						Caption="default"
+						Class="label label-default"
+					/>
+					<Label
+						Caption="primary"
+						Class="label label-primary"
+					/>
+					<Label
+						Caption="success"
+						Class="label label-success"
+					/>
+					<Label
+						Caption="info"
+						Class="label label-info"
+					/>
+					<Label
+						Caption="warning"
+						Class="label label-warning"
+					/>
+					<Label
+						Caption="danger"
+						Class="label label-danger"
+					/>
+					<Label
+						Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;label label-default&quot; /&gt;
+
+&lt;Label Caption=&quot;...&quot; Class=&quot;label label-primary&quot; /&gt;
+
+&lt;Label Caption=&quot;...&quot; Class=&quot;label label-success&quot; /&gt;
+
+&lt;Label Caption=&quot;...&quot; Class=&quot;label label-info&quot; /&gt;
+
+&lt;Label Caption=&quot;...&quot; Class=&quot;label label-warning&quot; /&gt;
+
+&lt;Label Caption=&quot;...&quot; Class=&quot;label label-danger&quot; /&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+	</Body>
+</Report>

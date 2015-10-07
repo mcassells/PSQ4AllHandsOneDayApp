@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Media"
+	ID="UI-Components.Media"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Media"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Division
+			HtmlDiv="True"
+			ID="doc-link"
+			>
+			<IncludeHtml
+				Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#media&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap media documentation&lt;/a&gt;"
+			/>
+			<Label
+				Caption="Used for styling an assortment of components likes blogs, tweets and testimonials."
+				Class="lead text-info"
+				HtmlTag="P"
+			/>
+		</Division>
+		<LineBreak/>
+		<FieldsetBox
+			Caption="Media Image Alignment"
+			ID="fsbMediaAlignment"
+			>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Division
+						Class="media"
+						HtmlDiv="True"
+						>
+						<Division
+							Class="media-left"
+							HtmlDiv="True"
+							>
+							<IncludeHtml
+								Html="&lt;a href=&quot;#&quot;&gt;
+  &lt;img class=&quot;media-object&quot; src=&quot;_SupportFiles/favicon/apple-touch-icon.png&quot; alt=&quot;...&quot;&gt;
+&lt;/a&gt;"
+							/>
+						</Division>
+						<Division
+							Class="media-body"
+							HtmlDiv="True"
+							>
+							<Label
+								Caption="Top aligned media"
+								Class="media-heading"
+								HtmlTag="H4"
+							/>
+							<Label
+								Caption="Eos adhuc mundi perfecto id. Brute concludaturque cu duo, an vix labores officiis. Eros mandamus ne vel, doctus elaboraret te has, malis nostrud ad quo. No est inermis placerat, nam ex noluisse philosophia."
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="Lorem ipsum dolor sit amet, usu no laboramus instructior, essent instructior ea mea. Labores similique ius id. Sea explicari constituto id. Eligendi delectus vis an, erant civibus et qui.
+
+Cum veniam constituam definitiones cu, id usu liber aliquid definiebas. Dignissim rationibus complectitur est no, adhuc aeterno delicatissimi ad eam, aliquid molestie te nec. Ea soleat philosophia ius, in elitr graece causae vel. Eos perfecto temporibus eu. An justo habemus usu. In nulla voluptua conclusionemque sit, sea impedit nominavi similique ad.
+
+Tation omnium pertinacia quo et, nec tantas inimicus ne, te cibo zril argumentum nec. Error latine mandamus ad pri. Has suscipit salutatus ei, quaeque disputationi eam ad. Oratio commune id ius, probo referrentur mea at. Usu ea decore mediocrem imperdiet, debet detraxit neglegentur id vel, an duo summo philosophia.
+
+Dolor cetero maiorum est id. Per eius nobis in, in mutat tibique qualisque mei. Quot soluta sit an, no duo wisi suscipit. Est ei utinam vivendo, id enim harum nam, verear delenit duo in.
+
+Vim te possit disputationi, nam fierent patrioque dissentias ex. Velit doctus in mel, vix ad iusto aliquid invidunt, ex quidam vivendo intellegat sea. Te impetus oblique apeirian pri, nam ubique quaestio ea. Viris timeam viderer vim te."
+								HtmlTag="P"
+							/>
+						</Division>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;media&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Division Class=&quot;media-left&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;img class=&amp;quot;media-object&amp;quot; src=&amp;quot;...&amp;quot; alt=&amp;quot;...&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/a&amp;gt;&quot; /&gt;
+  &lt;/Division&gt;
+  &lt;Division Class=&quot;media-body&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label HtmlTag=&quot;H4&quot; Class=&quot;media-heading&quot; Caption=&quot;Top aligned media&quot; /&gt;
+    &lt;Label Caption=&quot;...&quot; HtmlTag=&quot;P&quot; /&gt;
+    &lt;Label Caption=&quot;...&quot; HtmlTag=&quot;P&quot; /&gt;
+  &lt;/Division&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+					<Division
+						Class="media"
+						HtmlDiv="True"
+						>
+						<Division
+							Class="media-left media-middle"
+							HtmlDiv="True"
+							>
+							<IncludeHtml
+								Html="&lt;a href=&quot;#&quot;&gt;
+  &lt;img class=&quot;media-object&quot; src=&quot;_SupportFiles/favicon/apple-touch-icon.png&quot; alt=&quot;...&quot;&gt;
+&lt;/a&gt;"
+							/>
+						</Division>
+						<Division
+							Class="media-body"
+							HtmlDiv="True"
+							>
+							<Label
+								Caption="Middle aligned media"
+								Class="media-heading"
+								HtmlTag="H4"
+							/>
+							<Label
+								Caption="Eos adhuc mundi perfecto id. Brute concludaturque cu duo, an vix labores officiis. Eros mandamus ne vel, doctus elaboraret te has, malis nostrud ad quo. No est inermis placerat, nam ex noluisse philosophia."
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="Lorem ipsum dolor sit amet, usu no laboramus instructior, essent instructior ea mea. Labores similique ius id. Sea explicari constituto id. Eligendi delectus vis an, erant civibus et qui.
+
+Cum veniam constituam definitiones cu, id usu liber aliquid definiebas. Dignissim rationibus complectitur est no, adhuc aeterno delicatissimi ad eam, aliquid molestie te nec. Ea soleat philosophia ius, in elitr graece causae vel. Eos perfecto temporibus eu. An justo habemus usu. In nulla voluptua conclusionemque sit, sea impedit nominavi similique ad.
+
+Tation omnium pertinacia quo et, nec tantas inimicus ne, te cibo zril argumentum nec. Error latine mandamus ad pri. Has suscipit salutatus ei, quaeque disputationi eam ad. Oratio commune id ius, probo referrentur mea at. Usu ea decore mediocrem imperdiet, debet detraxit neglegentur id vel, an duo summo philosophia.
+
+Dolor cetero maiorum est id. Per eius nobis in, in mutat tibique qualisque mei. Quot soluta sit an, no duo wisi suscipit. Est ei utinam vivendo, id enim harum nam, verear delenit duo in.
+
+Vim te possit disputationi, nam fierent patrioque dissentias ex. Velit doctus in mel, vix ad iusto aliquid invidunt, ex quidam vivendo intellegat sea. Te impetus oblique apeirian pri, nam ubique quaestio ea. Viris timeam viderer vim te."
+								HtmlTag="P"
+							/>
+						</Division>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;media&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Division Class=&quot;media-left media-middle&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;img class=&amp;quot;media-object&amp;quot; src=&amp;quot;...&amp;quot; alt=&amp;quot;...&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/a&amp;gt;&quot; /&gt;
+  &lt;/Division&gt;
+  &lt;Division Class=&quot;media-body&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label HtmlTag=&quot;H4&quot; Class=&quot;media-heading&quot; Caption=&quot;Middle aligned media&quot; /&gt;
+    &lt;Label Caption=&quot;&quot; HtmlTag=&quot;P&quot; /&gt;
+    &lt;Label Caption=&quot;&quot; HtmlTag=&quot;P&quot; /&gt;
+  &lt;/Division&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+					<Division
+						Class="media"
+						HtmlDiv="True"
+						>
+						<Division
+							Class="media-left media-bottom"
+							HtmlDiv="True"
+							>
+							<IncludeHtml
+								Html="&lt;a href=&quot;#&quot;&gt;
+  &lt;img class=&quot;media-object&quot; src=&quot;_SupportFiles/favicon/apple-touch-icon.png&quot; alt=&quot;...&quot;&gt;
+&lt;/a&gt;"
+							/>
+						</Division>
+						<Division
+							Class="media-body"
+							HtmlDiv="True"
+							>
+							<Label
+								Caption="Bottom aligned media"
+								Class="media-heading"
+								HtmlTag="H4"
+							/>
+							<Label
+								Caption="Eos adhuc mundi perfecto id. Brute concludaturque cu duo, an vix labores officiis. Eros mandamus ne vel, doctus elaboraret te has, malis nostrud ad quo. No est inermis placerat, nam ex noluisse philosophia."
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="Lorem ipsum dolor sit amet, usu no laboramus instructior, essent instructior ea mea. Labores similique ius id. Sea explicari constituto id. Eligendi delectus vis an, erant civibus et qui.
+
+Cum veniam constituam definitiones cu, id usu liber aliquid definiebas. Dignissim rationibus complectitur est no, adhuc aeterno delicatissimi ad eam, aliquid molestie te nec. Ea soleat philosophia ius, in elitr graece causae vel. Eos perfecto temporibus eu. An justo habemus usu. In nulla voluptua conclusionemque sit, sea impedit nominavi similique ad.
+
+Tation omnium pertinacia quo et, nec tantas inimicus ne, te cibo zril argumentum nec. Error latine mandamus ad pri. Has suscipit salutatus ei, quaeque disputationi eam ad. Oratio commune id ius, probo referrentur mea at. Usu ea decore mediocrem imperdiet, debet detraxit neglegentur id vel, an duo summo philosophia.
+
+Dolor cetero maiorum est id. Per eius nobis in, in mutat tibique qualisque mei. Quot soluta sit an, no duo wisi suscipit. Est ei utinam vivendo, id enim harum nam, verear delenit duo in.
+
+Vim te possit disputationi, nam fierent patrioque dissentias ex. Velit doctus in mel, vix ad iusto aliquid invidunt, ex quidam vivendo intellegat sea. Te impetus oblique apeirian pri, nam ubique quaestio ea. Viris timeam viderer vim te."
+								HtmlTag="P"
+							/>
+						</Division>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;media&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Division Class=&quot;media-left media-bottom&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;img class=&amp;quot;media-object&amp;quot; src=&amp;quot;...&amp;quot; alt=&amp;quot;...&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/a&amp;gt;&quot; /&gt;
+  &lt;/Division&gt;
+  &lt;Division Class=&quot;media-body&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label HtmlTag=&quot;H4&quot; Class=&quot;media-heading&quot; Caption=&quot;Bottom aligned media&quot; /&gt;
+    &lt;Label Caption=&quot;&quot; HtmlTag=&quot;P&quot; /&gt;
+    &lt;Label Caption=&quot;&quot; HtmlTag=&quot;P&quot; /&gt;
+  &lt;/Division&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+			<LineBreak/>
+		</FieldsetBox>
+		<FieldsetBox
+			Caption="Media List"
+			ID="fsbMediaList"
+			>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<DataList
+						Class="media-list"
+						ID="listDefault"
+						Ordered="False"
+						>
+						<DataLayer
+							ID="sdlDefault"
+							Type="Static"
+							>
+							<StaticDataRow
+								id=""
+								label=""
+								link=""
+							/>
+						</DataLayer>
+						<ListItem
+							Class="media"
+							>
+							<Division
+								Class="media-left"
+								HtmlDiv="True"
+								>
+								<IncludeHtml
+									Html="&lt;a href=&quot;#&quot;&gt;
+  &lt;img class=&quot;media-object&quot; src=&quot;_SupportFiles/favicon/apple-touch-icon.png&quot; alt=&quot;...&quot;&gt;
+&lt;/a&gt;"
+								/>
+							</Division>
+							<Division
+								Class="media-body"
+								HtmlDiv="True"
+								>
+								<Label
+									Caption="Media heading"
+									Class="media-body"
+									HtmlTag="H4"
+								/>
+								<Label
+									Caption="Eos adhuc mundi perfecto id. Brute concludaturque cu duo, an vix labores officiis. Eros mandamus ne vel, doctus elaboraret te has, malis nostrud ad quo. No est inermis placerat, nam ex noluisse philosophia."
+									HtmlTag="P"
+								/>
+								<Label
+									Caption="Lorem ipsum dolor sit amet, usu no laboramus instructior, essent instructior ea mea. Labores similique ius id. Sea explicari constituto id. Eligendi delectus vis an, erant civibus et qui.
+
+Cum veniam constituam definitiones cu, id usu liber aliquid definiebas. Dignissim rationibus complectitur est no, adhuc aeterno delicatissimi ad eam, aliquid molestie te nec. Ea soleat philosophia ius, in elitr graece causae vel. Eos perfecto temporibus eu. An justo habemus usu. In nulla voluptua conclusionemque sit, sea impedit nominavi similique ad.
+
+Tation omnium pertinacia quo et, nec tantas inimicus ne, te cibo zril argumentum nec. Error latine mandamus ad pri. Has suscipit salutatus ei, quaeque disputationi eam ad. Oratio commune id ius, probo referrentur mea at. Usu ea decore mediocrem imperdiet, debet detraxit neglegentur id vel, an duo summo philosophia.
+
+Dolor cetero maiorum est id. Per eius nobis in, in mutat tibique qualisque mei. Quot soluta sit an, no duo wisi suscipit. Est ei utinam vivendo, id enim harum nam, verear delenit duo in.
+
+Vim te possit disputationi, nam fierent patrioque dissentias ex. Velit doctus in mel, vix ad iusto aliquid invidunt, ex quidam vivendo intellegat sea. Te impetus oblique apeirian pri, nam ubique quaestio ea. Viris timeam viderer vim te."
+									HtmlTag="P"
+								/>
+							</Division>
+						</ListItem>
+						<ListItem
+							Class="media"
+							>
+							<Division
+								Class="media-left"
+								HtmlDiv="True"
+								>
+								<IncludeHtml
+									Html="&lt;a href=&quot;#&quot;&gt;
+  &lt;img class=&quot;media-object&quot; src=&quot;_SupportFiles/favicon/apple-touch-icon.png&quot; alt=&quot;...&quot;&gt;
+&lt;/a&gt;"
+								/>
+							</Division>
+							<Division
+								Class="media-body"
+								HtmlDiv="True"
+								>
+								<Label
+									Caption="Media heading"
+									Class="media-body"
+									HtmlTag="H4"
+								/>
+								<Label
+									Caption="Eos adhuc mundi perfecto id. Brute concludaturque cu duo, an vix labores officiis. Eros mandamus ne vel, doctus elaboraret te has, malis nostrud ad quo. No est inermis placerat, nam ex noluisse philosophia."
+									HtmlTag="P"
+								/>
+								<Label
+									Caption="Lorem ipsum dolor sit amet, usu no laboramus instructior, essent instructior ea mea. Labores similique ius id. Sea explicari constituto id. Eligendi delectus vis an, erant civibus et qui.
+
+Cum veniam constituam definitiones cu, id usu liber aliquid definiebas. Dignissim rationibus complectitur est no, adhuc aeterno delicatissimi ad eam, aliquid molestie te nec. Ea soleat philosophia ius, in elitr graece causae vel. Eos perfecto temporibus eu. An justo habemus usu. In nulla voluptua conclusionemque sit, sea impedit nominavi similique ad.
+
+Tation omnium pertinacia quo et, nec tantas inimicus ne, te cibo zril argumentum nec. Error latine mandamus ad pri. Has suscipit salutatus ei, quaeque disputationi eam ad. Oratio commune id ius, probo referrentur mea at. Usu ea decore mediocrem imperdiet, debet detraxit neglegentur id vel, an duo summo philosophia.
+
+Dolor cetero maiorum est id. Per eius nobis in, in mutat tibique qualisque mei. Quot soluta sit an, no duo wisi suscipit. Est ei utinam vivendo, id enim harum nam, verear delenit duo in.
+
+Vim te possit disputationi, nam fierent patrioque dissentias ex. Velit doctus in mel, vix ad iusto aliquid invidunt, ex quidam vivendo intellegat sea. Te impetus oblique apeirian pri, nam ubique quaestio ea. Viris timeam viderer vim te."
+									HtmlTag="P"
+								/>
+							</Division>
+						</ListItem>
+					</DataList>
+					<Label
+						Caption="&lt;DataList Class=&quot;media-list&quot; ID=&quot;listDefault&quot; Ordered=&quot;False&quot;&gt;
+  &lt;DataLayer ID=&quot;sdlDefault&quot; Type=&quot;Static&quot;&gt;
+    &lt;StaticDataRow id=&quot;&quot; label=&quot;&quot; link=&quot;&quot; /&gt;
+  &lt;/DataLayer&gt;
+  &lt;ListItem Class=&quot;media&quot;&gt;
+    &lt;Division Class=&quot;media-left&quot; HtmlDiv=&quot;True&quot;&gt;
+      &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;img class=&amp;quot;media-object&amp;quot; src=&amp;quot;...&amp;quot; alt=&amp;quot;...&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/a&amp;gt;&quot; /&gt;
+    &lt;/Division&gt;
+    &lt;Division Class=&quot;media-body&quot; HtmlDiv=&quot;True&quot;&gt;
+      &lt;Label HtmlTag=&quot;H4&quot; Class=&quot;media-body&quot; Caption=&quot;Media heading&quot; /&gt;
+      &lt;Label Caption=&quot;...&quot; HtmlTag=&quot;P&quot; /&gt;
+    &lt;/Division&gt;
+  &lt;/ListItem&gt;
+&lt;/DataList&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+	</Body>
+</Report>

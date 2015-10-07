@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Text Helpers"
+	ID="UI-Components.TextHelpers"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Text Helpers"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Division
+			HtmlDiv="True"
+			ID="doc-link"
+			>
+			<IncludeHtml
+				Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/css/#helper-classes&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap text helper documentation&lt;/a&gt;"
+			/>
+			<Label
+				Caption="Provides meaning to content.  "
+				Class="lead text-primary"
+				HtmlTag="P"
+			/>
+		</Division>
+		<FieldsetBox
+			Caption="Text Helpers"
+			ID="fsbText"
+			>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Division
+						Class="panel panel-default"
+						HtmlDiv="True"
+						ID="Panel-default"
+						>
+						<Division
+							Class="panel-heading"
+							HtmlDiv="True"
+							>
+							<Label
+								Caption="Contextual"
+								Class="h4 ThemeBold"
+								Format="HTML"
+								HtmlTag="H2"
+							/>
+						</Division>
+						<Division
+							Class="panel-body"
+							HtmlDiv="True"
+							>
+							<Label
+								Caption="Colors"
+								Class="ThemeBold h4"
+								HtmlTag="H3"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.text-muted&lt;/code&gt;for disabled or unnecessary content."
+								Class="text-muted"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;text-muted&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.text-primary&lt;/code&gt;for extra visual weight and identifies the primary content."
+								Class="text-primary"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;text-primary&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.text-success&lt;/code&gt;to indicate successful or positive content."
+								Class="text-success"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;text-success&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.text-info&lt;/code&gt;for content related to information."
+								Class="text-info"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;text-info&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.text-warning&lt;/code&gt;to show caution should be taken with this action"
+								Class="text-warning"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;text-warning&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.text-danger&lt;/code&gt;to indicate a dangerous or harmful action."
+								Class="text-danger"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;text-danger&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="These may also be applied to links and will darken on hover just like our default link styles."
+								Class="text-info"
+								HtmlTag="p"
+							/>
+							<HR/>
+							<Label
+								Caption="Backgrounds"
+								Class="ThemeBold h4"
+								HtmlTag="H3"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.bg-primary&lt;/code&gt;for extra visual weight and identifies the primary content."
+								Class="bg-primary"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;bg-primary&quot; HtmlTag=&quot;P&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.bg-success&lt;/code&gt;to indicate successful or positive."
+								Class="bg-success"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;bg-success&quot; HtmlTag=&quot;P&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.bg-info&lt;/code&gt;for informational content."
+								Class="bg-info"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;bg-info&quot; HtmlTag=&quot;P&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.bg-warning&lt;/code&gt;to show caution."
+								Class="bg-warning"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;bg-warning&quot; HtmlTag=&quot;P&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.bg-danger&lt;/code&gt;to indicate a dangerous or harmful action."
+								Class="bg-danger"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;bg-danger&quot; HtmlTag=&quot;P&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Anchor components will darken on hover, just like the text classes."
+								Class="text-primary"
+								HtmlTag="p"
+							/>
+							<HR/>
+							<Label
+								Caption="Typography"
+								Class="ThemeBold h4"
+								HtmlTag="H3"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;&amp;lt;ins&amp;gt;&lt;/code&gt;for adding new content."
+								Class="text-info"
+								Format="HTML"
+								HtmlTag="ins"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; HtmlTag=&quot;ins&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;&amp;lt;u&amp;gt;&lt;/code&gt;to Underlined Text."
+								Class="text-info"
+								Format="HTML"
+								HtmlTag="u"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; HtmlTag=&quot;u&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt;for abbreviated text and add the unabbreviated text to the title/tool tip. &lt;strong&gt;Example: &lt;/strong&gt; &apos;&lt;abbr class=&quot;initialism&quot; title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;&apos;"
+								Class="text-info"
+								Format="HTML"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; HtmlTag=&quot;abbr&quot; Class=&quot;initialism&quot; Tooltip=&quot;...&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt;to specify content that is no longer applicable. &lt;strong&gt;Example: &lt;/strong&gt; &lt;del&gt;There are 9 planets in our solar system.&lt;/del&gt;"
+								Class="text-info"
+								Format="HTML"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; HtmlTag=&quot;del&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;&amp;lt;s&amp;gt;&lt;/code&gt;is used to specify content that is no longer applicable. &lt;strong&gt;Example: &lt;/strong&gt; &lt;s&gt;I use to work in our UK office.&lt;/s&gt;"
+								Class="text-info"
+								Format="HTML"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; HtmlTag=&quot;s&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;&amp;lt;small&amp;gt;&lt;/code&gt;to make text smaller."
+								Class="text-info"
+								Format="HTML"
+								HtmlTag="small"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; HtmlTag=&quot;small&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;for &lt;strong&gt;bold text&lt;/strong&gt;."
+								Class="text-info"
+								Format="HTML"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; HtmlTag=&quot;strong&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;for italic text."
+								Class="text-info"
+								Format="HTML"
+								HtmlTag="em"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; HtmlTag=&quot;em&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;to Highlighting Text."
+								Class="text-info"
+								Format="HTML"
+								HtmlTag="mark"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; HtmlTag=&quot;&amp;lt;mark&amp;gt;&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.text-left&lt;/code&gt;to left justify text."
+								Class="text-info text-left"
+								Format="HTML"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;text-left&quot; HtmlTag=&quot;P&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.text-right&lt;/code&gt;to right justify text."
+								Class="text-info text-right"
+								Format="HTML"
+								HtmlTag="DIV"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;text-right&quot; HtmlTag=&quot;P&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.text-center&lt;/code&gt;center text."
+								Class="text-info text-center"
+								Format="HTML"
+								HtmlTag="DIV"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;text-center&quot; HtmlTag=&quot;P&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.text-justify&lt;/code&gt;for justified text.  Justified text references the spacing between text."
+								Class="text-info text-justify"
+								Format="HTML"
+								HtmlTag="DIV"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;text-justify&quot; HtmlTag=&quot;P&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;.text-nowrap&lt;/code&gt;for keep text from wrapping."
+								Class="text-nowrap text-info"
+								Format="HTML"
+								HtmlTag="DIV"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; Class=&quot;text-nowrap&quot; HtmlTag=&quot;P&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Use the&lt;code&gt;&amp;lt;kbd&amp;gt;&lt;/code&gt;to indicate input that is typically entered via keyboard: &lt;strong&gt;Example:&lt;/strong&gt; "
+								Class="text-info"
+								Format="HTML"
+							/>
+							<Label
+								Caption="ctrl + p"
+								Format="HTML"
+								HtmlTag="kbd"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; HtmlTag=&quot;kbd&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="Sample Block is used to show output from a computer."
+								HtmlTag="samp"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;...&quot; HtmlTag=&quot;samp&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Division
+								Class="pull-left"
+								>
+								<Label
+									Caption="Use the&lt;code&gt;.pull-left&lt;/code&gt;to float content left."
+									Class="text-info"
+									Format="HTML"
+								/>
+							</Division>
+							<Division
+								Class="clearfix"
+							/>
+							<Label
+								Caption="&lt;Division Class=&quot;pull-left&quot;&gt;
+  &lt;Label Caption=&quot;...&quot; /&gt;
+&lt;/Division&gt;"
+								HtmlTag="pre"
+							/>
+							<Division
+								Class="pull-right"
+								>
+								<Label
+									Caption="Use the&lt;code&gt;.pull-right&lt;/code&gt;to float content right."
+									Class="text-info"
+									Format="HTML"
+								/>
+							</Division>
+							<Division
+								Class="clearfix"
+							/>
+							<Label
+								Caption="&lt;Division Class=&quot;pull-right&quot;&gt;
+  &lt;Label Caption=&quot;...&quot; /&gt;
+&lt;/Division&gt;"
+								HtmlTag="pre"
+							/>
+							<HR/>
+							<Label
+								Caption="Block Quotes"
+								Class="ThemeBold h4"
+								HtmlTag="H3"
+							/>
+							<Label
+								Caption="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+&lt;footer&gt;Someone famous in &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;&lt;/footer&gt;"
+								Format="HTML"
+								HtmlTag="blockquote"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;footer&amp;gt;...&amp;lt;cite title=&amp;quot;Source Title&amp;quot;&amp;gt;...&amp;lt;/cite&amp;gt;&amp;lt;/footer&amp;gt;&quot; Format=&quot;HTML&quot; HtmlTag=&quot;blockquote&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+  &lt;footer&gt;Someone famous in &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;&lt;/footer&gt;
+"
+								Class="blockquote-reverse"
+								Format="HTML"
+								HtmlTag="blockquote"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;footer&amp;gt;...&amp;lt;cite title=&amp;quot;...&amp;quot;&amp;gt;...&amp;lt;/cite&amp;gt;&amp;lt;/footer&amp;gt;&amp;#xD;&amp;#xA;&quot; Format=&quot;HTML&quot; HtmlTag=&quot;blockquote&quot; Class=&quot;blockquote-reverse&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<HR/>
+							<Label
+								Caption="Help Block"
+								Class="ThemeBold h4"
+								HtmlTag="H3"
+							/>
+							<Label
+								Caption="A block of help text that breaks onto a new line and may extend beyond one line"
+								Class="help-block"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;&quot; Class=&quot;help-block&quot; HtmlTag=&quot;Span&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<HR/>
+							<Label
+								Caption="Address"
+								Class="ThemeBold h4"
+								HtmlTag="H3"
+							/>
+							<Label
+								Caption="&lt;strong&gt;Logi Analytics.&lt;/strong&gt;&lt;br&gt;
+7900 Westpark Drive, Suite A200&lt;br&gt;
+McLean, VA 22102&lt;br&gt;
+&lt;abbr title=&quot;Phone&quot;&gt;P:&lt;/abbr&gt; (888) 564-4965"
+								Format="HTML"
+								HtmlTag="address"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;&amp;lt;strong&amp;gt;Logi Analytics.&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;&amp;#xD;&amp;#xA;7900 Westpark Drive, Suite A200&amp;lt;br&amp;gt;&amp;#xD;&amp;#xA;McLean, VA 22102&amp;lt;br&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;abbr title=&amp;quot;Phone&amp;quot;&amp;gt;P:&amp;lt;/abbr&amp;gt; (888) 564-4965&quot; Format=&quot;HTML&quot; HtmlTag=&quot;address&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+							<Label
+								Caption="&lt;strong&gt;Sales Team&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&quot;mailto:#&quot;&gt;salesteam@logianalytics.com&lt;/a&gt;"
+								Format="HTML"
+								HtmlTag="address"
+							/>
+							<Label
+								Caption="&lt;Label Caption=&quot;&amp;lt;strong&amp;gt;Sales Team&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;a href=&amp;quot;mailto:#&amp;quot;&amp;gt;salesteam@logianalytics.com&amp;lt;/a&amp;gt;&quot; Format=&quot;HTML&quot; HtmlTag=&quot;address&quot; /&gt;"
+								HtmlTag="pre"
+							/>
+						</Division>
+					</Division>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+	</Body>
+	<ideTestParams/>
+</Report>

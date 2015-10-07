@@ -1,0 +1,3216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Glyphicons"
+	ID="UI-Components.Glyphicons"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Glyphicons"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<FieldsetBox
+			Caption="Standard Buttons"
+			ID="fsbButtons"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="doc-link"
+				>
+				<IncludeHtml
+					Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#glyphicons&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap Glyphicon documentation&lt;/a&gt;"
+				/>
+				<Label
+					Caption="Over 250 font icons"
+					Class="lead text-info"
+					HtmlTag="P"
+				/>
+			</Division>
+			<Division
+				HtmlDiv="True"
+				ID="Glyphicons"
+				>
+				<Label
+					Caption="Glyphicons"
+					HtmlTag="h2"
+				/>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-asterisk"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-asterisk"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-plus"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-plus"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-euro"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-euro"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-eur"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-eur"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-minus"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-minus"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-cloud"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-cloud"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-envelope"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-envelope"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-pencil"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-pencil"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-glass"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-glass"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-music"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-music"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-search"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-search"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-heart"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-heart"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-star"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-star"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-empty"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-empty"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-user"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-user"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-film"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-film"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-th-large"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-th-large"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-th"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-th"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-glyphicon-th-list"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-glyphicon-th-list"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-ok"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-ok"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-remove"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-remove"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-zoom-in"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-zoom-in"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-zoom-out"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-zoom-out"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-off"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-off"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-signal"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-signal"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-cog"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-cog"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-trash"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-trash"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-home"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-home"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-file"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-file"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-time"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-time"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-road"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-road"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-download-alt"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-download-alt"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-download"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-download"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-upload"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-upload"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-inbox"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-inbox"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-play-circle"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-play-circle"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-repeat"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-repeat"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-refresh"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-refresh"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-list-alt"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-list-alt"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-lock"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-lock"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-flag"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-flag"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-headphones"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-headphones"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-volume-off"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-volume-off"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-volume-down"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-volume-down"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-volume-up"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-volume-up"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-qrcode"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-qrcode"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-barcode"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-barcode"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-tag"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-tag"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-tags"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-tags"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-book"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-book"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-bookmark"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-bookmark"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-print"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-print"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-camera"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-camera"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-font"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-font"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-bold"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-bold"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-italic"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-italic"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-text-height"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-text-height"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-text-width"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-text-width"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-align-left"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-align-left"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-align-center"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-align-center"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-align-right"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-align-right"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-align-justify"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-align-justify"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-list"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-list"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-indent-left"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-indent-left"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-indent-right"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-indent-right"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-facetime-video"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-facetime-video"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-picture"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-picture"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-map-marker"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-map-marker"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-adjust"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-adjust"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-tint"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-tint"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-edit"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-edit"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-share"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-share"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-check"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-check"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-move"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-move"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-step-backward"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-step-backward"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-fast-backward"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-fast-backward"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-backward"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-backward"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-play"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-play"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-pause"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-pause"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-stop"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-stop"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-forward"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-forward"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-fast-forward"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-fast-forward"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-step-forward"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-step-forward"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-eject"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-eject"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-chevron-left"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-chevron-left"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-chevron-right"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-chevron-right"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-plus-sign"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-plus-sign"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-minus-sign"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-minus-sign"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-remove-sign"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-remove-sign"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-ok-sign"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-ok-sign"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-question-sign"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-question-sign"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-info-sign"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-info-sign"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-screenshot"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-screenshot"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-remove-circle"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-remove-circle"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-ok-circle"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-ok-circle"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-ban-circle"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-ban-circle"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-arrow-left"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-arrow-left"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-arrow-right"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-arrow-right"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-arrow-up"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-arrow-up"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-arrow-down"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-arrow-down"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-share-alt"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-share-alt"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-resize-full"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-resize-full"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-resize-small"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-resize-small"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-exclamation-sign"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-exclamation-sign"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-gift"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-gift"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-leaf"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-leaf"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-fire"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-fire"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-eye-open"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-eye-open"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-eye-close"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-eye-close"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-warning-sign"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-warning-sign"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-plane"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-plane"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-calendar"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-calendar"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-random"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-random"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-comment"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-comment"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-magnet"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-magnet"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-chevron-up"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-chevron-up"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-chevron-down"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-chevron-down"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-retweet"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-retweet"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-shopping-cart"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-shopping-cart"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-folder-close"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-folder-close"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-folder-open"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-folder-open"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-resize-vertical"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-resize-vertical"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-resize-horizontal"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-resize-horizontal"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-hdd"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-hdd"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-bullhorn"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-bullhorn"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-bell"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-bell"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-certificate"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-certificate"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-thumbs-up"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-thumbs-up"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-thumbs-down"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-thumbs-down"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-hand-right"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-hand-right"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-hand-left"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-hand-left"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-hand-up"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-hand-up"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-hand-down"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-hand-down"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-circle-arrow-right"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-circle-arrow-right"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-circle-arrow-left"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-circle-arrow-left"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-circle-arrow-up"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-circle-arrow-up"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-circle-arrow-down"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-circle-arrow-down"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-globe"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-globe"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-wrench"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-wrench"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-tasks"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-tasks"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-filter"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-filter"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-briefcase"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-briefcase"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-fullscreen"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-fullscreen"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-dashboard"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-dashboard"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-paperclip"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-paperclip"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-heart-empty"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-heart-empty"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-link"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-link"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-phone"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-phone"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-pushpin"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-pushpin"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-usd"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-usd"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-gbp"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-gbp"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sort"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sort"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sort-by-alphabet"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sort-by-alphabet"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sort-by-alphabet-alt"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sort-by-alphabet-alt"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sort-by-order"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sort-by-order"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sort-by-order-alt"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sort-by-order-alt"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sort-by-attributes"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sort-by-attributes"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sort-by-attributes-alt"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sort-by-attributes-alt"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-unchecked"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-unchecked"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-expand"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-expand"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-collapse-down"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-collapse-down"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-collapse-up"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-collapse-up"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-log-in"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-log-in"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-flash"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-flash"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-log-out"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-log-out"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-new-window"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-new-window"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-record"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-record"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-save"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-save"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-open"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-open"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-saved"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-saved"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-import"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-import"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-export"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-export"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-send"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-send"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-floppy-disk"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-floppy-disk"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-floppy-saved"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-floppy-saved"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-floppy-remove"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-floppy-remove"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-floppy-save"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-floppy-save"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-floppy-open"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-floppy-open"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-credit-card"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-credit-card"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-transfer"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-transfer"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-cutlery"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-cutlery"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-header"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-header"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-compressed"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-compressed"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-earphone"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-earphone"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-phone-alt"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-phone-alt"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-tower"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-tower"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-stats"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-stats"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sd-video"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sd-video"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-hd-video"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-hd-video"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-subtitles"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-subtitles"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sound-stereo"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sound-stereo"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sound-dolby"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sound-dolby"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sound-5-1"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sound-5-1"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sound-6-1"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sound-6-1"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sound-7-1"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sound-7-1"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-copyright-mark"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-copyright-mark"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-registration-mark"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-registration-mark"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-cloud-download"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-cloud-download"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-cloud-upload"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-cloud-upload"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-tree-conifer"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-tree-conifer"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-tree-deciduous"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-tree-deciduous"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-cd"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-cd"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-save-file"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-save-file"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-open-file"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-open-file"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-level-up"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-level-up"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-copy"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-copy"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-paste"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-paste"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-alert"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-alert"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-equalizer"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-equalizer"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-king"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-king"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-queen"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-queen"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-pawn"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-pawn"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-bishop"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-bishop"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-knight"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-knight"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-baby-formula"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-baby-formula"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-tent"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-tent"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-blackboard"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-blackboard"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-bed"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-bed"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-apple"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-apple"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-erase"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-erase"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-hourglass"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-hourglass"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-lamp"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-lamp"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-duplicate"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-duplicate"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-piggy-bank"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-piggy-bank"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-scissors"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-scissors"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-bitcoin"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-bitcoin"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-btc"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-btc"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-xbt"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-xbt"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-yen"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-yen"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-jpy"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-jpy"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-ruble"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-ruble"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-rub"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-rub"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-scale"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-scale"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-ice-lolly"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-ice-lolly"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-ice-lolly-tasted"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-ice-lolly-tasted"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-education"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-education"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-horizontal"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-horizontal"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-option-vertical"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-option-vertical"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-menu-hamburger"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-menu-hamburger"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-modal-window"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-modal-window"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-oil"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-oil"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-grain"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-grain"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-sunglasses"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-sunglasses"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-text-size"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-text-size"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-text-color"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-text-color"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-text-background"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-text-background"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-object-align-top"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-object-align-top"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-object-align-bottom"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-object-align-bottom"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-object-align-horizontal"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-object-align-horizontal"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-object-align-left"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-object-align-left"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-object-align-vertical"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-object-align-vertical"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-object-align-right"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-object-align-right"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-triangle-right"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-triangle-right"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-triangle-left"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-triangle-left"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-triangle-bottom"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-triangle-bottom"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-triangle-top"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-triangle-top"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-console"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-console"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-superscript"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-superscript"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-subscript"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-subscript"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-menu-left"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-menu-left"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow
+					Class="ThemePadding"
+					>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-menu-right"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-menu-right"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-menu-down"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-menu-down"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="ThemeTextLarge"
+						>
+						<Label
+							Class="glyphicon glyphicon-menu-up"
+							Format="i"
+						/>
+						<Label
+							Caption=" glyphicon glyphicon-menu-up"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn/>
+				</ResponsiveRow>
+				<LineBreak/>
+				<IncludeHtml
+					Html="&lt;h3&gt;&lt;span class=&quot;glyphicon glyphicon-thumbs-up&quot;&gt;&lt;/span&gt;Glyphicon Example&lt;/h3&gt;"
+				/>
+				<Division
+					Class="well"
+					HtmlDiv="True"
+					>
+					<Label
+						Caption="&lt;Label Class=&quot;glyphicon glyphicon-thumbs-up&quot; Format=&quot;i&quot; /&gt;"
+						HtmlTag="pre"
+					/>
+				</Division>
+			</Division>
+		</FieldsetBox>
+	</Body>
+</Report>

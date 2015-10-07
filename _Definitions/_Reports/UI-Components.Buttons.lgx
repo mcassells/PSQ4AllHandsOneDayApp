@@ -1,0 +1,1036 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Buttons"
+	ID="UI-Components.Buttons"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Buttons"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Division
+			Class="btn-group btn-group-justified"
+			HtmlDiv="True"
+			ID="group-nav"
+			>
+			<RepeatElements
+				ID="repeat-nav"
+				>
+				<DataLayer
+					ID="tab-nav-list"
+					Type="Static"
+					>
+					<StaticDataRow
+						id=""
+						label="Standard Buttons"
+						link="fsbButtons"
+					/>
+					<StaticDataRow
+						id=""
+						label="Button Groups"
+						link="Button-Groups"
+					/>
+					<StaticDataRow
+						id=""
+						label="Input Groups"
+						link="Input-Groups"
+					/>
+					<StaticDataRow
+						id=""
+						label="Button Dropdowns"
+						link="button-dropdowns"
+					/>
+				</DataLayer>
+				<Label
+					Caption="@Repeat.label~"
+					Class="btn btn-default"
+					Format="HTML"
+					HtmlTag="a"
+					>
+					<EventHandler
+						DhtmlEvent="onclick"
+						>
+						<Action
+							ID="actJS"
+							Javascript="window.location.hash = &quot;@Repeat.link~&quot;;"
+							Type="Javascript"
+						/>
+					</EventHandler>
+				</Label>
+			</RepeatElements>
+		</Division>
+		<LineBreak
+			LineCount="3"
+		/>
+		<FieldsetBox
+			Caption="Standard Buttons"
+			ID="fsbButtons"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="doc-link"
+				>
+				<IncludeHtml
+					Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/css/#buttons&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap button documentation&lt;/a&gt;"
+				/>
+				<Label
+					Caption="Used to style &lt;buttons&gt;, &lt;input&gt; or &lt;a&gt; elements"
+					Class="lead text-info"
+					HtmlTag="P"
+				/>
+			</Division>
+			<Division
+				HtmlDiv="True"
+				ID="Standard-Buttons"
+				>
+				<Label
+					Caption="Standard Button Types"
+					HtmlTag="h5"
+				/>
+				<ResponsiveRow>
+					<ResponsiveColumn>
+						<Label
+							Caption="Link"
+							Class="btn btn-default"
+							HtmlTag="A"
+							>
+							<EventHandler
+								DhtmlEvent="onclick"
+								>
+								<Action
+									ID="actJS"
+									Javascript="void(0)"
+									Type="Javascript"
+								/>
+							</EventHandler>
+						</Label>
+						<LineBreak
+							LineCount="2"
+						/>
+						<Label
+							Caption="&lt;Label HtmlTag=&quot;A&quot; Class=&quot;btn btn-default&quot; Caption=&quot;Link&quot;&gt;
+  &lt;EventHandler DhtmlEvent=&quot;onclick&quot;&gt;
+    &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;void(0)&quot; /&gt;
+  &lt;/EventHandler&gt;
+&lt;/Label&gt;"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn>
+						<Button
+							Caption="Input"
+							Class="btn btn-default"
+							ID="myBtn"
+						/>
+						<LineBreak
+							LineCount="2"
+						/>
+						<Label
+							Caption="&lt;Button ID=&quot;myBtn&quot; Caption=&quot;Input&quot; Class=&quot;btn btn-default&quot; /&gt;"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn>
+						<Label
+							Caption="Button"
+							Class="btn btn-default"
+							HtmlTag="Button"
+							>
+							<EventHandler
+								DhtmlEvent="onclick"
+								>
+								<Action
+									ID="actJS"
+									Javascript="return false"
+									Type="Javascript"
+								/>
+							</EventHandler>
+						</Label>
+						<LineBreak
+							LineCount="2"
+						/>
+						<Label
+							Caption="&lt;Label HtmlTag=&quot;Button&quot; Class=&quot;btn btn-default&quot; Caption=&quot;Button&quot;&gt;
+  &lt;EventHandler DhtmlEvent=&quot;onclick&quot;&gt;
+    &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;return false&quot; /&gt;
+  &lt;/EventHandler&gt;
+&lt;/Label&gt;"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+			</Division>
+			<LineBreak/>
+			<Division
+				HtmlDiv="True"
+				ID="Button-Options"
+				>
+				<Label
+					Caption="Options"
+					HtmlTag="h5"
+				/>
+				<ResponsiveRow>
+					<ResponsiveColumn>
+						<Label
+							Caption="Default"
+							Class="btn btn-default"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Primary"
+							Class="btn btn-primary"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Success"
+							Class="btn btn-success"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Info"
+							Class="btn btn-info"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Warning"
+							Class="btn btn-warning"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Danger"
+							Class="btn btn-danger"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Link"
+							Class="btn btn-link"
+						/>
+						<LineBreak
+							LineCount="2"
+						/>
+						<Label
+							Caption="-- Standard button
+&lt;Label Class=&quot;btn btn-default&quot; Caption=&quot;Default&quot; /&gt;
+
+-- Provides extra visual weight and identifies the primary action in a set of buttons
+&lt;Label Class=&quot;btn btn-primary&quot; Caption=&quot;Primary&quot; /&gt;
+
+--Indicates a successful or positive action
+&lt;Label Class=&quot;btn btn-success&quot; Caption=&quot;Success&quot; /&gt;
+
+-- Contextual button for informational alert messages
+&lt;Label Class=&quot;btn btn-info&quot; Caption=&quot;Info&quot; /&gt;
+
+-- Indicates caution should be taken with this action
+&lt;Label Class=&quot;btn btn-warning&quot; Caption=&quot;Warning&quot; /&gt;
+
+--Indicates a dangerous or potentially negative action
+&lt;Label Class=&quot;btn btn-danger&quot; Caption=&quot;Danger&quot; /&gt;
+
+--Deemphasize a button by making it look like a link while maintaining button behavior
+&lt;Label Class=&quot;btn btn-link&quot; Caption=&quot;Link&quot; /&gt;"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+			</Division>
+			<LineBreak/>
+			<Division
+				HtmlDiv="True"
+				ID="Button-Sizes"
+				>
+				<Label
+					Caption="Sizes"
+					HtmlTag="h5"
+				/>
+				<ResponsiveRow>
+					<ResponsiveColumn>
+						<Label
+							Caption="Large"
+							Class="btn btn-default btn-lg"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Default"
+							Class="btn btn-default"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Small"
+							Class="btn btn-default btn-sm"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Extra Small"
+							Class="btn btn-default btn-xs"
+						/>
+						<LineBreak
+							LineCount="2"
+						/>
+						<Label
+							Caption="-- Large Button btn btn-default btn-lg
+&lt;Label Class=&quot;btn btn-default btn-lg&quot; Caption=&quot;Large&quot; /&gt;
+
+-- Default Button btn btn-default
+&lt;Label Class=&quot;btn btn-default&quot; Caption=&quot;Default&quot; /&gt;
+
+-- Small Button btn btn-default
+&lt;Label Class=&quot;btn btn-default btn-sm&quot; Caption=&quot;Small&quot; /&gt;
+
+-- Extra Small Button btn btn-default btn-xs
+&lt;Label Class=&quot;btn btn-default btn-xs&quot; Caption=&quot;Extra Small&quot; /&gt;"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+			</Division>
+			<LineBreak/>
+			<Division
+				HtmlDiv="True"
+				ID="Button-Blocks"
+				>
+				<Label
+					Caption="Button Block"
+					HtmlTag="h5"
+				/>
+				<ResponsiveRow>
+					<ResponsiveColumn>
+						<Label
+							Caption="Block level button"
+							Class="btn btn-primary btn-block btn-lg"
+						/>
+						<LineBreak
+							LineCount="2"
+						/>
+						<Label
+							Caption="-- Button Block btn btn-primary btn-block btn-lg
+&lt;Label Class=&quot;btn btn-primary btn-block btn-lg&quot; Caption=&quot;Block level button&quot; /&gt;"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+			</Division>
+			<LineBreak/>
+			<Division
+				HtmlDiv="True"
+				ID="Button-Active"
+				>
+				<Label
+					Caption="Active State"
+					HtmlTag="h5"
+				/>
+				<ResponsiveRow>
+					<ResponsiveColumn>
+						<Label
+							Caption="Default"
+							Class="btn btn-default btn-lg active"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Primary"
+							Class="btn btn-primary btn-lg active"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Success"
+							Class="btn btn-success btn-lg active"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Info"
+							Class="btn btn-info btn-lg active"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Warning"
+							Class="btn btn-warning btn-lg active"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Danger"
+							Class="btn btn-danger btn-lg active"
+						/>
+						<LineBreak
+							LineCount="2"
+						/>
+						<Label
+							Caption="-- Default
+&lt;Label Class=&quot;btn btn-default btn-lg active&quot; Caption=&quot;Default&quot; /&gt;
+
+-- Primary
+&lt;Label Class=&quot;btn btn-primary btn-lg active&quot; Caption=&quot;Primary&quot; /&gt;
+
+-- Success
+&lt;Label Class=&quot;btn btn-success btn-lg active&quot; Caption=&quot;Success&quot; /&gt;
+
+-- Info
+&lt;Label Class=&quot;btn btn-info btn-lg active&quot; Caption=&quot;Info&quot; /&gt;
+
+-- Warning
+&lt;Label Class=&quot;btn btn-warning btn-lg active&quot; Caption=&quot;Warning&quot; /&gt;
+
+-- Danger
+&lt;Label Class=&quot;btn btn-danger btn-lg active&quot; Caption=&quot;Danger&quot; /&gt;"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+			</Division>
+			<LineBreak/>
+			<Division
+				HtmlDiv="True"
+				ID="Button-Disabled"
+				>
+				<Label
+					Caption="Disabled State"
+					HtmlTag="h5"
+				/>
+				<ResponsiveRow>
+					<ResponsiveColumn>
+						<Label
+							Caption="Default"
+							Class="btn btn-default btn-lg disabled"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Primary"
+							Class="btn btn-primary btn-lg disabled"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Success"
+							Class="btn btn-success btn-lg disabled"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Info"
+							Class="btn btn-info btn-lg disabled"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Warning"
+							Class="btn btn-warning btn-lg disabled"
+						/>
+						<Spaces/>
+						<Label
+							Caption="Danger"
+							Class="btn btn-danger btn-lg disabled"
+						/>
+						<LineBreak
+							LineCount="2"
+						/>
+						<Label
+							Caption="-- Default
+&lt;Label Class=&quot;btn btn-default btn-lg disabled&quot; Caption=&quot;Default&quot; /&gt;
+
+-- Primary
+&lt;Label Class=&quot;btn btn-primary btn-lg disabled&quot; Caption=&quot;Primary&quot; /&gt;
+
+-- Success
+&lt;Label Class=&quot;btn btn-success btn-lg disabled&quot; Caption=&quot;Success&quot; /&gt;
+
+-- Info
+&lt;Label Class=&quot;btn btn-info btn-lg disabled&quot; Caption=&quot;Info&quot; /&gt;
+
+-- Warning
+&lt;Label Class=&quot;btn btn-warning btn-lg disabled&quot; Caption=&quot;Warning&quot; /&gt;
+
+-- Danger
+&lt;Label Class=&quot;btn btn-danger btn-lg disabled&quot; Caption=&quot;Danger&quot; /&gt;"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+			</Division>
+		</FieldsetBox>
+		<FieldsetBox
+			Caption="Button groups"
+			ID="Button-Groups"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="doc-link"
+				>
+				<IncludeHtml
+					Html="&lt;a href=&quot;http://getbootstrap.com/components/#btn-groups&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap button group documentation&lt;/a&gt;"
+				/>
+			</Division>
+			<Division
+				HtmlDiv="True"
+				ID="Standard-btn-groups"
+				>
+				<Label
+					Caption="Standard button groups"
+					HtmlTag="H5"
+				/>
+				<Division
+					Class="btn-group"
+					ID="btn-group-lg"
+					>
+					<Label
+						Caption="Left"
+						Class="btn btn-default btn-lg"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+					<Label
+						Caption="Middle"
+						Class="btn btn-default btn-lg"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+					<Label
+						Caption="Right"
+						Class="btn btn-default btn-lg"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+				</Division>
+				<LineBreak
+					LineCount="2"
+				/>
+				<Division
+					Class="btn-group"
+					HtmlDiv="True"
+					ID="btn-group-md"
+					>
+					<Label
+						Caption="Left"
+						Class="btn btn-default"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+					<Label
+						Caption="Middle"
+						Class="btn btn-default"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+					<Label
+						Caption="Right"
+						Class="btn btn-default"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+				</Division>
+				<LineBreak
+					LineCount="2"
+				/>
+				<Division
+					Class="btn-group"
+					HtmlDiv="True"
+					ID="btn-group-sm"
+					>
+					<Label
+						Caption="Left"
+						Class="btn btn-default btn-sm"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+					<Label
+						Caption="Middle"
+						Class="btn btn-default btn-sm"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+					<Label
+						Caption="Right"
+						Class="btn btn-default btn-sm"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+				</Division>
+				<LineBreak
+					LineCount="2"
+				/>
+				<Division
+					Class="btn-group"
+					HtmlDiv="True"
+					ID="btn-group-xs"
+					>
+					<Label
+						Caption="Left"
+						Class="btn btn-default btn-xs"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+					<Label
+						Caption="Middle"
+						Class="btn btn-default btn-xs"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+					<Label
+						Caption="Right"
+						Class="btn btn-default btn-xs"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+				</Division>
+				<LineBreak
+					LineCount="2"
+				/>
+				<Label
+					Caption="&lt;Division ID=&quot;btn-group&quot; Class=&quot;btn-group&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;Left&quot; Class=&quot;btn btn-default&quot; HtmlTag=&quot;a&quot;&gt;
+    &lt;EventHandler DhtmlEvent=&quot;onclick&quot;&gt;
+      &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;void(0)&quot; /&gt;
+    &lt;/EventHandler&gt;
+  &lt;/Label&gt;
+  &lt;Label Caption=&quot;Middle&quot; Class=&quot;btn btn-default&quot; HtmlTag=&quot;a&quot;&gt;
+    &lt;EventHandler DhtmlEvent=&quot;onclick&quot;&gt;
+      &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;void(0)&quot; /&gt;
+    &lt;/EventHandler&gt;
+  &lt;/Label&gt;
+  &lt;Label Caption=&quot;Right&quot; Class=&quot;btn btn-default&quot; HtmlTag=&quot;a&quot;&gt;
+    &lt;EventHandler DhtmlEvent=&quot;onclick&quot;&gt;
+      &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;void(0)&quot; /&gt;
+    &lt;/EventHandler&gt;
+  &lt;/Label&gt;
+&lt;/Division&gt;"
+					HtmlTag="pre"
+				/>
+			</Division>
+			<LineBreak
+				LineCount="2"
+			/>
+			<Division
+				HtmlDiv="True"
+				ID="Vertical-btn-groups"
+				>
+				<Label
+					Caption="Vertical button group"
+					HtmlTag="H5"
+				/>
+				<Division
+					Class="btn-group-vertical"
+					ID="btn-group-vertical"
+					>
+					<Label
+						Caption="Left"
+						Class="btn btn-default"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+					<Label
+						Caption="Middle"
+						Class="btn btn-default"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+					<Label
+						Caption="Right"
+						Class="btn btn-default"
+						HtmlTag="a"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+				</Division>
+				<LineBreak
+					LineCount="2"
+				/>
+				<Label
+					Caption="&lt;Division ID=&quot;btn-group-vertical&quot; Class=&quot;btn-group-vertical&quot;&gt;
+  &lt;Label Caption=&quot;Left&quot; Class=&quot;btn btn-default&quot; HtmlTag=&quot;a&quot;&gt;
+    &lt;EventHandler DhtmlEvent=&quot;onclick&quot;&gt;
+      &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;void(0)&quot; /&gt;
+    &lt;/EventHandler&gt;
+  &lt;/Label&gt;
+  &lt;Label Caption=&quot;Middle&quot; Class=&quot;btn btn-default&quot; HtmlTag=&quot;a&quot;&gt;
+    &lt;EventHandler DhtmlEvent=&quot;onclick&quot;&gt;
+      &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;void(0)&quot; /&gt;
+    &lt;/EventHandler&gt;
+  &lt;/Label&gt;
+  &lt;Label Caption=&quot;Right&quot; Class=&quot;btn btn-default&quot; HtmlTag=&quot;a&quot;&gt;
+    &lt;EventHandler DhtmlEvent=&quot;onclick&quot;&gt;
+      &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;void(0)&quot; /&gt;
+    &lt;/EventHandler&gt;
+  &lt;/Label&gt;
+&lt;/Division&gt;"
+					HtmlTag="pre"
+				/>
+			</Division>
+			<LineBreak
+				LineCount="2"
+			/>
+			<Division
+				HtmlDiv="True"
+				ID="Standard-btn-groups"
+				>
+				<Label
+					Caption="Justified button groups"
+					HtmlTag="H5"
+				/>
+				<Division
+					Class="btn-group btn-group-justified"
+					HtmlDiv="True"
+					ID="btn-group"
+					>
+					<Label
+						Caption="Left"
+						Class="btn btn-default"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+					<Label
+						Caption="Middle"
+						Class="btn btn-default"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+					<Label
+						Caption="Right"
+						Class="btn btn-default"
+						>
+						<EventHandler
+							DhtmlEvent="onclick"
+							>
+							<Action
+								ID="actJS"
+								Javascript="void(0)"
+								Type="Javascript"
+							/>
+						</EventHandler>
+					</Label>
+				</Division>
+				<LineBreak
+					LineCount="2"
+				/>
+				<Label
+					Caption="&lt;Division ID=&quot;btn-group&quot; Class=&quot;btn-group btn-group-justified&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;Left&quot; Class=&quot;btn btn-default&quot;&gt;
+    &lt;EventHandler DhtmlEvent=&quot;onclick&quot;&gt;
+      &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;void(0)&quot; /&gt;
+    &lt;/EventHandler&gt;
+  &lt;/Label&gt;
+  &lt;Label Caption=&quot;Middle&quot; Class=&quot;btn btn-default&quot;&gt;
+    &lt;EventHandler DhtmlEvent=&quot;onclick&quot;&gt;
+      &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;void(0)&quot; /&gt;
+    &lt;/EventHandler&gt;
+  &lt;/Label&gt;
+  &lt;Label Caption=&quot;Right&quot; Class=&quot;btn btn-default&quot;&gt;
+    &lt;EventHandler DhtmlEvent=&quot;onclick&quot;&gt;
+      &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;void(0)&quot; /&gt;
+    &lt;/EventHandler&gt;
+  &lt;/Label&gt;
+&lt;/Division&gt;"
+					HtmlTag="pre"
+				/>
+			</Division>
+		</FieldsetBox>
+		<FieldsetBox
+			Caption="Button Dropdowns"
+			ID="button-dropdowns"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="doc-link"
+				>
+				<IncludeHtml
+					Html="&lt;a href=&quot;http://getbootstrap.com/components/#btn-dropdowns&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap Button Dropdown documentation&lt;/a&gt;"
+				/>
+			</Division>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Division
+						Class="btn-group"
+						HtmlDiv="True"
+						ID="BtnDdlDefault"
+						>
+						<IncludeHtml
+							Html="&lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+    Default &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;"
+						/>
+						<DataList
+							Class="dropdown-menu"
+							ID="listDefault"
+							Ordered="False"
+							>
+							<DataLayer
+								ID="sdlDefault"
+								Type="Static"
+								>
+								<StaticDataRow
+									id=""
+									label=""
+									link=""
+								/>
+							</DataLayer>
+							<ListItem>
+								<IncludeHtml
+									Html="&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;"
+								/>
+							</ListItem>
+							<ListItem>
+								<IncludeHtml
+									Html="&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;"
+								/>
+							</ListItem>
+							<ListItem
+								Class="divider"
+								ID="divider"
+							/>
+							<ListItem>
+								<IncludeHtml
+									Html="&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;"
+								/>
+							</ListItem>
+						</DataList>
+					</Division>
+					<Label
+						Caption="&lt;Division ID=&quot;BtnDdlDefault&quot; HtmlDiv=&quot;True&quot; Class=&quot;btn-group&quot;&gt;
+  &lt;IncludeHtml Html=&quot;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-default dropdown-toggle&amp;quot; data-toggle=&amp;quot;dropdown&amp;quot; aria-haspopup=&amp;quot;true&amp;quot; aria-expanded=&amp;quot;false&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;    Default &amp;lt;span class=&amp;quot;caret&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/button&amp;gt;&quot; /&gt;
+  &lt;DataList ID=&quot;listDefault&quot; Class=&quot;dropdown-menu&quot; Ordered=&quot;False&quot;&gt;
+    &lt;DataLayer Type=&quot;Static&quot; ID=&quot;sdlDefault&quot;&gt;
+      &lt;StaticDataRow id=&quot;&quot; label=&quot;&quot; link=&quot;&quot; /&gt;
+    &lt;/DataLayer&gt;
+    &lt;ListItem&gt;
+      &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Action&amp;lt;/a&amp;gt;&quot; /&gt;
+    &lt;/ListItem&gt;
+    &lt;ListItem&gt;
+      &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Something else here&amp;lt;/a&amp;gt;&quot; /&gt;
+    &lt;/ListItem&gt;
+    &lt;ListItem Class=&quot;divider&quot; ID=&quot;divider&quot; /&gt;
+    &lt;ListItem&gt;
+      &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Separated link&amp;lt;/a&amp;gt;&quot; /&gt;
+    &lt;/ListItem&gt;
+  &lt;/DataList&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Division
+						Class="btn-group"
+						HtmlDiv="True"
+						ID="BtnDdlDefault"
+						>
+						<IncludeHtml
+							Html="&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Action&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-danger dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;Slit&lt;/span&gt;
+  &lt;/button&gt;"
+						/>
+						<DataList
+							Class="dropdown-menu"
+							ID="listDblDefault"
+							Ordered="False"
+							>
+							<DataLayer
+								ID="sdlDefault"
+								Type="Static"
+								>
+								<StaticDataRow
+									id=""
+									label=""
+									link=""
+								/>
+							</DataLayer>
+							<ListItem>
+								<IncludeHtml
+									Html="&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;"
+								/>
+							</ListItem>
+							<ListItem>
+								<IncludeHtml
+									Html="&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;"
+								/>
+							</ListItem>
+							<ListItem
+								Class="divider"
+								ID="divider"
+							/>
+							<ListItem>
+								<IncludeHtml
+									Html="&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;"
+								/>
+							</ListItem>
+						</DataList>
+					</Division>
+					<Label
+						Caption="&lt;Division ID=&quot;BtnDdlDefault&quot; HtmlDiv=&quot;True&quot; Class=&quot;btn-group&quot;&gt;
+  &lt;IncludeHtml Html=&quot;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-danger&amp;quot;&amp;gt;Action&amp;lt;/button&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-danger dropdown-toggle&amp;quot; data-toggle=&amp;quot;dropdown&amp;quot; aria-haspopup=&amp;quot;true&amp;quot; aria-expanded=&amp;quot;false&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;span class=&amp;quot;caret&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;span class=&amp;quot;sr-only&amp;quot;&amp;gt;Slit&amp;lt;/span&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/button&amp;gt;&quot; /&gt;
+  &lt;DataList ID=&quot;listDblDefault&quot; Class=&quot;dropdown-menu&quot; Ordered=&quot;False&quot;&gt;
+    &lt;DataLayer Type=&quot;Static&quot; ID=&quot;sdlDefault&quot;&gt;
+      &lt;StaticDataRow id=&quot;&quot; label=&quot;&quot; link=&quot;&quot; /&gt;
+    &lt;/DataLayer&gt;
+    &lt;ListItem&gt;
+      &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Action&amp;lt;/a&amp;gt;&quot; /&gt;
+    &lt;/ListItem&gt;
+    &lt;ListItem&gt;
+      &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Something else here&amp;lt;/a&amp;gt;&quot; /&gt;
+    &lt;/ListItem&gt;
+    &lt;ListItem Class=&quot;divider&quot; ID=&quot;divider&quot; /&gt;
+    &lt;ListItem&gt;
+      &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Separated link&amp;lt;/a&amp;gt;&quot; /&gt;
+    &lt;/ListItem&gt;
+  &lt;/DataList&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+	</Body>
+	<ideTestParams/>
+</Report>

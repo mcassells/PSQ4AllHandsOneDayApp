@@ -1,0 +1,51 @@
+<DefinitionModifier>
+	<!-- Modify InfoGO definitions by entering DefinitionModifierFile command elements here. -->
+	<RemoveElement XPath=".//ReportHeader"/>
+	<RemoveElement ID="divGoCreateContainer"/>
+	<InsertBeforeElement XPath=".//Division[@ID='divGoContainer']">
+		<NewElement>
+			<Division Class="ThemePanel go-create" HtmlDiv="True" ID="divGoCreateContainer" IdeDisplayStatus="Collapsed">
+				<Division Class="go-create-list-col" HtmlDiv="True" ID="divGoHome" IdeDisplayStatus="Collapsed">
+					<Division Class="rdAgUnselectedTab go-create-list-item go-home" HtmlDiv="True" ID="divGoHomeLink" IdeDisplayStatus="Collapsed">
+					<ConditionalClass Class="rdAgUnselectedTab go-create-list-item go-home active" Condition="'@Request.rdReport~'=='InfoGo.goHome'||'@Request.rdReport~'==''" ID="TabActiveState" />
+					<Label Class="fa fa-home fa-2x" Format="home-icon" HtmlTag="I" />
+					<Action ID="actHome" Type="Report" IdeDisplayStatus="Collapsed">
+						<Target Report="InfoGo.goHome" Type="Report" />
+						<LinkParams goBookmarkCaption="@Constant.goDefaultAnalysisName~" rdAgReset="True" rdBookmarkCollection="@Application.rdBookmarkCollectionDefault~" rdNewBookmark="True" />
+					</Action>
+					</Division>
+				</Division>
+				<Division Class="go-create-list-col" HtmlDiv="True" ID="divGoCreateAnalysis" IdeDisplayStatus="Collapsed">
+					<Division Class="rdAgUnselectedTab go-create-list-item go-create-analysis" HtmlDiv="True" ID="divGoCreateAnalysisLink" IdeDisplayStatus="Collapsed">
+					<ConditionalClass Class="rdAgUnselectedTab go-create-list-item go-create-analysis active" Condition="'@Request.rdReport~'=='InfoGo.goAnalysisGrid'" ID="TabActiveState" />
+					<Label Caption="Analyze &amp; Visualize" />
+					<Action ID="actAnalysis" Type="Report" IdeDisplayStatus="Collapsed">
+						<Target Report="InfoGo.goAnalysisGrid" Type="Report" />
+						<LinkParams goBookmarkCaption="@Constant.goDefaultAnalysisName~" rdAgReset="True" rdBookmarkCollection="@Application.rdBookmarkCollectionDefault~" rdNewBookmark="True" />
+					</Action>
+					</Division>
+				</Division>
+				<Division Class="go-create-list-col" HtmlDiv="True" ID="divGoCreateDashboard" IdeDisplayStatus="Collapsed">
+					<Division Class="rdAgUnselectedTab go-create-list-item go-create-dashboard" HtmlDiv="True" ID="divGoCreateDashboardLink" IdeDisplayStatus="Collapsed">
+					<ConditionalClass Class="rdAgUnselectedTab go-create-list-item go-create-dashboard active" Condition="'@Request.rdReport~'=='InfoGo.goDashboard'" ID="TabActiveState" />
+					<Label Caption="Design Dashboard" />
+					<Action ID="actDashboard" Type="Report" IdeDisplayStatus="Collapsed">
+						<Target Report="InfoGo.goDashboard" Type="Report" />
+						<LinkParams goBookmarkCaption="@Constant.goDefaultDashboardName~" rdBookmarkCollection="@Application.rdBookmarkCollectionDefault~" rdNewBookmark="True" />
+					</Action>
+					</Division>
+				</Division>
+				<Division Class="go-create-list-col" HtmlDiv="True" ID="divGoCreateReport" IdeDisplayStatus="Collapsed">
+					<Division Class="rdAgUnselectedTab go-create-list-item go-create-report" HtmlDiv="True" ID="divGoCreateReportLink" IdeDisplayStatus="Collapsed">
+					<ConditionalClass Class="rdAgUnselectedTab go-create-list-item go-create-report active" Condition="'@Request.rdReport~'=='InfoGo.goReport'" ID="TabActiveState" />
+					<Label Caption="Design Report" />
+					<Action ID="actReport" Type="Report" IdeDisplayStatus="Collapsed">
+						<Target Report="InfoGo.goReport" Type="Report" />
+						<LinkParams goBookmarkCaption="@Constant.goDefaultReportName~" rdBookmarkCollection="@Application.rdBookmarkCollectionDefault~" rdNewBookmark="True" rdReportAuthorEdit="True" />
+					</Action>
+					</Division>
+				</Division>
+			</Division>		
+		</NewElement>
+	</InsertBeforeElement>
+</DefinitionModifier>

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Dropdowns"
+	ID="UI-Components.Dropdowns"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Dropdowns"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<FieldsetBox
+			Caption="Button Dropdowns"
+			ID="fsbdropdowns"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="doc-link"
+				>
+				<IncludeHtml
+					Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#dropdowns&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap dropdowns documentation&lt;/a&gt;"
+				/>
+				<Label
+					Caption="Interactive toggle dropdown using a list of links."
+					Class="lead text-info"
+					HtmlTag="P"
+				/>
+			</Division>
+			<LineBreak/>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Label
+						Caption="Dropdown"
+						HtmlTag="H5"
+					/>
+					<Division
+						Class="dropdown"
+						HtmlDiv="True"
+						ID="BtnDdlDefault"
+						>
+						<IncludeHtml
+							Html="  &lt;button class=&quot;btn btn-default dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    Dropdown
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;"
+						/>
+						<DataList
+							Class="dropdown-menu"
+							ID="listDefault"
+							Ordered="False"
+							>
+							<DataLayer
+								ID="sdlDefault"
+								Type="Static"
+								>
+								<StaticDataRow
+									id=""
+									label=""
+									link=""
+								/>
+							</DataLayer>
+							<ListItem>
+								<IncludeHtml
+									Html="&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;"
+								/>
+							</ListItem>
+							<ListItem>
+								<IncludeHtml
+									Html="&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;"
+								/>
+							</ListItem>
+							<ListItem
+								Class="divider"
+								ID="divider"
+							/>
+							<ListItem>
+								<IncludeHtml
+									Html="&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;"
+								/>
+							</ListItem>
+						</DataList>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;dropdown&quot; HtmlDiv=&quot;True&quot; ID=&quot;BtnDdlDefault&quot;&gt;
+  &lt;IncludeHtml Html=&quot;  &amp;lt;button class=&amp;quot;btn btn-default dropdown-toggle&amp;quot; type=&amp;quot;button&amp;quot; id=&amp;quot;dropdownMenu1&amp;quot; data-toggle=&amp;quot;dropdown&amp;quot; aria-haspopup=&amp;quot;true&amp;quot; aria-expanded=&amp;quot;true&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;    Dropdown&amp;#xD;&amp;#xA;    &amp;lt;span class=&amp;quot;caret&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/button&amp;gt;&quot; /&gt;
+  &lt;DataList Class=&quot;dropdown-menu&quot; ID=&quot;listDefault&quot; Ordered=&quot;False&quot;&gt;
+    &lt;DataLayer ID=&quot;sdlDefault&quot; Type=&quot;Static&quot;&gt;
+      &lt;StaticDataRow id=&quot;&quot; label=&quot;&quot; link=&quot;&quot; /&gt;
+    &lt;/DataLayer&gt;
+    &lt;ListItem&gt;
+      &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Action&amp;lt;/a&amp;gt;&quot; /&gt;
+    &lt;/ListItem&gt;
+    &lt;ListItem&gt;
+      &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Something else here&amp;lt;/a&amp;gt;&quot; /&gt;
+    &lt;/ListItem&gt;
+    &lt;ListItem Class=&quot;divider&quot; ID=&quot;divider&quot; /&gt;
+    &lt;ListItem&gt;
+      &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Separated link&amp;lt;/a&amp;gt;&quot; /&gt;
+    &lt;/ListItem&gt;
+  &lt;/DataList&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<LineBreak/>
+					<Label
+						Caption="Dropup"
+						HtmlTag="H5"
+					/>
+					<Division
+						Class="dropup"
+						HtmlDiv="True"
+						ID="BtnDdlDefault"
+						>
+						<IncludeHtml
+							Html="&lt;button class=&quot;btn btn-default dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownMenu2&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+    Dropup
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;"
+						/>
+						<DataList
+							Class="dropdown-menu"
+							ID="listDblDefault"
+							Ordered="False"
+							>
+							<DataLayer
+								ID="sdlDefault"
+								Type="Static"
+								>
+								<StaticDataRow
+									id=""
+									label=""
+									link=""
+								/>
+							</DataLayer>
+							<ListItem>
+								<IncludeHtml
+									Html="&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;"
+								/>
+							</ListItem>
+						</DataList>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;dropup&quot; HtmlDiv=&quot;True&quot; ID=&quot;BtnDdlDefault&quot;&gt;
+  &lt;IncludeHtml Html=&quot;&amp;lt;button class=&amp;quot;btn btn-default dropdown-toggle&amp;quot; type=&amp;quot;button&amp;quot; id=&amp;quot;dropdownMenu2&amp;quot; data-toggle=&amp;quot;dropdown&amp;quot; aria-haspopup=&amp;quot;true&amp;quot; aria-expanded=&amp;quot;false&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;    Dropup&amp;#xD;&amp;#xA;    &amp;lt;span class=&amp;quot;caret&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/button&amp;gt;&quot; /&gt;
+  &lt;DataList Class=&quot;dropdown-menu&quot; ID=&quot;listDblDefault&quot; Ordered=&quot;False&quot;&gt;
+    &lt;DataLayer ID=&quot;sdlDefault&quot; Type=&quot;Static&quot;&gt;
+      &lt;StaticDataRow id=&quot;&quot; label=&quot;&quot; link=&quot;&quot; /&gt;
+    &lt;/DataLayer&gt;
+    &lt;ListItem&gt;
+      &lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Action&amp;lt;/a&amp;gt;&quot; /&gt;
+    &lt;/ListItem&gt;
+  &lt;/DataList&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+	</Body>
+</Report>

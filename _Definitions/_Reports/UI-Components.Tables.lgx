@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	ID="UI-Components.Tables"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Tables"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Division
+			HtmlDiv="True"
+			ID="doc-link"
+			>
+			<IncludeHtml
+				Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/css/#tables&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap table documentation&lt;/a&gt;"
+			/>
+			<Label
+				Caption="Bootstrap has a broad range of table examples.  The following shows how some of the basic examples can be used with Logi Info."
+				Class="lead text-info"
+				Format="HTML"
+				HtmlTag="P"
+			/>
+		</Division>
+		<Rows
+			Class="table"
+			>
+			<Row
+				Class="active"
+				>
+				<Column
+					ColSpan="5"
+					>
+					<Label
+						Caption="Row 1 is using the &lt;code&gt;.active&lt;/code&gt; class"
+						Format="HTML"
+					/>
+				</Column>
+			</Row>
+			<Row
+				Class="success"
+				>
+				<Column
+					ColSpan="5"
+					>
+					<Label
+						Caption="Row 1 is using the &lt;code&gt;.success&lt;/code&gt; class"
+						Format="HTML"
+					/>
+				</Column>
+			</Row>
+			<Row
+				Class="warning"
+				>
+				<Column
+					ColSpan="5"
+					>
+					<Label
+						Caption="Row 1 is using the &lt;code&gt;.warning&lt;/code&gt; class"
+						Format="HTML"
+					/>
+				</Column>
+			</Row>
+			<Row
+				Class="danger"
+				>
+				<Column
+					ColSpan="5"
+					>
+					<Label
+						Caption="Row 1 is using the &lt;code&gt;.danger&lt;/code&gt; class"
+						Format="HTML"
+					/>
+				</Column>
+			</Row>
+			<Row
+				Class="info"
+				>
+				<Column
+					ColSpan="5"
+					>
+					<Label
+						Caption="Row 1 is using the &lt;code&gt;.info&lt;/code&gt; class"
+						Format="HTML"
+					/>
+				</Column>
+			</Row>
+			<Row>
+				<Column
+					Class="active"
+					>
+					<Label
+						Caption="Column class &lt;code&gt;.active&lt;/code&gt;"
+						Format="HTML"
+					/>
+				</Column>
+				<Column
+					Class="success"
+					>
+					<Label
+						Caption="Column class &lt;code&gt;.success&lt;/code&gt;"
+						Format="HTML"
+					/>
+				</Column>
+				<Column
+					Class="warning"
+					>
+					<Label
+						Caption="Column class &lt;code&gt;.warning&lt;/code&gt;"
+						Format="HTML"
+					/>
+				</Column>
+				<Column
+					Class="danger"
+					>
+					<Label
+						Caption="Column class &lt;code&gt;.danger&lt;/code&gt;"
+						Format="HTML"
+					/>
+				</Column>
+				<Column
+					Class="info"
+					>
+					<Label
+						Caption="Column class &lt;code&gt;.info&lt;/code&gt;"
+						Format="HTML"
+					/>
+				</Column>
+			</Row>
+		</Rows>
+		<Label
+			Caption="The following is an example of the &lt;code&gt;.active&lt;/code&gt; class used on a table row and table cell."
+			Class="text-info"
+			Format="HTML"
+			HtmlTag="Span"
+		/>
+		<Label
+			Caption="&lt;Row Class=&quot;active&quot;&gt;&lt;Column ColSpan=&quot;5&quot;&gt;&lt;/Column&gt;&lt;/Row&gt;
+
+&lt;Column Class=&quot;active&quot;&gt;&lt;/Column&gt;"
+			HtmlTag="pre"
+		/>
+		<HR/>
+		<Label
+			Caption="Logi Datatable element"
+			Class="lead text-info"
+			Format="HTML"
+			HtmlTag="P"
+		/>
+		<DataTable
+			AjaxPaging="True"
+			Class="table table-hover table-striped table-condensed"
+			ID="dt"
+			SortArrows="True"
+			>
+			<DataLayer
+				ID="StaticDataLayer1"
+				Type="Static"
+				>
+				<StaticDataRow
+					id="276"
+					Name="Row Name"
+					Value_1="687"
+					Value_2="4985"
+					Value_3="Yes"
+					Value_4=".08"
+				/>
+				<StaticDataRow
+					id="641"
+					Name="Row Name"
+					Value_1="251"
+					Value_2="1234"
+					Value_3="No"
+					Value_4=".40"
+				/>
+				<StaticDataRow
+					id="982"
+					Name="Row Name"
+					Value_1="381"
+					Value_2="1647"
+					Value_3="No"
+					Value_4=".31"
+				/>
+				<StaticDataRow
+					id="123"
+					Name="Row Name"
+					Value_1="813"
+					Value_2="9816"
+					Value_3="No"
+					Value_4=".72"
+				/>
+				<StaticDataRow
+					id="365"
+					Name="Row Name"
+					Value_1="631"
+					Value_2="218"
+					Value_3="Yes"
+					Value_4=".12"
+				/>
+				<StaticDataRow
+					id="872"
+					Name="Row Name"
+					Value_1="518"
+					Value_2="9411"
+					Value_3="Yes"
+					Value_4=".86"
+				/>
+				<StaticDataRow
+					id="83"
+					Name="Row Name"
+					Value_1="798"
+					Value_2="5676"
+					Value_3="No"
+					Value_4=".67"
+				/>
+			</DataLayer>
+			<DataTableColumn
+				Header="id"
+				ID="colid"
+				>
+				<Label
+					Caption="@Data.id~"
+					ID="lblid"
+				/>
+				<DataColumnSort
+					DataColumn="id"
+					DataType="Number"
+				/>
+			</DataTableColumn>
+			<DataTableColumn
+				Header="Name"
+				ID="colName"
+				>
+				<Label
+					Caption="@Data.Name~"
+					ID="lblName"
+				/>
+				<DataColumnSort
+					DataColumn="Name"
+				/>
+			</DataTableColumn>
+			<DataTableColumn
+				Header="Value_1"
+				ID="colValue_1"
+				>
+				<Label
+					Caption="@Data.Value_1~"
+					ID="lblValue_1"
+				/>
+				<DataColumnSort
+					DataColumn="Value_1"
+					DataType="Number"
+				/>
+			</DataTableColumn>
+			<DataTableColumn
+				Header="Value_2"
+				ID="colValue_2"
+				>
+				<Label
+					Caption="@Data.Value_2~"
+					ID="lblValue_2"
+				/>
+				<DataColumnSort
+					DataColumn="Value_2"
+					DataType="Number"
+				/>
+			</DataTableColumn>
+			<DataTableColumn
+				Header="Value_3"
+				ID="colValue_3"
+				>
+				<Label
+					Caption="@Data.Value_3~"
+					ID="lblValue_3"
+				/>
+				<DataColumnSort
+					DataColumn="Value_3"
+				/>
+			</DataTableColumn>
+			<DataTableColumn
+				Header="Value_4"
+				ID="colValue_4"
+				>
+				<Label
+					Caption="@Data.Value_4~"
+					ID="lblValue_4"
+				/>
+				<DataColumnSort
+					DataColumn="Value_4"
+					DataType="Number"
+				/>
+			</DataTableColumn>
+		</DataTable>
+		<Label
+			Caption="The following is an example of the &lt;code&gt;.table&lt;/code&gt;, &lt;code&gt;.table-hover&lt;/code&gt;, &lt;code&gt;.table-striped&lt;/code&gt;, &lt;code&gt;.table-condensed&lt;/code&gt; classes used in the main datatable class."
+			Class="text-info"
+			Format="HTML"
+			HtmlTag="Span"
+		/>
+		<Label
+			Caption="&lt;DataTable AjaxPaging=&quot;True&quot; ID=&quot;dt&quot; SortArrows=&quot;True&quot; Class=&quot;table table-hover table-striped table-condensed&quot;&gt;
+	...
+&lt;/DataTable&gt;"
+			HtmlTag="pre"
+		/>
+		<HR/>
+		<Division
+			HtmlDiv="True"
+			ID="AnalysisGrid"
+			>
+			<Label
+				Caption="In order to style the analysis grid jQuery must be used to add the table classes."
+				Class="lead text-info"
+				Format="HTML"
+				HtmlTag="P"
+			/>
+			<ResponsiveVisibility
+				HideForExtraSmallScreen="True"
+				HideForSmallScreen="True"
+			/>
+			<IncludeScript
+				IncludedScript="$(document).ready(function(){
+	$(&apos;table.rdAgDataTable&apos;).addClass(&apos;table table-hover table-striped table-condensed&apos;);
+});
+
+"
+			/>
+			<AnalysisGrid
+				AjaxPaging="True"
+				DraggableColumns="True"
+				ID="OrdersAnalysisGrid"
+				ShowPageNumber="True"
+				SortArrows="True"
+				>
+				<DataLayer
+					ConnectionID="Northwind"
+					ID="DLActiveSQL"
+					Source="Select [Orders Qry].OrderDate,
+  Employees.LastName,
+  Employees.FirstName,
+  Employees.Title,
+  Year([Orders Qry].ShippedDate) As &apos;ShipYear&apos;,
+  [Orders Qry].ShippedDate,
+  [Orders Qry].Freight,
+  [Orders Qry].ShipName,
+  [Orders Qry].ShipAddress,
+  [Orders Qry].ShipCity,
+  [Orders Qry].ShipRegion,
+  [Orders Qry].ShipPostalCode,
+  [Orders Qry].ShipCountry,
+  [Orders Qry].CompanyName
+From [Orders Qry]
+  Inner Join Employees On [Orders Qry].EmployeeID = Employees.EmployeeID"
+					Type="ActiveSQL"
+				/>
+				<AnalysisGridColumn
+					DataColumn="OrderDate"
+					DataType="Date"
+					Format="Short Date"
+					Header="Order Date"
+					ID="colOrderDate"
+				/>
+				<AnalysisGridColumn
+					DataColumn="LastName"
+					DataType="Text"
+					Header="LastName"
+					ID="colLastName"
+				/>
+				<AnalysisGridColumn
+					DataColumn="FirstName"
+					DataType="Text"
+					Header="FirstName"
+					ID="colFirstName"
+				/>
+				<AnalysisGridColumn
+					DataColumn="Title"
+					DataType="Text"
+					Header="Title"
+					ID="colTitle"
+				/>
+				<AnalysisGridColumn
+					DataColumn="ShipYear"
+					DataType="Number"
+					Header="ShipYear"
+					ID="colShipYear"
+				/>
+				<AnalysisGridColumn
+					DataColumn="ShippedDate"
+					DataType="Date"
+					Format="Short Date"
+					Header="ShippedDate"
+					ID="colShippedDate"
+				/>
+				<AnalysisGridColumn
+					DataColumn="Freight"
+					DataType="Number"
+					Header="Freight"
+					ID="colFreight"
+				/>
+				<AnalysisGridColumn
+					DataColumn="ShipName"
+					DataType="Text"
+					Header="ShipName"
+					ID="colShipName"
+				/>
+				<AnalysisGridColumn
+					DataColumn="ShipAddress"
+					DataType="Text"
+					Header="ShipAddress"
+					ID="colShipAddress"
+				/>
+				<AnalysisGridColumn
+					DataColumn="ShipCity"
+					DataType="Text"
+					Header="ShipCity"
+					ID="colShipCity"
+				/>
+				<AnalysisGridColumn
+					DataColumn="ShipRegion"
+					DataType="Text"
+					Header="ShipRegion"
+					ID="colShipRegion"
+				/>
+				<AnalysisGridColumn
+					DataColumn="ShipPostalCode"
+					DataType="Text"
+					Header="ShipPostalCode"
+					ID="colShipPostalCode"
+				/>
+				<AnalysisGridColumn
+					DataColumn="ShipCountry"
+					DataType="Text"
+					Header="ShipCountry"
+					ID="colShipCountry"
+				/>
+				<AnalysisGridColumn
+					DataColumn="CompanyName"
+					DataType="Text"
+					Header="CompanyName"
+					ID="colCompanyName"
+				/>
+				<WaitPage/>
+			</AnalysisGrid>
+			<Label
+				Caption="Include the following to update the Analysis Grid class &lt;code&gt;.table&lt;/code&gt;, &lt;code&gt;.table-hover&lt;/code&gt;, &lt;code&gt;.table-striped&lt;/code&gt;, &lt;code&gt;.table-condensed&lt;/code&gt;."
+				Class="text-info"
+				Format="HTML"
+				HtmlTag="Span"
+			/>
+			<Label
+				Caption="&lt;IncludeScript IncludedScript=&quot;$(document).ready(function(){&amp;#xD;&amp;#xA;	$(&apos;table.rdAgDataTable&apos;).addClass(&apos;table table-hover table-striped table-condensed&apos;);&amp;#xD;&amp;#xA;});&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&quot; /&gt;"
+				HtmlTag="pre"
+			/>
+		</Division>
+		<Division
+			Class="text-center text-danger"
+			HtmlDiv="True"
+			ID="AnalysisGrid-hidden-msg"
+			>
+			<ResponsiveVisibility
+				HideForLargeScreen="True"
+				HideForMediumScreen="True"
+			/>
+			<Label
+				Class="fa fa-desktop fa-4x"
+				ID="desktop-icon"
+			/>
+			<Label
+				Caption="The analysis grid can only be viewed on a tablet or desktop computer."
+				HtmlTag="H5"
+			/>
+		</Division>
+	</Body>
+	<ideTestParams/>
+</Report>

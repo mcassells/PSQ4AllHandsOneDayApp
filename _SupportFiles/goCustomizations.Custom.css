@@ -1,0 +1,101 @@
+/*  Header
+	Change anything to fit your needs  */
+.go-header {
+	background-color: #fff;
+	border-bottom: 1px solid #e1e1e1;
+	padding: 1em 1em 0;
+/*	height: 5em;*/
+}
+
+.go-header-spacer {
+	padding-top: 1em;
+}
+
+/*  Body
+	Adjust this to fit a different-sized footer  */
+#divGoContainer {
+	padding-bottom: 6em;
+}
+
+/*  Footer
+	Change the fixed height of the sticky footer to fit more, or tweak other details  */
+.go-footer {
+	height: 3.5em; /* Set fixed height here */
+	margin-top: -3.5em; /* Set negative of fixed height here */
+	background-color: #fff;
+	padding: 1em;
+}
+
+/*	There's a spacer element if you'd like to use it
+.go-footer-spacer {} */
+
+/*  Use any responsive CSS fixes as necessary  */
+/*@media (max-width: 767px) {
+	.go-footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}*/
+
+/* 	Apply this class to .go-header and .go-box container to let headers scroll away  */
+.go-absolute {
+	position: absolute;
+}
+
+/* Josh's secret sauce */
+	.go-create {
+		background: transparent;
+		padding: 0;
+		box-shadow: none;
+	}
+	
+	.go-create-list-col {
+		width: 25%;
+		min-width: 7.2em;
+		text-align: center;
+		margin: 0 auto;
+		display: inline-block;
+		margin-left: 0;
+		vertical-align: top;
+  		border-left: 1px solid #FFF;
+	}
+
+	.go-create-list-item {
+		height: 3em;
+	}
+
+	.go-absolute {
+		position: absolute;
+	}
+	
+	#divGoCreateContainer .go-create-list-col:first-child .go-create-list-item {
+		border-radius: 4px 0 0 4px;
+	}
+	
+	#divGoCreateContainer .go-create-list-col:last-child .go-create-list-item {
+		border-radius:0 4px 4px 0;
+	}
+	
+	#divGoCreateContainer .go-create-list-col .go-create-list-item span{
+		font-size:larger;
+	}
+	
+	#divGoCreateContainer .rdAgUnselectedTabOn:hover, #divGoCreateContainer .rdAgUnselectedTab:hover, #divGoCreateContainer .rdAgUnselectedTab.active {
+		/* background-color: #D0DADF; */
+		background: #757575;
+		background: -moz-linear-gradient(top, #757575 0%, #454d59 76%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#757575), color-stop(76%,#454d59));
+		background: -webkit-linear-gradient(top, #757575 0%,#454d59 76%);
+		background: -o-linear-gradient(top, #757575 0%,#454d59 76%);
+		background: -ms-linear-gradient(top, #757575 0%,#454d59 76%);
+		background: linear-gradient(to bottom, #757575 0%,#454d59 76%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#757575', endColorstr='#454d59',GradientType=0 );
+	}
+	
+	.reportAuthorbgcmenu>span>span a span,
+	.reportAuthorbgcmenu>span>span span.rdAcCommandHighlight{
+		padding: 8px 15px;
+		display: inline-block;
+	}

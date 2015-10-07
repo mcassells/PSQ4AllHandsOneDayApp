@@ -1,15 +1,208 @@
-﻿<Setting
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Setting
 	ID="_settings"
 	>
-	<GlobalCSS
-		ID="themeSignal"
-		Theme="Signal"
+	<Application
+		Caption="Accelerate"
+		DefaultReport="Visualizations"
 	/>
-	<Application/>
-	<Path/>
+	<Path
+		AppPath="http://localhost/Accelerate"
+	/>
 	<General
+		BookmarkCollectionDefault="@Function.UserName~goCollection"
+		BookmarkLocation="@Function.AppPhysicalPath~\goBookmarks\UserName@Function.UserName~"
+		DoctypeDeclaration="Html5"
+		rdDebuggerStyle="Redirect"
+		RedirectErrorUrl="rdPage.aspx?rdReport=_Layout.Error"
 		RepoFriendly="True"
 	/>
-	<Connections/>
+	<SessionTimeout
+		SessionAutoKeepAlive="True"
+	/>
 	<TeamDevelopment/>
+	<GlobalCSS
+		ID="ThemeAccelerate"
+		Theme="Accelerate"
+	/>
+	<Constants
+		goAllowSharing="True"
+		goBatchSelection="False"
+		goCustomTableSessionVars=""
+		goDefaultAnalysisName="Untitled Analysis"
+		goDefaultDashboardName="Untitled Dashboard"
+		goDefaultReportName="Untitled Report"
+		goHideColumnSelection="False"
+		goHomeName="Menu"
+		goReportStarterFile=""
+		goSchedulerEnabled="True"
+		ID="InfoGO-Constants"
+		SchedulerApplicationID="InfoGO"
+	/>
+	<Remark>
+		<Constants
+			Caption_Application="App Template"
+			Caption_NoDataFound="No data found"
+			Caption_WaitPanel="Retrieving data ..."
+			Organization_Name="My Company"
+			Organization_Url="http://www.mycompany.com"
+			>
+			<Note
+				Note="Helpful constants that can be used throughout the application."
+			/>
+		</Constants>
+	</Remark>
+	<Connections>
+		<Connection
+			ID="Northwind"
+			SqlServer="localhost"
+			SqlServerDatabase="Northwind"
+			SqlServerPassword="lgxpass000"
+			SqlServerPort=""
+			SqlServerUser="sa"
+			Type="SqlServer"
+		/>
+		<Connection
+			ID="AdventureWorks"
+			SqlServer="localhost"
+			SqlServerDatabase="AdventureWorks"
+			SqlServerPassword="lgxpass000"
+			SqlServerPort=""
+			SqlServerUser="sa"
+			Type="SqlServer"
+			>
+			<Metadata
+				ID="metaAWsales"
+				MetadataName="AW Sales"
+			/>
+		</Connection>
+		<Note
+			Note="Add and configure a supported database Connection element here,"
+		/>
+		<Note
+			Note="then select it and run its Metadata Builder wizard."
+		/>
+		<Connection
+			ID="goScheduler"
+			PassKey="myKey"
+			ServerName="localhost"
+			Type="Scheduler"
+		/>
+		<Connection
+			ID="goMail"
+			SmtpServer="localhost"
+			Type="Smtp"
+		/>
+	</Connections>
+	<Security
+		AuthenticationSource="Standard"
+		CacheRights="Session"
+		SecurityEnabled="True"
+		>
+		<AuthenticationRule
+			ID="AuthStatic"
+			UsernameDataColumn="userName"
+			>
+			<DataLayer
+				ID="dlStaticAuth"
+				Type="Static"
+				>
+				<StaticDataRow
+					password="password"
+					userID="0"
+					userName="Admin"
+				/>
+				<StaticDataRow
+					password="password"
+					userID="1"
+					userName="StandardUser"
+				/>
+				<Note
+					Note="Always supply a role for new login"
+				/>
+				<CompareFilter
+					CaseSensitive="False"
+					CompareType="="
+					CompareValue="@Request.rdUsername~"
+					DataColumn="userName"
+					DataType="Text"
+					ID="compareUserName"
+				/>
+				<CompareFilter
+					CaseSensitive="True"
+					CompareType="="
+					CompareValue="@Request.rdPassword~"
+					DataColumn="password"
+					DataType="Text"
+					ID="comparePassword"
+				/>
+			</DataLayer>
+		</AuthenticationRule>
+		<UserRoles
+			ID="RoleStatic"
+			>
+			<DataLayer
+				ID="dlRoles"
+				Type="Static"
+				>
+				<StaticDataRow
+					roleName="Admin"
+					userName="Admin"
+				/>
+				<StaticDataRow
+					roleName="User"
+					userName="StandardUser"
+				/>
+				<Note
+					Note="Add role for login"
+				/>
+				<ConditionFilter
+					Condition="&quot;@Function.UserName~&quot; == &quot;@Data.userName~&quot;"
+				/>
+			</DataLayer>
+		</UserRoles>
+		<Rights>
+			<Remark>
+				<RightFromRole
+					ID="SeeAll"
+					>
+					<DataLayer
+						ID="dlRoleRights"
+						Type="Static"
+						>
+						<StaticDataRow
+							role="Master"
+						/>
+					</DataLayer>
+				</RightFromRole>
+			</Remark>
+			<RightsFromRoles/>
+		</Rights>
+	</Security>
+	<Remark>
+		<Security
+			AuthenticationClientAddresses="127.0.0.1,::1"
+			AuthenticationSource="SecureKey"
+			CacheRights="Session"
+			ID="SecureKey"
+			RestartSession="True"
+			SecurityEnabled="True"
+			>
+			<Rights>
+				<RightsFromRoles/>
+			</Rights>
+		</Security>
+	</Remark>
+	<StartupProcess
+		Process="proc_Theme-Settings"
+		TaskID="startup-SetThemeSettings"
+		>
+		<Note
+			Note="This process sets the theme color settings"
+		/>
+	</StartupProcess>
+	<ideTestParams
+		rdPassword=""
+		rdUsername=""
+	/>
 </Setting>

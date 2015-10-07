@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Input Groups"
+	ID="UI-Components.InputGroups"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Input Groups"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<FieldsetBox
+			Caption="Input groups"
+			ID="Input-Groups"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="doc-link"
+				>
+				<IncludeHtml
+					Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#input-groups&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap input group documentation&lt;/a&gt;"
+				/>
+				<Label
+					Caption="Add text, buttons, icons or dropdowns to any form control."
+					Class="lead text-info"
+					Format="HTML"
+					HtmlTag="P"
+				/>
+			</Division>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Label
+						Caption="Icon left positioned"
+						HtmlTag="h5"
+					/>
+					<Division
+						Class="input-group"
+						HtmlDiv="True"
+						ID="input-group"
+						>
+						<Label
+							Caption="&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;"
+							Class="input-group-addon"
+							Format="HTML"
+						/>
+						<InputText
+							ID="inpText"
+						/>
+					</Division>
+					<LineBreak/>
+					<Label
+						Caption="&lt;Division ID=&quot;input-group&quot; Class=&quot;input-group&quot;&gt;
+  &lt;Label Class=&quot;input-group-addon&quot; Caption=&quot;&amp;lt;i class=&amp;quot;fa fa-search&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&quot; Format=&quot;HTML&quot; /&gt;
+  &lt;InputText ID=&quot;inpText&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Icon right positioned"
+						HtmlTag="h5"
+					/>
+					<Division
+						Class="input-group"
+						HtmlDiv="True"
+						ID="input-group"
+						>
+						<InputText
+							ID="inpText"
+						/>
+						<Label
+							Caption="&lt;i class=&quot;fa fa-calendar&quot;&gt;&lt;/i&gt;"
+							Class="input-group-addon"
+							Format="HTML"
+						/>
+					</Division>
+					<LineBreak/>
+					<Label
+						Caption="&lt;Division ID=&quot;input-group&quot; Class=&quot;input-group&quot;&gt;
+  &lt;InputText ID=&quot;inpText&quot; /&gt;
+  &lt;Label Class=&quot;input-group-addon&quot; Caption=&quot;&amp;lt;i class=&amp;quot;fa fa-calendar&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&quot; Format=&quot;HTML&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Button action"
+						HtmlTag="h5"
+					/>
+					<Division
+						Class="input-group"
+						HtmlDiv="True"
+						ID="input-group"
+						>
+						<InputText
+							ID="inpText"
+						/>
+						<Division
+							Class="input-group-btn"
+							HtmlDiv="False"
+							ID="input-group-btn"
+							>
+							<Label
+								Caption="Search"
+								Class="btn btn-primary"
+								>
+								<EventHandler
+									DhtmlEvent="onclick"
+									>
+									<Action
+										ID="actJS"
+										Javascript="alert(&quot;Clicked!&quot;)"
+										Type="Javascript"
+									/>
+								</EventHandler>
+							</Label>
+						</Division>
+					</Division>
+					<LineBreak/>
+					<Label
+						Caption="&lt;Division ID=&quot;input-group&quot; Class=&quot;input-group&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;InputText ID=&quot;inpText&quot; /&gt;
+  &lt;Division HtmlDiv=&quot;False&quot; ID=&quot;input-group-btn&quot; Class=&quot;input-group-btn&quot;&gt;
+    &lt;Label Class=&quot;btn btn-primary&quot; Caption=&quot;Search&quot;&gt;
+      &lt;EventHandler DhtmlEvent=&quot;onclick&quot;&gt;
+        &lt;Action Type=&quot;Javascript&quot; ID=&quot;actJS&quot; Javascript=&quot;alert(&amp;quot;Clicked!&amp;quot;)&quot; /&gt;
+      &lt;/EventHandler&gt;
+    &lt;/Label&gt;
+  &lt;/Division&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+	</Body>
+</Report>

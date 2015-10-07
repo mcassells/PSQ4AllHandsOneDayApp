@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="List Groups"
+	ID="UI-Components.ListGroups"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="List Groups"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Division
+			HtmlDiv="True"
+			ID="doc-link"
+			>
+			<IncludeHtml
+				Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#list-group&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap list group documentation&lt;/a&gt;"
+			/>
+			<Label
+				Caption="Display a styled list of items with custom content."
+				Class="lead text-info"
+				HtmlTag="P"
+			/>
+		</Division>
+		<LineBreak/>
+		<FieldsetBox
+			Caption="List Groups"
+			ID="fsbListGroups"
+			>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<DataList
+						Class="list-group"
+						ID="listListGroup"
+						Ordered="False"
+						>
+						<DataLayer
+							ID="sdlDefault"
+							Type="Static"
+							>
+							<StaticDataRow
+								id=""
+								label=""
+								link=""
+							/>
+						</DataLayer>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="List Item One"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="List Item One"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="List Item Three"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="List Item Four"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="List Item Five"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="List Item Six"
+							/>
+						</ListItem>
+					</DataList>
+					<Label
+						Caption="&lt;DataList Class=&quot;list-group&quot; ID=&quot;listListGroup&quot; Ordered=&quot;False&quot;&gt;
+  &lt;DataLayer ID=&quot;sdlDefault&quot; Type=&quot;Static&quot;&gt;
+    &lt;StaticDataRow id=&quot;&quot; label=&quot;&quot; link=&quot;&quot; /&gt;
+  &lt;/DataLayer&gt;
+  &lt;ListItem Class=&quot;list-group-item&quot;&gt;
+    &lt;Label Caption=&quot;...&quot; /&gt;
+  &lt;/ListItem&gt;
+&lt;/DataList&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+		<FieldsetBox
+			Caption="Other Options"
+			ID="fsbOtherOptions"
+			>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Label
+						Caption="Badges"
+						Class="h4"
+						HtmlTag="H3"
+					/>
+					<DataList
+						Class="list-group"
+						ID="listListGroupBadges"
+						Ordered="False"
+						>
+						<DataLayer
+							ID="sdlDefault"
+							Type="Static"
+							>
+							<StaticDataRow
+								id=""
+								label=""
+								link=""
+							/>
+						</DataLayer>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="1"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="List Item One"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="2"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="List Item One"
+								Format="HTML"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="3"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="List Item Three"
+								Format="HTML"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="4"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="List Item Four"
+								Format="HTML"
+							/>
+						</ListItem>
+					</DataList>
+					<Label
+						Caption="&lt;DataList Class=&quot;list-group&quot; ID=&quot;listListGroupBadges&quot; Ordered=&quot;False&quot;&gt;
+  &lt;DataLayer ID=&quot;sdlDefault&quot; Type=&quot;Static&quot;&gt;
+    &lt;StaticDataRow id=&quot;&quot; label=&quot;&quot; link=&quot;&quot; /&gt;
+  &lt;/DataLayer&gt;
+  &lt;ListItem Class=&quot;list-group-item&quot;&gt;
+    &lt;Label Caption=&quot;...&quot; Class=&quot;badge&quot; HtmlTag=&quot;Span&quot; /&gt;
+    &lt;Label Caption=&quot;...&quot; /&gt;
+  &lt;/ListItem&gt;
+&lt;/DataList&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Active"
+						Class="h4"
+						HtmlTag="H3"
+					/>
+					<DataList
+						Class="list-group"
+						ID="listListGroupActive"
+						Ordered="False"
+						>
+						<DataLayer
+							ID="sdlDefault"
+							Type="Static"
+							>
+							<StaticDataRow
+								id=""
+								label=""
+								link=""
+							/>
+						</DataLayer>
+						<ListItem
+							Class="list-group-item active"
+							>
+							<Label
+								Caption="1"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="List Item One"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="2"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="List Item One"
+								Format="HTML"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="3"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="List Item Three"
+								Format="HTML"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="4"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="List Item Four"
+								Format="HTML"
+							/>
+						</ListItem>
+					</DataList>
+					<Label
+						Caption="&lt;DataList Class=&quot;list-group&quot; ID=&quot;listListGroup&quot; Ordered=&quot;False&quot;&gt;
+  &lt;DataLayer ID=&quot;sdlDefault&quot; Type=&quot;Static&quot;&gt;
+    &lt;StaticDataRow id=&quot;&quot; label=&quot;&quot; link=&quot;&quot; /&gt;
+  &lt;/DataLayer&gt;
+  &lt;ListItem Class=&quot;list-group-item active&quot;&gt;
+  	&lt;Label Caption=&quot;...&quot; Class=&quot;badge&quot; HtmlTag=&quot;Span&quot; /&gt;
+    &lt;Label Caption=&quot;...&quot; /&gt;
+  &lt;/ListItem&gt;
+&lt;/DataList&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Label
+						Caption="Disabled"
+						Class="h4"
+						HtmlTag="H3"
+					/>
+					<DataList
+						Class="list-group"
+						ID="listListGroupDisabled"
+						Ordered="False"
+						>
+						<DataLayer
+							ID="sdlDefault"
+							Type="Static"
+							>
+							<StaticDataRow
+								id=""
+								label=""
+								link=""
+							/>
+						</DataLayer>
+						<ListItem
+							Class="list-group-item disabled"
+							>
+							<Label
+								Caption="1"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="List Item One"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="2"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="List Item One"
+								Format="HTML"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="3"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="List Item Three"
+								Format="HTML"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item"
+							>
+							<Label
+								Caption="4"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption="List Item Four"
+								Format="HTML"
+							/>
+						</ListItem>
+					</DataList>
+					<Label
+						Caption="&lt;DataList Class=&quot;list-group&quot; ID=&quot;listListGroup&quot; Ordered=&quot;False&quot;&gt;
+  &lt;DataLayer ID=&quot;sdlDefault&quot; Type=&quot;Static&quot;&gt;
+    &lt;StaticDataRow id=&quot;&quot; label=&quot;&quot; link=&quot;&quot; /&gt;
+  &lt;/DataLayer&gt;
+  &lt;ListItem Class=&quot;list-group-item disabled&quot;&gt;
+    &lt;Label Caption=&quot;...&quot; /&gt;
+  &lt;/ListItem&gt;
+&lt;/DataList&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Contextual"
+						Class="h4"
+						HtmlTag="H3"
+					/>
+					<DataList
+						Class="list-group"
+						ID="listListGroupContextual"
+						Ordered="False"
+						>
+						<DataLayer
+							ID="sdlDefault"
+							Type="Static"
+							>
+							<StaticDataRow
+								id=""
+								label=""
+								link=""
+							/>
+						</DataLayer>
+						<ListItem
+							Class="list-group-item list-group-item-success"
+							>
+							<Label
+								Caption="1"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption=".list-group-item-success"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item list-group-item-info"
+							>
+							<Label
+								Caption="2"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption=".list-group-item-info"
+								Format="HTML"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item list-group-item-warning"
+							>
+							<Label
+								Caption="3"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption=".list-group-item-warning"
+								Format="HTML"
+							/>
+						</ListItem>
+						<ListItem
+							Class="list-group-item list-group-item-danger"
+							>
+							<Label
+								Caption="4"
+								Class="badge"
+								HtmlTag="Span"
+							/>
+							<Label
+								Caption=".list-group-item-danger"
+								Format="HTML"
+							/>
+						</ListItem>
+					</DataList>
+					<Label
+						Caption="&lt;DataList Class=&quot;list-group&quot; ID=&quot;listListGroupContextual&quot; Ordered=&quot;False&quot;&gt;
+  &lt;DataLayer ID=&quot;sdlDefault&quot; Type=&quot;Static&quot;&gt;
+    &lt;StaticDataRow id=&quot;&quot; label=&quot;&quot; link=&quot;&quot; /&gt;
+  &lt;/DataLayer&gt;
+  &lt;ListItem Class=&quot;list-group-item list-group-item-success&quot;&gt;
+    &lt;Label Caption=&quot;...&quot; /&gt;
+  &lt;/ListItem&gt;
+&lt;/DataList&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+	</Body>
+</Report>

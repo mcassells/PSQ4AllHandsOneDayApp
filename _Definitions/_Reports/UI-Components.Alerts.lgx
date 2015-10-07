@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Alerts"
+	ID="UI-Components.Alerts"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Alerts"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Division
+			HtmlDiv="True"
+			ID="doc-link"
+			>
+			<IncludeHtml
+				Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#Alerts&apos;,&apos;_blank&apos;, &apos;toolbar=yes, scrollbars=yes, resizable=yes&apos;)&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap Alerts documentation&lt;/a&gt;"
+			/>
+			<Label
+				Caption="Provide important information, alerts or messages to users."
+				Class="lead text-info"
+				HtmlTag="P"
+			/>
+		</Division>
+		<FieldsetBox
+			Caption="Alerts"
+			ID="fsbAlerts"
+			>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Label
+						Caption="Success"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="alert alert-success"
+						HtmlDiv="True"
+						>
+						<Label
+							Caption="..."
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;alert alert-success&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;...&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Info"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="alert alert-info"
+						HtmlDiv="True"
+						>
+						<Label
+							Caption="..."
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;alert alert-info&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;...&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Warning"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="alert alert-warning"
+						HtmlDiv="True"
+						>
+						<Label
+							Caption="..."
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;alert alert-warning&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;...&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Danger"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="alert alert-danger"
+						HtmlDiv="True"
+						>
+						<Label
+							Caption="..."
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;alert alert-danger&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;...&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+			<LineBreak/>
+		</FieldsetBox>
+		<FieldsetBox
+			Caption="Dismissible Alerts"
+			ID="fsbAlertsDismissable"
+			>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Label
+						Caption="Success"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="alert alert-success alert-dismissible"
+						HtmlDiv="True"
+						>
+						<Label
+							Caption="&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;"
+							Format="HTML"
+						/>
+						<Label
+							Caption="..."
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;alert alert-success alert-dismissible&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;close&amp;quot; data-dismiss=&amp;quot;alert&amp;quot; aria-label=&amp;quot;Close&amp;quot;&amp;gt;&amp;lt;span aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&quot; Format=&quot;HTML&quot; /&gt;
+  &lt;Label Caption=&quot;...&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Info"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="alert alert-info alert-dismissible"
+						HtmlDiv="True"
+						>
+						<Label
+							Caption="&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;"
+							Format="HTML"
+						/>
+						<Label
+							Caption="..."
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;alert alert-info alert-dismissible&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;close&amp;quot; data-dismiss=&amp;quot;alert&amp;quot; aria-label=&amp;quot;Close&amp;quot;&amp;gt;&amp;lt;span aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&quot; Format=&quot;HTML&quot; /&gt;
+  &lt;Label Caption=&quot;...&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Warning"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="alert alert-warning alert-dismissible"
+						HtmlDiv="True"
+						>
+						<Label
+							Caption="&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;"
+							Format="HTML"
+						/>
+						<Label
+							Caption="..."
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;alert alert-warning alert-dismissible&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;close&amp;quot; data-dismiss=&amp;quot;alert&amp;quot; aria-label=&amp;quot;Close&amp;quot;&amp;gt;&amp;lt;span aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&quot; Format=&quot;HTML&quot; /&gt;
+  &lt;Label Caption=&quot;...&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Danger"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="alert alert-danger alert-dismissible"
+						HtmlDiv="True"
+						>
+						<Label
+							Caption="&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;"
+							Format="HTML"
+						/>
+						<Label
+							Caption="..."
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;alert alert-danger alert-dismissible&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;close&amp;quot; data-dismiss=&amp;quot;alert&amp;quot; aria-label=&amp;quot;Close&amp;quot;&amp;gt;&amp;lt;span aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&quot; Format=&quot;HTML&quot; /&gt;
+  &lt;Label Caption=&quot;...&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+			<LineBreak/>
+		</FieldsetBox>
+		<FieldsetBox
+			Caption="Links in Alerts"
+			ID="fsbAlertsLinks"
+			>
+			<ResponsiveRow>
+				<ResponsiveColumn>
+					<Label
+						Caption="Success"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="alert alert-success alert-dismissible"
+						HtmlDiv="True"
+						>
+						<Label
+							Caption="&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;"
+							Format="HTML"
+						/>
+						<Label
+							Caption="&lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;link in alert&lt;/a&gt; ..."
+							Format="HTML"
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;alert alert-success alert-dismissible&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;close&amp;quot; data-dismiss=&amp;quot;alert&amp;quot; aria-label=&amp;quot;Close&amp;quot;&amp;gt;&amp;lt;span aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&quot; Format=&quot;HTML&quot; /&gt;
+  &lt;Label Caption=&quot;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;alert-link&amp;quot;&amp;gt;link in alert&amp;lt;/a&amp;gt; ...&quot; Format=&quot;HTML&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Info"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="alert alert-info alert-dismissible"
+						HtmlDiv="True"
+						>
+						<Label
+							Caption="&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;"
+							Format="HTML"
+						/>
+						<Label
+							Caption="&lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;link in alert&lt;/a&gt; ..."
+							Format="HTML"
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;alert alert-info alert-dismissible&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;close&amp;quot; data-dismiss=&amp;quot;alert&amp;quot; aria-label=&amp;quot;Close&amp;quot;&amp;gt;&amp;lt;span aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&quot; Format=&quot;HTML&quot; /&gt;
+  &lt;Label Caption=&quot;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;alert-link&amp;quot;&amp;gt;link in alert&amp;lt;/a&amp;gt; ...&quot; Format=&quot;HTML&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Warning"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="alert alert-warning alert-dismissible"
+						HtmlDiv="True"
+						>
+						<Label
+							Caption="&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;"
+							Format="HTML"
+						/>
+						<Label
+							Caption="&lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;link in alert&lt;/a&gt; ..."
+							Format="HTML"
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;alert alert-warning alert-dismissible&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;close&amp;quot; data-dismiss=&amp;quot;alert&amp;quot; aria-label=&amp;quot;Close&amp;quot;&amp;gt;&amp;lt;span aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&quot; Format=&quot;HTML&quot; /&gt;
+  &lt;Label Caption=&quot;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;alert-link&amp;quot;&amp;gt;link in alert&amp;lt;/a&amp;gt; ...&quot; Format=&quot;HTML&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+				<ResponsiveColumn>
+					<Label
+						Caption="Danger"
+						Class="h4"
+						HtmlTag="H2"
+					/>
+					<Division
+						Class="alert alert-danger alert-dismissible"
+						HtmlDiv="True"
+						>
+						<Label
+							Caption="&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;"
+							Format="HTML"
+						/>
+						<Label
+							Caption="&lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;link in alert&lt;/a&gt; ..."
+							Format="HTML"
+						/>
+					</Division>
+					<Label
+						Caption="&lt;Division Class=&quot;alert alert-danger alert-dismissible&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Label Caption=&quot;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;close&amp;quot; data-dismiss=&amp;quot;alert&amp;quot; aria-label=&amp;quot;Close&amp;quot;&amp;gt;&amp;lt;span aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&quot; Format=&quot;HTML&quot; /&gt;
+  &lt;Label Caption=&quot;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;alert-link&amp;quot;&amp;gt;link in alert&amp;lt;/a&amp;gt; ...&quot; Format=&quot;HTML&quot; /&gt;
+&lt;/Division&gt;"
+						HtmlTag="pre"
+					/>
+				</ResponsiveColumn>
+			</ResponsiveRow>
+		</FieldsetBox>
+	</Body>
+</Report>

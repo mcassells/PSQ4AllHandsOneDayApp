@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Page Header"
+	ID="UI-Components.PageHeader"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Page Header"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<ResponsiveRow>
+			<ResponsiveColumn>
+				<IncludeHtml
+					Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#page-header&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap page header documentation&lt;/a&gt;"
+				/>
+				<Label
+					Caption="Simply a shell of a &lt;h1&gt; to assign the suitable amount of space."
+					Class="lead text-info"
+					HtmlTag="P"
+				/>
+				<Division
+					Class="page-header"
+					HtmlDiv="True"
+					ID="divPageHeader"
+					>
+					<Label
+						Caption="Hello Logi!"
+						HtmlTag="H1"
+					/>
+				</Division>
+				<Label
+					Caption="&lt;Division Class=&quot;page-header&quot; HtmlDiv=&quot;True&quot; ID=&quot;divPageHeader&quot;&gt;
+  &lt;Label Caption=&quot;Hello Logi!&quot; HtmlTag=&quot;H1&quot; /&gt;
+&lt;/Division&gt;"
+					Class="pull-down"
+					HtmlTag="pre"
+				/>
+			</ResponsiveColumn>
+		</ResponsiveRow>
+	</Body>
+</Report>

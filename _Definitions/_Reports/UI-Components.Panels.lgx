@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Panels"
+	ID="UI-Components.Panels"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Panels"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Division
+			HtmlDiv="True"
+			ID="doc-link"
+			>
+			<IncludeHtml
+				Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#panels&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap panel documentation&lt;/a&gt;"
+			/>
+			<Label
+				Caption="A panel is a bordered box containing content."
+				Class="lead text-info"
+				HtmlTag="P"
+			/>
+		</Division>
+		<FieldsetBox
+			Caption="Standard Panels"
+			ID="Panels"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="Standard-panels"
+				>
+				<ResponsiveRow>
+					<ResponsiveColumn>
+						<Division
+							Class="panel panel-default"
+							HtmlDiv="True"
+							ID="Panel-default"
+							>
+							<Division
+								Class="panel-heading"
+								HtmlDiv="True"
+								ID="panel-heading"
+								>
+								<Label
+									Caption="Panel Heading"
+								/>
+							</Division>
+							<Division
+								Class="panel-body"
+								HtmlDiv="True"
+								ID="panel-body"
+								>
+								<Label
+									Caption="This is the body of my panel"
+								/>
+								<Label
+									Caption="&lt;Division ID=&quot;Panel-default&quot; Class=&quot;panel panel-default&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Division ID=&quot;panel-heading&quot; Class=&quot;panel-heading&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label Caption=&quot;Panel Heading&quot; /&gt;
+  &lt;/Division&gt;
+  &lt;Division ID=&quot;panel-body&quot; Class=&quot;panel-body&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label Caption=&quot;This is the body of my panel&quot; /&gt;
+  &lt;/Division&gt;
+&lt;/Division&gt;"
+									HtmlTag="pre"
+								/>
+							</Division>
+						</Division>
+					</ResponsiveColumn>
+					<ResponsiveColumn>
+						<Division
+							Class="panel panel-success"
+							HtmlDiv="True"
+							ID="Panel-success"
+							>
+							<Division
+								Class="panel-heading"
+								HtmlDiv="True"
+								ID="panel-heading"
+								>
+								<Label
+									Caption="Panel Heading"
+								/>
+							</Division>
+							<Division
+								Class="panel-body"
+								HtmlDiv="True"
+								ID="panel-body"
+								>
+								<Label
+									Caption="This is the body of my panel"
+								/>
+								<Label
+									Caption="&lt;Division ID=&quot;Panel-danger&quot; Class=&quot;panel panel-success&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Division ID=&quot;panel-heading&quot; Class=&quot;panel-heading&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label Caption=&quot;Panel Heading&quot; /&gt;
+  &lt;/Division&gt;
+  &lt;Division ID=&quot;panel-body&quot; Class=&quot;panel-body&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label Caption=&quot;This is the body of my panel&quot; /&gt;
+  &lt;/Division&gt;
+&lt;/Division&gt;"
+									HtmlTag="pre"
+								/>
+							</Division>
+						</Division>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow>
+					<ResponsiveColumn>
+						<Division
+							Class="panel panel-warning"
+							HtmlDiv="True"
+							ID="Panel-warning"
+							>
+							<Division
+								Class="panel-heading"
+								HtmlDiv="True"
+								ID="panel-heading"
+								>
+								<Label
+									Caption="Panel Heading"
+								/>
+							</Division>
+							<Division
+								Class="panel-body"
+								HtmlDiv="True"
+								ID="panel-body"
+								>
+								<Label
+									Caption="This is the body of my panel"
+								/>
+								<Label
+									Caption="&lt;Division ID=&quot;Panel-danger&quot; Class=&quot;panel panel-warning&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Division ID=&quot;panel-heading&quot; Class=&quot;panel-heading&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label Caption=&quot;Panel Heading&quot; /&gt;
+  &lt;/Division&gt;
+  &lt;Division ID=&quot;panel-body&quot; Class=&quot;panel-body&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label Caption=&quot;This is the body of my panel&quot; /&gt;
+  &lt;/Division&gt;
+&lt;/Division&gt;"
+									HtmlTag="pre"
+								/>
+							</Division>
+						</Division>
+					</ResponsiveColumn>
+					<ResponsiveColumn>
+						<Division
+							Class="panel panel-danger"
+							HtmlDiv="True"
+							ID="Panel-danger"
+							>
+							<Division
+								Class="panel-heading"
+								HtmlDiv="True"
+								ID="panel-heading"
+								>
+								<Label
+									Caption="Panel Heading"
+								/>
+							</Division>
+							<Division
+								Class="panel-body"
+								HtmlDiv="True"
+								ID="panel-body"
+								>
+								<Label
+									Caption="This is the body of my panel"
+								/>
+								<Label
+									Caption="&lt;Division ID=&quot;Panel-danger&quot; Class=&quot;panel panel-danger&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Division ID=&quot;panel-heading&quot; Class=&quot;panel-heading&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label Caption=&quot;Panel Heading&quot; /&gt;
+  &lt;/Division&gt;
+  &lt;Division ID=&quot;panel-body&quot; Class=&quot;panel-body&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label Caption=&quot;This is the body of my panel&quot; /&gt;
+  &lt;/Division&gt;
+&lt;/Division&gt;"
+									HtmlTag="pre"
+								/>
+							</Division>
+						</Division>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+			</Division>
+		</FieldsetBox>
+		<FieldsetBox
+			Caption="Clean Panel"
+			ID="CleanPanel"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="Clean-panel"
+				>
+				<Division
+					Class="panel panel-default"
+					HtmlDiv="True"
+					ID="Panel-Clean"
+					>
+					<Division
+						Class="panel-heading clean"
+						HtmlDiv="True"
+						ID="panel-heading"
+						>
+						<Label
+							Caption="Panel Heading"
+						/>
+					</Division>
+					<Division
+						Class="panel-body"
+						HtmlDiv="True"
+						ID="panel-body"
+						>
+						<Label
+							Caption="This is the body of my panel"
+						/>
+						<Label
+							Caption="&lt;Division ID=&quot;Panel-Clean&quot; Class=&quot;panel panel-default&quot; HtmlDiv=&quot;True&quot;&gt;
+  &lt;Division ID=&quot;panel-heading&quot; Class=&quot;panel-heading clean&quot;  HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label Caption=&quot;Panel Heading&quot; /&gt;
+  &lt;/Division&gt;
+  &lt;Division ID=&quot;panel-body&quot; Class=&quot;panel-body&quot; HtmlDiv=&quot;True&quot;&gt;
+    &lt;Label Caption=&quot;This is the body of my panel&quot; /&gt;
+  &lt;/Division&gt;
+&lt;/Division&gt;"
+							HtmlTag="pre"
+						/>
+					</Division>
+				</Division>
+			</Division>
+		</FieldsetBox>
+	</Body>
+</Report>

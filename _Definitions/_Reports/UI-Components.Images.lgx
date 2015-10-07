@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report
+	Caption="Images and Thumbnail"
+	ID="UI-Components.Images"
+	>
+	<Body>
+		<Division
+			Class="page-title"
+			HtmlDiv="True"
+			ID="page-title"
+			>
+			<Label
+				Caption="Images and Thumbnails"
+				HtmlTag="H1"
+			/>
+		</Division>
+		<Division
+			Class="btn-group btn-group-justified"
+			HtmlDiv="True"
+			ID="group-nav"
+			>
+			<RepeatElements
+				ID="repeat-nav"
+				>
+				<DataLayer
+					ID="tab-nav-list"
+					Type="Static"
+					>
+					<StaticDataRow
+						id=""
+						label="Images"
+						link="fsbImages"
+					/>
+					<StaticDataRow
+						id=""
+						label="Thumbnails"
+						link="fsbThumbnail"
+					/>
+				</DataLayer>
+				<Label
+					Caption="@Repeat.label~"
+					Class="btn btn-default"
+					Format="HTML"
+					HtmlTag="a"
+					>
+					<EventHandler
+						DhtmlEvent="onclick"
+						>
+						<Action
+							ID="actJS"
+							Javascript="window.location.hash = &quot;@Repeat.link~&quot;;"
+							Type="Javascript"
+						/>
+					</EventHandler>
+				</Label>
+			</RepeatElements>
+		</Division>
+		<FieldsetBox
+			Caption="Images"
+			ID="fsbImages"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="doc-link"
+				>
+				<IncludeHtml
+					Html="&lt;a href=&quot;JavaScript:void(0)&quot; onclick=&quot;window.open(&apos;http://getbootstrap.com/components/#images&apos;,&apos;_blank&apos;); return false;&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap image documentation&lt;/a&gt;"
+				/>
+				<Label
+					Caption="Easily add responsive images and shapes.  To center images which use the &lt;code&gt;.img-responsive&lt;/code&gt; class, use .center-block instead of &lt;code&gt;.text-center&lt;/code&gt;."
+					Class="lead text-info"
+					Format="HTML"
+					HtmlTag="P"
+				/>
+			</Division>
+			<FieldsetBox
+				Caption="Responsive Image"
+				ID="fsbResponsiveImage"
+				>
+				<Division
+					Class="thumbnail"
+					HtmlDiv="True"
+					>
+					<Image
+						AltText="Responsive Image"
+						Caption="_theme_files.logo.png"
+						Class="img-responsive"
+					/>
+				</Division>
+				<Label
+					Caption="&lt;Image Caption=&quot;...&quot; Class=&quot;img-responsive&quot; AltText=&quot;Responsive Image&quot; /&gt;"
+					Class="pull-down"
+					HtmlTag="pre"
+				/>
+			</FieldsetBox>
+			<FieldsetBox
+				Caption="Image Shapes"
+				ID="fsbImagesRounded"
+				>
+				<ResponsiveRow>
+					<ResponsiveColumn
+						Class="text-center"
+						>
+						<Label
+							Caption="Images Rounded"
+							Class="H5"
+							HtmlTag="H3"
+						/>
+						<Division
+							Class="thumbnail"
+							HtmlDiv="True"
+							>
+							<Image
+								AltText="Images Rounded"
+								Caption="apple-touch-icon-152x152.png"
+								Class="img-rounded"
+							/>
+						</Division>
+						<Label
+							Caption="&lt;Image Caption=&quot;...&quot; Class=&quot;img-circle&quot; AltText=&quot;Image Circle&quot; /&gt;"
+							Class="pull-down"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="text-center"
+						>
+						<Label
+							Caption="Image Circle"
+							Class="H5"
+							HtmlTag="H3"
+						/>
+						<Division
+							Class="thumbnail"
+							HtmlDiv="True"
+							>
+							<Image
+								AltText="Image Circle"
+								Caption="apple-touch-icon-152x152.png"
+								Class="img-circle"
+							/>
+						</Division>
+						<Label
+							Caption="&lt;Image Caption=&quot;...&quot; Class=&quot;img-circle&quot; AltText=&quot;Image Circle&quot; /&gt;"
+							Class="pull-down"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="text-center"
+						>
+						<Label
+							Caption="Images Thumbnail"
+							Class="H5"
+							HtmlTag="H3"
+						/>
+						<Division
+							Class="thumbnail"
+							HtmlDiv="True"
+							>
+							<Image
+								AltText="Images Thumbnail"
+								Caption="apple-touch-icon-152x152.png"
+								Class="img-thumbnail"
+							/>
+						</Division>
+						<Label
+							Caption="&lt;Image Caption=&quot;...&quot; Class=&quot;img-thumbnail&quot; AltText=&quot;Images Thumbnail&quot; /&gt;"
+							Class="pull-down"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+			</FieldsetBox>
+		</FieldsetBox>
+		<FieldsetBox
+			Caption="Thumbnail"
+			ID="fsbThumbnail"
+			>
+			<Division
+				HtmlDiv="True"
+				ID="doc-link"
+				>
+				<IncludeHtml
+					Html="&lt;a href=&quot;http://getbootstrap.com/components/#thumbnail&quot; class=&quot;btn btn-info&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Bootstrap thumbnail documentation&lt;/a&gt;"
+				/>
+			</Division>
+			<LineBreak/>
+			<FieldsetBox
+				Caption="Thumbnail Link"
+				ID="fsbThumbnailLink"
+				>
+				<ResponsiveRow>
+					<ResponsiveColumn
+						ColspanExtraSmallScreen="12"
+						ColspanMediumScreen="4"
+						ColspanSmallScreen="12"
+						>
+						<IncludeHtml
+							Html="&lt;a href=&quot;#&quot; class=&quot;thumbnail&quot;&gt;
+    &lt;img src=&quot;_SupportFiles/_theme_files.logo.png&quot; alt=&quot;...&quot;&gt;
+&lt;/a&gt;"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="hidden-xs hidden-sm"
+						>
+						<IncludeHtml
+							Html="&lt;a href=&quot;#&quot; class=&quot;thumbnail&quot;&gt;
+    &lt;img src=&quot;_SupportFiles/_theme_files.logo.png&quot; alt=&quot;...&quot;&gt;
+&lt;/a&gt;"
+						/>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						Class="hidden-xs hidden-sm"
+						>
+						<IncludeHtml
+							Html="&lt;a href=&quot;#&quot; class=&quot;thumbnail&quot;&gt;
+    &lt;img src=&quot;_SupportFiles/_theme_files.logo.png&quot; alt=&quot;...&quot;&gt;
+&lt;/a&gt;"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow>
+					<ResponsiveColumn>
+						<Label
+							Caption="&lt;IncludeHtml Html=&quot;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;thumbnail&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;img src=&amp;quot;...&amp;quot; alt=&amp;quot;...&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/a&amp;gt;&quot; /&gt;"
+							Class="pull-down"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+			</FieldsetBox>
+			<FieldsetBox
+				Caption="Thumbnail with Content"
+				ID="fsbThumbnailContent"
+				>
+				<ResponsiveRow>
+					<ResponsiveColumn
+						ColspanExtraSmallScreen="12"
+						ColspanLargeScreen="4"
+						ColspanMediumScreen="4"
+						ColspanSmallScreen="12"
+						>
+						<Division
+							Class="thumbnail"
+							>
+							<Image
+								Caption="_theme_files.logo.png"
+							/>
+							<LineBreak/>
+							<Label
+								Caption="Noster invenire nec at, vis ei volumus consetetur. Sea ea tale ullum erroribus, et vidit vocent tritani nec. Ad bonorum albucius mel, ne quo dicit pericula, nam in gubergren reprehendunt. Modo veritus duo ne, populo diceret pri at, et urbanitas efficiantur vis. Ex ius vidisse tritani expetenda, eruditi tractatos cum eu."
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<LineBreak/>
+							<Label
+								Caption="&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt;"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+						</Division>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						ColspanExtraSmallScreen="0"
+						ColspanMediumScreen="4"
+						ColspanSmallScreen="0"
+						>
+						<Division
+							Class="thumbnail"
+							>
+							<Image
+								Caption="_theme_files.logo.png"
+							/>
+							<LineBreak/>
+							<Label
+								Caption="Noster invenire nec at, vis ei volumus consetetur. Sea ea tale ullum erroribus, et vidit vocent tritani nec. Ad bonorum albucius mel, ne quo dicit pericula, nam in gubergren reprehendunt. Modo veritus duo ne, populo diceret pri at, et urbanitas efficiantur vis. Ex ius vidisse tritani expetenda, eruditi tractatos cum eu."
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<LineBreak/>
+							<Label
+								Caption="&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt;"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+						</Division>
+					</ResponsiveColumn>
+					<ResponsiveColumn
+						ColspanExtraSmallScreen="0"
+						ColspanMediumScreen="4"
+						ColspanSmallScreen="0"
+						>
+						<Division
+							Class="thumbnail"
+							>
+							<Image
+								Caption="_theme_files.logo.png"
+							/>
+							<LineBreak/>
+							<Label
+								Caption="Noster invenire nec at, vis ei volumus consetetur. Sea ea tale ullum erroribus, et vidit vocent tritani nec. Ad bonorum albucius mel, ne quo dicit pericula, nam in gubergren reprehendunt. Modo veritus duo ne, populo diceret pri at, et urbanitas efficiantur vis. Ex ius vidisse tritani expetenda, eruditi tractatos cum eu."
+								Format="HTML"
+								HtmlTag="P"
+							/>
+							<LineBreak/>
+							<Label
+								Caption="&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt;"
+								Format="HTML"
+								HtmlTag="P"
+							/>
+						</Division>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+				<ResponsiveRow>
+					<ResponsiveColumn>
+						<Label
+							Caption="&lt;Division&gt;
+  &lt;Image Caption=&quot;...&quot; /&gt;
+  &lt;LineBreak /&gt;
+  &lt;Label Caption=&quot;...&quot; HtmlTag=&quot;P&quot; Format=&quot;HTML&quot; /&gt;
+  &lt;LineBreak /&gt;
+  &lt;Label Caption=&quot;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;btn btn-primary&amp;quot; role=&amp;quot;button&amp;quot;&amp;gt;Button&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;btn btn-default&amp;quot; role=&amp;quot;button&amp;quot;&amp;gt;Button&amp;lt;/a&amp;gt;&quot; HtmlTag=&quot;P&quot; Format=&quot;HTML&quot; /&gt;
+&lt;/Division&gt;"
+							Class="pull-down"
+							HtmlTag="pre"
+						/>
+					</ResponsiveColumn>
+				</ResponsiveRow>
+			</FieldsetBox>
+		</FieldsetBox>
+	</Body>
+	<ideTestParams/>
+</Report>

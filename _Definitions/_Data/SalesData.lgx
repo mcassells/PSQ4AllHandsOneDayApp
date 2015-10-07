@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data
+	ID="SalesData"
+	>
+	<Note
+		Note="// This report can be accessed via script or browser with the URL: http://localhost/[PATH_TO_YOUR_APP]/rdTemplate/rdData.aspx?rdData=SalesData
+// Replace [PATH_TO_YOUR_APP] with your application name or application path.
+// EXAMPLE: http://localhost/Accelerate/rdTemplate/rdData.aspx?rdData=SalesData"
+		>
+		<Note
+			Note="// Be sure to turn off security before running the data report."
+		/>
+	</Note>
+	<JsonData
+		ID="jsonData"
+		JsonVarName="Exclude"
+		>
+		<DataLayer
+			ConnectionID="AdventureWorks"
+			Source="Select Top 100 Sales.SalesOrderHeader.SalesOrderID,
+  Person.Contact.FirstName,
+  Person.Contact.LastName,
+  Person.Contact.EmailAddress,
+  Person.Contact.Phone,
+  Sales.SalesOrderHeader.OrderDate,
+  Sales.SalesOrderHeader.DueDate,
+  Sales.SalesOrderHeader.ShipDate,
+  Sales.SalesOrderHeader.SubTotal,
+  Sales.SalesOrderHeader.TaxAmt,
+  Sales.SalesOrderHeader.Freight
+From Sales.SalesOrderHeader
+  Left Join Person.Contact On Person.Contact.ContactID =
+    Sales.SalesOrderHeader.ContactID"
+			Type="SQL"
+		/>
+	</JsonData>
+	<ideTestParams
+		rdDataID=""
+	/>
+</Data>

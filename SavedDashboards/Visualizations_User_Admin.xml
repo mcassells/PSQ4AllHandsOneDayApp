@@ -1,0 +1,15 @@
+<rdSavedDashboard>
+  <Tabs ID="rdDashboardTabs" ActiveTabID="bf0cd31db78a4ada835bbd6e97c0b5fb" DashboardColumnCount="2">
+    <Tab ID="bf0cd31db78a4ada835bbd6e97c0b5fb" Caption="Important Visuals" ColumnCount="2" rdFreeformLayoutStyle="Width:1651px;" />
+  </Tabs>
+  <Panel ID="GaugeDisplay" InstanceID="675545f715e14f54a76e656e445d190e" TabID="bf0cd31db78a4ada835bbd6e97c0b5fb" Caption="KPI" DashboardColumn="0">
+    <LinkParams DisplayAs_675545f715e14f54a76e656e445d190e="KPI" InstanceID="675545f715e14f54a76e656e445d190e" />
+  </Panel>
+  <Panel ID="GeoHeatMap" InstanceID="8356631e70fc46d3b073237eff55dfdc" TabID="bf0cd31db78a4ada835bbd6e97c0b5fb" DashboardColumn="0" />
+  <Panel ID="HeatMapVisualization" InstanceID="866335e1eaca4e11976abf5c910017ec" TabID="bf0cd31db78a4ada835bbd6e97c0b5fb" DashboardColumn="0" />
+  <Panel ID="TimePeriodComparison" InstanceID="1fe3de0b9f6c4b4bb01dab848c249a6a" TabID="bf0cd31db78a4ada835bbd6e97c0b5fb" DashboardColumn="1" />
+  <Panel ID="GaugeDisplay" InstanceID="a2bf3e700a1d4b13bd520dd372089e9c" TabID="bf0cd31db78a4ada835bbd6e97c0b5fb" DashboardColumn="1" Caption="Gauge Display">
+    <LinkParams InstanceID="a2bf3e700a1d4b13bd520dd372089e9c" DisplayAs_a2bf3e700a1d4b13bd520dd372089e9c="BalloonBar" />
+  </Panel>
+  <Panel ID="KPI-Table" InstanceID="81d2fa1fd40d44d8a6f72515f1ee494f" TabID="bf0cd31db78a4ada835bbd6e97c0b5fb" DashboardColumn="1" />
+</rdSavedDashboard>

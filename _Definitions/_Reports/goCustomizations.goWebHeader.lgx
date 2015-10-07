@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ID="goCustomizations.goWebHeader" SavedBy="FELIPE-SURFACE\fblanco" SavedAt="9/9/2014 10:39:28 AM" EngineVersion="8.2.26">
+  <SharedElement ID="sharedHeader">
+    <Remark>
+      <Division ID="divGoHeader" HtmlDiv="True" Class="go-header" ShowModes="rdBrowser">
+        <Division ID="divHeaderContent" HtmlDiv="True">
+          <Note Note="Remark this or edit content in here" />
+          <Note Note="Add ThemeContent class to divHeaderContent for margins" />
+          <Label Caption="My Company" />
+        </Division>
+        <Division ID="divGoHeaderSpacer" HtmlDiv="True" Class="go-header-spacer">
+          <Note Note="Remark this or use it for a thin top line" />
+        </Division>
+      </Division>
+    </Remark>
+  </SharedElement>
+</Report>

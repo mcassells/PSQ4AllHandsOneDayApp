@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ID="InfoGo.goSchedule" InfoGoVersion="12.0.90">
+  <ReportCenterMenu SchedulerConnectionID="goScheduler">
+    <Note Note="This definition allows the rdRcCommand LinkParam to work.  This report becomes the popup panel for scheduling." />
+  </ReportCenterMenu>
+  <SetSessionVariables>
+    <SessionParams rdRcScheduleConnID="goScheduler" />
+  </SetSessionVariables>
+</Report>
