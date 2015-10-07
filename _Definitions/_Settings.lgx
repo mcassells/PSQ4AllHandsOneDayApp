@@ -7,7 +7,7 @@
 		DefaultReport="Visualizations"
 	/>
 	<Path
-		AppPath="http://localhost/Accelerate"
+		AppPath="http://localhost/PSQ4AllHandsOneDayApp"
 	/>
 	<General
 		BookmarkCollectionDefault="@Function.UserName~goCollection"
