@@ -218,6 +218,9 @@
 			Note="This process sets the theme color settings"
 		/>
 	</StartupProcess>
+	<Note
+		Note="Test"
+	/>
 	<ideTestParams
 		rdPassword=""
 		rdUsername=""

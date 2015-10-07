@@ -218,38 +218,6 @@
       <Element Key="10" />
       <Element Key="11" />
     </File>
-    <File Name="C:\inetpub\wwwroot\Accelerate\_Definitions\_Reports\UI-Components.Alerts.lgx">
-      <Element Key="0\2" />
-      <Element Key="0\2\0" />
-      <Element Key="0\2\0\0" />
-      <Element Key="0\2\0\0\1" />
-      <Element Key="0\2\0\1" />
-      <Element Key="0\2\0\1\1" />
-      <Element Key="0\2\0\2" />
-      <Element Key="0\2\0\2\1" />
-      <Element Key="0\2\0\3" />
-      <Element Key="0\2\0\3\1" />
-      <Element Key="0\3" />
-      <Element Key="0\3\0" />
-      <Element Key="0\3\0\0" />
-      <Element Key="0\3\0\0\1" />
-      <Element Key="0\3\0\1" />
-      <Element Key="0\3\0\1\1" />
-      <Element Key="0\3\0\2" />
-      <Element Key="0\3\0\2\1" />
-      <Element Key="0\3\0\3" />
-      <Element Key="0\3\0\3\1" />
-      <Element Key="0\4" />
-      <Element Key="0\4\0" />
-      <Element Key="0\4\0\0" />
-      <Element Key="0\4\0\0\1" />
-      <Element Key="0\4\0\1" />
-      <Element Key="0\4\0\1\1" />
-      <Element Key="0\4\0\2" />
-      <Element Key="0\4\0\2\1" />
-      <Element Key="0\4\0\3" />
-      <Element Key="0\4\0\3\1" />
-    </File>
     <File Name="C:\inetpub\wwwroot\Accelerate\_Definitions\_Reports\UI-Components.Badges.lgx">
       <Element Key="0\1\2\0\0" />
     </File>
