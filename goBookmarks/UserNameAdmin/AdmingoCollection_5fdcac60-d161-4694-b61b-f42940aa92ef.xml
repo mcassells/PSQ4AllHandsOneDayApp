@@ -1,0 +1,66 @@
+<Report>
+  <Body>
+    <Division ID="cd47589d-c7d9-423d-9c0a-24a7d527b685" HtmlDiv="True" rdReportAuthorElementType="Visualization" Class="rd-report-author-element" rdGalleryPanelID="rdCustomDashboardPanel_6b05d5de5b524dbaa77a89b5c7be23ca">
+      <Division ID="divTitle_cd47589d-c7d9-423d-9c0a-24a7d527b685" HtmlDiv="True">
+        <Label ID="lblVisualizationTitle_cd47589d-c7d9-423d-9c0a-24a7d527b685" Class="ThemeHeader" Caption="Units in Stock By Category">
+        </Label>
+      </Division>
+      <Division ID="divContent_cd47589d-c7d9-423d-9c0a-24a7d527b685" HtmlDiv="True" Class="rd-report-author-element-content ">
+        <ChartCanvas CaptionDated="{AggrName} of {DataColumnName} by {LabelColumnName}" ChartHeight="300" ChartWidth="" BorderColor="#7A7A7A" BorderRadius="4" ID="rdAcChart_AnalChart_1_b43a15d5-b99e-4c0c-b8e1-bfe9360e0b56" rdUnderSuperElement="True" rdAcSavedFile="C:\inetpub\wwwroot\PSQ4AllHandsOneDayApp\goBookmarks\UserNameAdmin\AdmingoCollection_d657d44f-08c8-4dba-a0fe-06c02d9ebcfb.xml" rdAcIsAnalysisChart="True" rdOriginalChartLabelColumn="Categories_CategoryName" rdOriginalChartValueColumn="Products_UnitsInStock" PlotBackgroundColor="#ffffff" BackgroundColor="Transparent" BackgroundColorTransparency="15" BorderColorTransparency="15" rdThumbnailPath="C:\inetpub\wwwroot\PSQ4AllHandsOneDayApp\goBookmarks\UserNameAdmin/rdThumbnails\rdThumb-9e618d2dcaf74e4391ec75e8cc720be6.png">
+          <Series Type="Pie" ChartLabelColumn="Categories_CategoryName" ChartYDataColumn="rdAggrProducts_UnitsInStock" Color="#4DA8EF" Colors="#4DA8EF, #53C5B7, #EF9828, #E8CF44, #9A7AE8, #1F2B3A, #FF2C2D, #67E25C, #DADADC, #F26A66" PieBorderColor="Transparent" PieBorderColorTransparency="0" PieBorderThickness="0">
+            <Quicktip ID="rdAcPieChartQuicktip">
+              <QuicktipRow Caption="Category Name: " Value="@Chart.Categories_CategoryName~" />
+              <QuicktipRow Caption="Units In Stock: " Value="@Chart.rdAggrProducts_UnitsInStock~" Format="General Number" />
+            </Quicktip>
+            <DataLabels FontFamily=" 'Lato', Helvetica, Arial, sans-serif" FontWeight="Normal" FontColor="#424242" FontSize="14" />
+          </Series>
+          <DataLayer Type="ActiveSQL" ConnectionID="Northwind" Source="Categories" QueryBuilderTableID="Categories" ErrorSessionVar="rdActiveSqlErrorMsg" ID="dlAnalChart_1">
+            <SqlColumn ID="Categories_CategoryID" DataColumn="CategoryID" DataType="Number" Caption="Category Id" />
+            <SqlColumn ID="Categories_CategoryName" DataColumn="CategoryName" DataType="Text" Caption="Category Name" />
+            <SqlColumn ID="Categories_Description" DataColumn="Description" DataType="Text" Caption="Description" />
+            <SqlJoin JoinType="Inner Join">
+              <MatchCondition LeftDataColumn="CategoryID" RightDataColumn="CategoryID" />
+              <SqlQuery Source="Products" QueryBuilderTableID="Products">
+                <SqlColumn ID="Products_ProductID" DataColumn="ProductID" DataType="Number" Caption="Product Id" />
+                <SqlColumn ID="Products_ProductName" DataColumn="ProductName" DataType="Text" Caption="Product Name" />
+                <SqlColumn ID="Products_SupplierID" DataColumn="SupplierID" DataType="Number" Caption="Supplier Id" />
+                <SqlColumn ID="Products_CategoryID" DataColumn="CategoryID" DataType="Number" Caption="Category Id" />
+                <SqlColumn ID="Products_QuantityPerUnit" DataColumn="QuantityPerUnit" DataType="Text" Caption="Quantity Per Unit" />
+                <SqlColumn ID="Products_UnitPrice" DataColumn="UnitPrice" DataType="Number" Caption="Unit Price" />
+                <SqlColumn ID="Products_UnitsInStock" DataColumn="UnitsInStock" DataType="Number" Caption="Units In Stock" />
+                <SqlColumn ID="Products_UnitsOnOrder" DataColumn="UnitsOnOrder" DataType="Number" Caption="Units On Order" />
+                <SqlColumn ID="Products_ReorderLevel" DataColumn="ReorderLevel" DataType="Number" Caption="Reorder Level" />
+                <SqlColumn ID="Products_Discontinued" DataColumn="Discontinued" DataType="Boolean" Caption="Discontinued" />
+              </SqlQuery>
+            </SqlJoin>
+            <SqlGroup GroupColumn="Categories_CategoryName" DataType="Text" KeepGroupedRows="False">
+              <SqlAggregateColumn ID="rdAggrProducts_UnitsInStock" AggregateColumn="Products_UnitsInStock" AggregateFunction="SUM" DataType="Number" />
+            </SqlGroup>
+            <SortFilter SortColumn="rdAggrProducts_UnitsInStock" DataType="Number" SortSequence="Descending" />
+            <RelevanceFilter ID="rdAcPieChartRelevanceFilter" RelevanceValue="0" RelevanceType="NumberOfRows" IrrelevanceLabel="Other" DataColumn="rdAggrProducts_UnitsInStock" LabelColumn="Categories_CategoryName" />
+          </DataLayer>
+          <ChartXAxis AxisLineColor="#EFEFF1">
+            <AxisLabelStyle FontColor="#717171" FontAngle="40" FontSize="12" FontFamily=" 'Lato', Helvetica, Arial, sans-serif" FontWeight="Normal" />
+          </ChartXAxis>
+          <ChartYAxis AxisLineColor="#EFEFF1">
+            <ChartTicksAndGrid GridLineColor="#F7F7F7" TickLineColor="#F7F7F7" />
+            <AxisLabelStyle FontColor="#717171" FontSize="12" FontFamily=" 'Lato', Helvetica, Arial, sans-serif" FontWeight="Normal" />
+          </ChartYAxis>
+        </ChartCanvas>
+      </Division>
+      <HtmlStyle border-style="none" />
+    </Division>
+  </Body>
+  <StyleSheet StyleSheet="_Themes/Accelerate/css/bootstrap.min.css" />
+  <StyleSheet StyleSheet="_Themes/Accelerate/font-awesome/css/font-awesome.min.css" />
+  <StyleSheet StyleSheet="_Themes/Accelerate/Theme.css" />
+  <StyleSheet StyleSheet="_Themes/Accelerate/css/smartmenus.css" />
+  <StyleSheet StyleSheet="_Themes/Accelerate/css/daterangepicker.css" />
+  <StyleSheet StyleSheet="_Themes/Accelerate/css/bootstrap-datepicker.css" />
+  <StyleSheet StyleSheet="_Themes/Accelerate/css/colpick.css" />
+  <StyleSheet StyleSheet="_Themes/Accelerate/css/iconpicker.min.css" />
+  <StyleSheet StyleSheet="_Themes/Accelerate/css/application.css" />
+  <StyleSheet StyleSheet="_SupportFiles/_theme_files.custom.css" />
+  <StyleSheet StyleSheet="" Theme="Accelerate" />
+  <StyleSheet StyleSheet="rdTemplate/rdReportAuthor/reportAuthor.css" />
+</Report>

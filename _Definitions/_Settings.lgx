@@ -55,27 +55,44 @@
 	<Connections>
 		<Connection
 			ID="Northwind"
-			SqlServer="localhost"
+			SqlServer="209.48.69.227"
 			SqlServerDatabase="Northwind"
-			SqlServerPassword="lgxpass000"
-			SqlServerPort=""
-			SqlServerUser="sa"
-			Type="SqlServer"
-		/>
-		<Connection
-			ID="AdventureWorks"
-			SqlServer="localhost"
-			SqlServerDatabase="AdventureWorks"
-			SqlServerPassword="lgxpass000"
-			SqlServerPort=""
-			SqlServerUser="sa"
+			SqlServerPassword="Logipass"
+			SqlServerUser="Training_User"
 			Type="SqlServer"
 			>
 			<Metadata
-				ID="metaAWsales"
-				MetadataName="AW Sales"
+				ID="metaNorthwind"
+				MetadataName="Northwind"
 			/>
 		</Connection>
+		<Remark>
+			<Connection
+				ID="Northwind"
+				SqlServer="localhost"
+				SqlServerDatabase="Northwind"
+				SqlServerPassword="lgxpass000"
+				SqlServerPort=""
+				SqlServerUser="sa"
+				Type="SqlServer"
+			/>
+		</Remark>
+		<Remark>
+			<Connection
+				ID="AdventureWorks"
+				SqlServer="localhost"
+				SqlServerDatabase="AdventureWorks2014"
+				SqlServerPassword="lgxpass000"
+				SqlServerPort=""
+				SqlServerUser="sa"
+				Type="SqlServer"
+				>
+				<Metadata
+					ID="metaAWsales"
+					MetadataName="AW Sales"
+				/>
+			</Connection>
+		</Remark>
 		<Note
 			Note="Add and configure a supported database Connection element here,"
 		/>
